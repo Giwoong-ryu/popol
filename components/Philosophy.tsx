@@ -29,7 +29,7 @@ const Philosophy: React.FC = () => {
     <section className="py-24 bg-white relative z-10">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-sm font-bold text-green-600 uppercase tracking-widest mb-3">Philosophy & Case Study</h2>
+          <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">Philosophy & Case Study</h2>
           <h3 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
             문제 해결이 성장의 핵심입니다
           </h3>
@@ -47,12 +47,12 @@ const Philosophy: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100 hover:border-green-200 transition-colors duration-300"
+              className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100 hover:border-emerald-200 transition-colors duration-300"
             >
               <h4 className="text-2xl font-bold text-gray-900 mb-6 pb-4 border-b border-gray-200">
                 {item.title}
               </h4>
-              
+
               <div className="space-y-6">
                 <div>
                   <div className="flex items-center gap-2 text-red-500 font-bold mb-2">
@@ -75,11 +75,11 @@ const Philosophy: React.FC = () => {
                 </div>
 
                 <div>
-                  <div className="flex items-center gap-2 text-green-600 font-bold mb-2">
+                  <div className="flex items-center gap-2 text-emerald-600 font-bold mb-2">
                     <CheckCircle2 className="w-5 h-5" />
                     <span>Result</span>
                   </div>
-                  <p className="text-gray-900 font-medium bg-green-50 p-4 rounded-xl border border-green-100">
+                  <p className="text-gray-900 font-medium bg-emerald-50 p-4 rounded-xl border border-emerald-100">
                     {item.result}
                   </p>
                 </div>
