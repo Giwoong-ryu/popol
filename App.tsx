@@ -72,7 +72,7 @@ const App: React.FC = () => {
               {/* Close Button */}
               <button
                 onClick={closeModal}
-                className="fixed top-6 right-6 z-50 bg-white text-gray-900 p-3 rounded-full shadow-2xl hover:bg-emerald-600 hover:text-white hover:scale-110 transition-all border-2 border-gray-900"
+                className="fixed top-6 right-6 z-50 bg-emerald-600 text-white p-3 rounded-full shadow-2xl hover:bg-emerald-700 hover:scale-110 transition-all"
               >
                 <X className="w-6 h-6" />
               </button>
