@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { User, Coffee, Map, BarChart, Users, FileText } from 'lucide-react';
 
 const highlights = [
-  { icon: <Coffee className="w-6 h-6" />, title: "카페 운영 8년", desc: "메가커피 매니저, 개인 카페 총괄" },
+  { icon: <Coffee className="w-6 h-6" />, title: "카페 총경력 8년 (운영 경력 5년)", desc: "메가커피 매니저, 개인 카페 총괄" },
   { icon: <Map className="w-6 h-6" />, title: "신규 매장 구축", desc: "상권 분석부터 인테리어 공정 관리까지" },
   { icon: <BarChart className="w-6 h-6" />, title: "매출 성장", desc: "전략적 운영으로 매출 회복 및 성장" },
   { icon: <Users className="w-6 h-6" />, title: "교육 및 관리", desc: "직원 교육, 스케줄링, CS 관리" },
@@ -24,7 +24,7 @@ const About: React.FC = () => {
         >
           <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">About Me</h2>
           <h3 className="text-3xl md:text-5xl font-bold text-gray-900">
-            류기웅 <span className="text-gray-400 font-normal">Ryu Gi-Woong</span>
+            유기웅 <span className="text-gray-400 font-normal">Ryu Gi-Woong</span>
           </h3>
         </motion.div>
 
@@ -60,13 +60,13 @@ const About: React.FC = () => {
             </p>
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed mb-8">
               <p>
-                현장의 소리를 데이터로 분석하고, AI 기술을 접목하여 비효율을 개선합니다.
+                현장의 소리를 데이터로 분석하고, AI 도구를 활용하여 업무 효율을 개선합니다.
               </p>
               <p>
                 단순한 매장 관리를 넘어 브랜드의 성장을 기획합니다.
               </p>
               <p>
-                8년간의 카페 운영 경험을 바탕으로 신규 매장 구축부터 매출 회복,
+                총 8년의 카페 경력(운영 경력 5년)을 바탕으로 신규 매장 구축부터 매출 회복,
                 직원 교육까지 매장 운영의 전 과정을 책임집니다.
               </p>
             </div>

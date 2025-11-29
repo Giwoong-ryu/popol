@@ -207,36 +207,19 @@ const Gallery: React.FC = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900">현장의 순간들</h3>
           </div>
 
-          {/* Cafe Carousel Layout - 5 visible items */}
-          <div className="relative max-w-7xl mx-auto">
+          {/* Cafe Carousel Layout - 3 visible items */}
+          <div className="relative max-w-6xl mx-auto">
             <div className="overflow-hidden py-8">
-              <div className="flex items-center justify-center gap-3 md:gap-4">
-                {/* Far Left Item */}
-                <motion.div
-                  key={`cafe-far-left-${cafeIndex}`}
-                  initial={{ opacity: 0, scale: 0.85 }}
-                  animate={{ opacity: 0.5, scale: 0.85 }}
-                  transition={{ duration: 0.3 }}
-                  className="hidden lg:block flex-shrink-0 w-40 xl:w-48"
-                >
-                  <div className="relative rounded-xl overflow-hidden shadow-sm aspect-square">
-                    <img
-                      src={cafeImages[getImageIndex(-2, cafeImages.length, cafeIndex)]}
-                      alt="Cafe"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </motion.div>
-
+              <div className="flex items-center justify-center gap-4 md:gap-6">
                 {/* Left Item */}
                 <motion.div
                   key={`cafe-left-${cafeIndex}`}
                   initial={{ opacity: 0, scale: 0.92 }}
-                  animate={{ opacity: 0.7, scale: 0.92 }}
+                  animate={{ opacity: 0.75, scale: 0.92 }}
                   transition={{ duration: 0.3 }}
-                  className="hidden md:block flex-shrink-0 w-44 lg:w-52 xl:w-56"
+                  className="hidden md:block flex-shrink-0 w-64 lg:w-80 xl:w-96"
                 >
-                  <div className="relative rounded-xl overflow-hidden shadow-md aspect-square">
+                  <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-square">
                     <img
                       src={cafeImages[getImageIndex(-1, cafeImages.length, cafeIndex)]}
                       alt="Cafe"
@@ -249,11 +232,11 @@ const Gallery: React.FC = () => {
                 <motion.div
                   key={`cafe-center-${cafeIndex}`}
                   initial={{ opacity: 0, scale: 0.95, y: 10 }}
-                  animate={{ opacity: 1, scale: 1.0, y: -5 }}
+                  animate={{ opacity: 1, scale: 1.0, y: -8 }}
                   transition={{ duration: 0.3 }}
-                  className="flex-shrink-0 w-56 md:w-60 lg:w-64 xl:w-72 z-10"
+                  className="flex-shrink-0 w-72 md:w-80 lg:w-96 xl:w-[28rem] z-10"
                 >
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-square border-4 border-emerald-100">
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-square border-4 border-emerald-100">
                     <img
                       src={cafeImages[cafeIndex]}
                       alt={`Cafe ${cafeIndex + 1}`}
@@ -267,30 +250,13 @@ const Gallery: React.FC = () => {
                 <motion.div
                   key={`cafe-right-${cafeIndex}`}
                   initial={{ opacity: 0, scale: 0.92 }}
-                  animate={{ opacity: 0.7, scale: 0.92 }}
+                  animate={{ opacity: 0.75, scale: 0.92 }}
                   transition={{ duration: 0.3 }}
-                  className="hidden md:block flex-shrink-0 w-44 lg:w-52 xl:w-56"
+                  className="hidden md:block flex-shrink-0 w-64 lg:w-80 xl:w-96"
                 >
-                  <div className="relative rounded-xl overflow-hidden shadow-md aspect-square">
+                  <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-square">
                     <img
                       src={cafeImages[getImageIndex(1, cafeImages.length, cafeIndex)]}
-                      alt="Cafe"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </motion.div>
-
-                {/* Far Right Item */}
-                <motion.div
-                  key={`cafe-far-right-${cafeIndex}`}
-                  initial={{ opacity: 0, scale: 0.85 }}
-                  animate={{ opacity: 0.5, scale: 0.85 }}
-                  transition={{ duration: 0.3 }}
-                  className="hidden lg:block flex-shrink-0 w-40 xl:w-48"
-                >
-                  <div className="relative rounded-xl overflow-hidden shadow-sm aspect-square">
-                    <img
-                      src={cafeImages[getImageIndex(2, cafeImages.length, cafeIndex)]}
                       alt="Cafe"
                       className="w-full h-full object-cover"
                     />

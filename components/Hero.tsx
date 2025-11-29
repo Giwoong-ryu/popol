@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
 const heroImages = [
-  { src: "/app_make/h_1.webp", link: "#about" },
-  { src: "/app_make/h_2.webp", link: "#gallery" },
-  { src: "/app_make/h_3.jpeg", link: "#philosophy" },
-  { src: "/app_make/h_4.jpeg", link: "#projects" },
-  { src: "/app_make/h_5.jpeg", link: "#experience" },
-  { src: "/app_make/cafe_3.webp", link: "#documents" },
+  { src: "/app_make/h_1.webp", link: "#about", label: "카페" },
+  { src: "/app_make/h_3.jpeg", link: "#philosophy", label: "필로소피" },
+  { src: "/app_make/cafe_3.webp", link: "#documents", label: "문서" },
+  { src: "/app_make/h_5.jpeg", link: "#experience", label: "경력" },
+  { src: "/app_make/h_4.jpeg", link: "#projects", label: "프로젝트" },
+  { src: "/app_make/h_2.webp", link: "#gallery", label: "갤러리" },
 ];
 
 const Hero: React.FC = () => {
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
             매장을 움직이는 운영·기획 인재.
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            카페 운영 8년 + 신규 매장 기획 + AI 자동화 기반 업무 효율 전문가
+            카페 총경력 8년 (운영 경력 5년) + 신규 매장 기획 + AI 활용 가능
           </p>
         </motion.div>
 
@@ -45,13 +45,18 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.1 * index, duration: 0.5 }}
-              className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer block"
+              className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer block relative group"
             >
               <img
                 src={item.src}
                 alt={`Portfolio ${index + 1}`}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                <span className="text-white text-xl md:text-2xl font-bold opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                  {item.label}
+                </span>
+              </div>
             </motion.a>
           ))}
         </motion.div>
@@ -64,10 +69,10 @@ const Hero: React.FC = () => {
           className="text-center mt-16"
         >
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-            류기웅 <span className="text-gray-600 font-normal">Ryu Gi-Woong</span>
+            유기웅 <span className="text-gray-600 font-normal">Ryu Gi-Woong</span>
           </h2>
           <p className="text-gray-600">
-            카페 운영 8년 경력 | 신규 매장 기획 전문 | AI 자동화 업무 효율화
+            카페 총경력 8년 (운영 경력 5년) | 신규 매장 기획 전문 | AI 활용 가능
           </p>
         </motion.div>
       </div>
