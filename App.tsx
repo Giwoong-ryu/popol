@@ -1,13 +1,9 @@
 import React from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
-import ProductContents from './components/ProductContents';
-import MarketStrategy from './components/MarketStrategy';
+import Projects from './components/Projects';
 import Philosophy from './components/Philosophy';
-import Automation from './components/Automation';
-import Education from './components/Education';
 import Gallery from './components/Gallery';
-import Documents from './components/Documents';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -16,13 +12,9 @@ const App: React.FC = () => {
       <main className="flex flex-col w-full">
         <Hero />
         <About />
-        <ProductContents />
-        <MarketStrategy />
+        <Projects />
         <Philosophy />
-        <Automation />
-        <Education />
         <Gallery />
-        <Documents />
       </main>
       <Footer />
 
