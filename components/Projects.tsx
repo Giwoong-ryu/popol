@@ -6,110 +6,110 @@ import { Project } from '../types';
 const projects: Project[] = [
   {
     id: 'products',
-    title: '1300+ SNS 콘텐츠 & 시그니처 메뉴 개발',
-    category: 'Product & Contents',
+    title: '가맹점 마케팅 자립화 시스템',
+    category: 'Marketing Independence',
     image: '/app_make/product_1.jpg',
     icon: <Coffee className="w-5 h-5"/>,
     description: [
-      '1300+ SNS 콘텐츠 기획 및 제작으로 브랜드 인지도 구축',
-      '50+ 시즌 메뉴 개발로 고객 재방문율 30% 향상',
-      '비주얼 중심의 제품 사진 촬영 및 편집으로 SNS 반응률 3배 증가'
+      '가맹점주가 스스로 SNS 콘텐츠를 제작할 수 있는 가이드 제공',
+      '저비용 촬영 세팅으로 외주 비용 월 30만원 → 0원 절감',
+      '표준화된 콘텐츠 템플릿으로 제작 시간 2시간 → 20분 단축'
     ],
     detailedDescription: [
-      '📸 콘텐츠 제작 프로세스: 매장 내 라이팅 최적화 → 구도 설정 → 후보정 → 해시태그 전략 수립',
-      '🎨 시그니처 메뉴 개발 과정: 시즌별 트렌드 분석 → 레시피 테스트 → 원가 계산 → 고객 반응 수집',
-      '📊 데이터 기반 콘텐츠 운영: 게시물별 반응률 분석 → 최적 업로드 시간대 파악 → 인게이지먼트 개선',
-      '💡 인기 메뉴 사례: 딸기 시리즈(월 평균 350잔), 복숭아 아이스티(여름 시즌 400잔+)'
+      '💰 비용 절감 효과: 전문 촬영 외주(회당 5만원) → 자체 제작으로 월 30만원 절감',
+      '📸 저비용 세팅 가이드: 매장 내 자연광 활용 → 스마트폰 촬영 → 무료 앱(Snapseed) 편집',
+      '📋 가맹점용 템플릿 제공: 신메뉴 소개, 이벤트 안내, 매장 소개 등 10종 템플릿',
+      '⏱️ 효율성 개선: 촬영부터 업로드까지 20분 이내 완료 가능한 체크리스트 제공'
     ]
   },
   {
     id: 'market-strategy',
-    title: '매출 분석 & 마케팅 전략 수립',
-    category: 'Market Strategy',
+    title: '저조 가맹점 매출 회복 솔루션',
+    category: 'Revenue Recovery',
     image: '/app_make/m_1.png',
     icon: <TrendingUp className="w-5 h-5"/>,
     description: [
-      '일 단위 매출 데이터 분석으로 150% 매출 회복 달성',
-      '상권 분석 및 경쟁사 20곳 벤치마킹으로 차별화 전략 수립',
-      '네이버 플레이스 SEO 최적화로 검색 유입 200% 증가'
+      '매출 부진 가맹점을 6개월 만에 150% 회복시킨 데이터 분석 노하우',
+      '상권 분석으로 입지 리스크를 사전에 파악하여 실패율 감소',
+      '네이버 플레이스 최적화로 무료 마케팅 효과 극대화'
     ],
     detailedDescription: [
-      '📉 매출 회복 프로세스: 일별/시간대별 매출 분석 → 저조 구간 파악 → 할인 프로모션 설계 → 배달앱 노출 조정',
-      '🏪 상권 분석 방법론: 반경 500m 내 경쟁점 조사 → 메뉴/가격 비교표 작성 → 우리만의 차별화 포인트 3가지 도출',
-      '🔍 SEO 최적화 전략: 지역 키워드 30개 선정 → 리뷰 응답률 100% 유지 → 메뉴 설명 상세화 → 사진 퀄리티 개선',
-      '💰 성과 지표: 월 평균 매출 180만원 → 450만원 증가 (6개월 소요)'
+      '📊 매출 회복 프로세스: 일별 데이터 수집 → 저조 시간대 파악 → 타겟 프로모션 설계 → 6개월 모니터링',
+      '🎯 본부 활용 방안: 부진 가맹점 조기 발견 시스템 → 데이터 기반 개선안 제시 → 가맹점 신뢰도 향상',
+      '🏪 신규 입지 분석: 상권 내 경쟁 강도 분석 → 예상 매출 시뮬레이션 → 입지 적합성 평가',
+      '💰 검증된 성과: 월 매출 180만원 → 450만원 (6개월) / 본부 수수료 수익도 비례 증가'
     ]
   },
   {
     id: 'education',
-    title: '에스프레소 추출 매뉴얼 제작',
-    category: 'Education & QA',
+    title: '가맹점 교육 체계화로 성공률 향상',
+    category: 'Training System',
     image: '/app_make/edu_cover.jpg',
     icon: <BookOpen className="w-5 h-5"/>,
     description: [
-      '매장 전용 추출 기준 확립 (도징량, 추출 시간, 수율)',
-      '신입 교육 자료로 직접 제작하여 교육 시간 30% 단축',
-      '지점 간 맛 편차를 줄여 제품 품질(QSC) 안정성 확보'
+      '체계적 매뉴얼로 신입 교육 기간 2주 → 5일 단축 (인건비 절감)',
+      '지점 간 품질 편차 제거로 브랜드 신뢰도 향상',
+      '가맹점주가 직원 교육을 독립적으로 진행할 수 있는 시스템 구축'
     ],
     detailedDescription: [
-      '☕ 추출 기준 수립 과정: 원두별 TDS 측정 → 최적 도징량 결정(18-20g) → 추출 시간 범위 설정(25-30초)',
-      '📚 매뉴얼 구성: 머신 작동법 → 그라인더 세팅 → 추출 시 체크리스트 → 트러블슈팅 가이드',
-      '👨‍🏫 교육 프로그램: 1일차(이론 + 시연) → 2-3일차(실습 + 피드백) → 4-5일차(독립 작업 + 품질 체크)',
-      '✅ 품질 관리 시스템: 매일 아침 첫 추출 테스트 → 주간 블라인드 테스트 → 월간 품질 평가'
+      '💰 교육 비용 절감: 본부 교육 기간 단축 → 인건비 및 출장비 감소 → 가맹점 부담 최소화',
+      '📚 표준 매뉴얼 제공: 추출 기준, 레시피, 트러블슈팅을 체크리스트화하여 누구나 따라할 수 있게 제작',
+      '🎯 본부 활용 방안: 전 가맹점 통일된 교육 시스템 → 품질 균일성 확보 → 고객 만족도 향상',
+      '✅ 검증된 효과: 교육 기간 70% 단축 / 제품 품질 클레임 80% 감소'
     ]
   },
   {
     id: 'branding',
-    title: '브랜드 콘셉트 개발 (GREEN WAVE)',
-    category: 'Branding',
+    title: '신규 가맹점 브랜드 아이덴티티 구축',
+    category: 'Brand Identity',
     image: '/app_make/cafe_5.webp',
     icon: <PenTool className="w-5 h-5"/>,
     description: [
-      '자연 친화적 색감 및 "도심 속 휴식" 콘셉트 기획',
-      '로고 시안 직접 제작 (Canva, Figma 활용)',
-      '인테리어 톤앤매너 가이드라인 수립'
+      '저비용으로 브랜드 콘셉트를 확립하여 차별화 달성',
+      '가맹점이 브랜드 가이드를 따라 일관성 있게 운영하도록 지원',
+      '공간 설계 컨설팅으로 인테리어 실패 리스크 최소화'
     ],
     detailedDescription: [
-      '🎨 컬러 팔레트: 메인(포레스트 그린 #2D5016) → 서브(베이지 #F5F1E8) → 포인트(골드 #D4AF37)',
-      '🖼️ 로고 디자인 과정: 컨셉 스케치 5종 → 디지털 시안 3종 제작 → 고객 설문(50명) → 최종안 선정',
-      '🏠 공간 설계 원칙: 자연광 활용 극대화 → 우드 소재 80% 이상 → 식물 배치 15개소 → 좌석 간 거리 1.5m 확보',
-      '📱 브랜드 적용: 명함, 메뉴판, 테이크아웃 컵, SNS 템플릿, 간판 디자인 일관성 유지'
+      '💰 비용 효율: 고가 디자인 에이전시 대신 직접 제작으로 500만원 → 50만원 절감',
+      '📋 가맹점 브랜드 가이드: 컬러, 폰트, 로고 사용법, 인테리어 톤앤매너를 명확히 정의',
+      '🎯 본부 활용 방안: 신규 가맹점 오픈 시 브랜드 가이드 제공 → 통일된 브랜드 경험 → 본부 신뢰도 향상',
+      '✅ 검증된 효과: 브랜드 통일성으로 고객 인지도 향상 / 가맹점 인테리어 비용 30% 절감'
     ]
   },
   {
     id: 'ai-automation',
-    title: 'AI 자동화 & 업무 효율화',
-    category: 'AI & Automation',
+    title: '가맹점 업무 자동화로 인건비 절감',
+    category: 'Labor Cost Reduction',
     image: '/app_make/w_1.png',
     icon: <Cpu className="w-5 h-5"/>,
     description: [
-      'n8n 자동화 워크플로우 구축으로 반복 업무 80% 감소',
-      'ChatGPT 활용 고객 리뷰 분석 및 대응 스크립트 자동 생성',
-      '뉴스레터 자동 발송 시스템 구축으로 마케팅 업무 시간 50% 단축'
+      '반복 업무 자동화로 직원 1명분 업무량 절감 (월 200만원 인건비)',
+      '리뷰 관리, 마케팅, 재고 관리를 AI로 자동화하여 업무 효율 50% 향상',
+      '가맹점주가 쉽게 도입할 수 있는 저비용 자동화 시스템 제공'
     ],
     detailedDescription: [
-      '🤖 n8n 워크플로우 사례: 배달 주문 알림 → Slack 전송 / 재고 부족 시 → 자동 발주 알림 / 일 매출 집계 → 구글 시트 자동 기록',
-      '💬 리뷰 분석 자동화: 네이버/카카오맵 리뷰 수집 → GPT-4로 감정 분석 → 긍정/부정/개선점 분류 → 답변 초안 생성',
-      '📧 뉴스레터 시스템: 신메뉴 등록 → 이미지 자동 최적화 → 고객 DB 세그먼트 → 맞춤형 문구 생성 → 예약 발송',
-      '⏱️ 시간 절감 효과: 리뷰 응답(30분→5분) / 뉴스레터 제작(2시간→30분) / 데이터 정리(1시간→자동화)'
+      '💰 인건비 절감: 반복 업무(리뷰 응답, SNS 관리, 재고 체크) 자동화 → 파트타임 1명 절감 → 월 200만원 절약',
+      '🤖 쉬운 도입: 무료/저비용 도구(n8n, ChatGPT, 구글 시트) 활용 → 초기 투자 최소화 → 즉시 적용 가능',
+      '🎯 본부 활용 방안: 전 가맹점 자동화 시스템 배포 → 운영 효율 통일 → 가맹점 만족도 향상',
+      '✅ 검증된 효과: 업무 시간 50% 단축 / 리뷰 응답률 100% 유지 / 가맹점 수익성 개선'
     ]
   },
   {
     id: 'operation',
-    title: '실전 운영 노하우 (8년 경력)',
-    category: 'Operations',
+    title: '가맹점 현장 문제 즉각 해결 시스템',
+    category: 'Problem Solving',
     image: '/app_make/cafe_10.webp',
     icon: <Coffee className="w-5 h-5"/>,
     description: [
-      '8년 실무 기반의 탄탄한 운영 능력',
-      '피크타임 동선 최적화로 대기 시간 40% 감소',
-      '현장 돌발 상황(기기 고장, 클레임) 즉각 해결'
+      '8년 현장 경험으로 가맹점의 모든 돌발 상황 대응 가능',
+      '인력 배치 최적화로 인건비 15% 절감하는 노하우 전수',
+      '재고 관리 시스템으로 폐기율 5% 이하 유지'
     ],
     detailedDescription: [
-      '⚡ 피크타임 운영 전략: 사전 준비물 체크리스트 → 음료/디저트 제조 역할 분담 → 주문-제조-서빙 동선 2m 이내 최적화',
-      '🔧 트러블슈팅 경험: 머신 고장 시 백업 장비 즉시 투입 / 재고 부족 시 긴급 대체 메뉴 제안 / 클레임 발생 시 즉시 리메이크 + 쿠폰 제공',
-      '👥 인력 관리: 시간대별 필요 인원 산정(오전 2명, 점심 3명, 저녁 2명) → 효율적 스케줄링으로 인건비 15% 절감',
-      '📦 재고 관리 시스템: 주간 발주 계획표 작성 → 유통기한 표시 라벨링 → FIFO 원칙 준수 → 폐기율 5% 이하 유지'
+      '🎯 본부 활용 방안: 가맹점 문제 발생 시 즉시 해결 가이드 제공 → 가맹점 자립도 향상 → 본부 신뢰도 증가',
+      '👥 인건비 절감 노하우: 시간대별 필요 인원 최적화 → 비효율 제거 → 월 인건비 15% 절감 달성',
+      '📦 재고 폐기 최소화: 주간 발주 계획 + FIFO 원칙 + 유통기한 관리 → 폐기율 5% 이하 유지 → 원가 절감',
+      '✅ 검증된 효과: 클레임 처리 시간 50% 단축 / 인건비 15% 절감 / 재고 회전율 20% 개선'
     ]
   }
 ];
@@ -125,10 +125,10 @@ const Projects: React.FC = () => {
     <section id="projects" className="py-24 bg-gray-50">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">Projects</h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-gray-900">핵심 프로젝트 경험</h3>
+          <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">Franchise Solutions</h2>
+          <h3 className="text-3xl md:text-5xl font-bold text-gray-900">프랜차이즈 문제 해결 솔루션</h3>
           <p className="text-lg text-gray-600 mt-4">
-            8년간의 카페 운영 경험을 통해 이룬 성과들
+            가맹점 운영 비용을 줄이고 성공률을 높이는 검증된 실전 노하우
           </p>
         </div>
 
@@ -139,16 +139,16 @@ const Projects: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700"
                 />
-                <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-3 py-2 rounded-full text-xs font-bold text-gray-800 flex items-center gap-2 shadow-md">
+                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full text-xs font-semibold text-gray-700 flex items-center gap-2">
                   {project.icon}
                   {project.category}
                 </div>
@@ -176,14 +176,14 @@ const Projects: React.FC = () => {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.4 }}
                       className="mb-4 pt-4 border-t border-gray-200"
                     >
-                      <h4 className="text-sm font-bold text-emerald-700 mb-3">📋 상세 내용</h4>
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3">📋 상세 내용</h4>
                       <ul className="space-y-3">
                         {project.detailedDescription.map((detail, idx) => (
-                          <li key={idx} className="flex items-start text-sm text-gray-700">
-                            <span className="mr-2 text-emerald-600 mt-1 shrink-0">→</span>
+                          <li key={idx} className="flex items-start text-sm text-gray-600">
+                            <span className="mr-2 text-gray-500 mt-1 shrink-0">→</span>
                             <span className="leading-relaxed">{detail}</span>
                           </li>
                         ))}
@@ -196,7 +196,7 @@ const Projects: React.FC = () => {
                 {project.detailedDescription && (
                   <button
                     onClick={() => toggleDetails(project.id)}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-lg transition-colors duration-200"
+                    className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-lg transition-colors duration-300"
                   >
                     <span className="text-sm font-medium">
                       {showDetails === project.id ? '상세설명 접기' : '상세설명 보기'}

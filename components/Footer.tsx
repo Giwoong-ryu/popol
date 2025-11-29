@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <button className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 text-white rounded-full font-bold hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+        <button className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 text-white rounded-full font-semibold hover:bg-emerald-700 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-500">
           <Download className="w-5 h-5" />
           이력서(PDF) 다운로드
         </button>
