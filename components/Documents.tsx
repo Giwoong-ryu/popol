@@ -26,7 +26,7 @@ const marketDocuments: Document[] = [
     description: '지역 상권 데이터 기반 매출 예측 분석',
   },
   {
-    image: '/app_make/m-3.png',
+    image: '/app_make/m_3.png',
     title: '경쟁사 벤치마킹',
     category: 'Competitive Analysis',
     icon: <Target className="w-5 h-5" />,
