@@ -3,17 +3,17 @@ import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
 const heroImages = [
+  "/app_make/h_5.png",
   "/app_make/h_1.webp",
   "/app_make/h_2.webp",
   "/app_make/h_3.jpg",
   "/app_make/h_4.webp",
-  "/app_make/h_5.png",
   "/app_make/cafe_3.webp",
 ];
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative w-full py-20 bg-white">
+    <section id="hero" className="relative w-full py-20 bg-white">
       <div className="container mx-auto px-6">
         {/* Hero Text */}
         <motion.div

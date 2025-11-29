@@ -80,7 +80,7 @@ const projects: Project[] = [
 
 const Projects: React.FC = () => {
   return (
-    <section className="py-24 bg-gray-50">
+    <section id="projects" className="py-24 bg-gray-50">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">Projects</h2>
