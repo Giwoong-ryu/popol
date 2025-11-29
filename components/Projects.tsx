@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { BookOpen, TrendingUp, PenTool, Cpu, Coffee } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { BookOpen, TrendingUp, PenTool, Cpu, Coffee, ChevronDown, ChevronUp } from 'lucide-react';
 import { Project } from '../types';
 
 const projects: Project[] = [
@@ -48,7 +48,7 @@ const projects: Project[] = [
     icon: <PenTool className="w-5 h-5"/>,
     description: [
       '자연 친화적 색감 및 "도심 속 휴식" 콘셉트 기획',
-      '로고 시안 직접 제작 (Canva, Illustrator 활용)',
+      '로고 시안 직접 제작 (Canva, Figma 활용)',
       '인테리어 톤앤매너 가이드라인 수립'
     ]
   },
@@ -79,6 +79,12 @@ const projects: Project[] = [
 ];
 
 const Projects: React.FC = () => {
+  const [expandedProject, setExpandedProject] = useState<string | null>(null);
+
+  const toggleProject = (id: string) => {
+    setExpandedProject(expandedProject === id ? null : id);
+  };
+
   return (
     <section id="projects" className="py-24 bg-gray-50">
       <div className="container mx-auto px-6 max-w-7xl">
@@ -117,14 +123,48 @@ const Projects: React.FC = () => {
                   {project.title}
                 </h3>
 
-                <ul className="space-y-2">
-                  {project.description.map((desc, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-gray-600">
-                      <span className="mr-2 text-emerald-500 mt-1 shrink-0">•</span>
-                      <span className="leading-relaxed">{desc}</span>
-                    </li>
-                  ))}
-                </ul>
+                <AnimatePresence>
+                  {expandedProject === project.id ? (
+                    <motion.ul
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="space-y-2 mb-4"
+                    >
+                      {project.description.map((desc, idx) => (
+                        <li key={idx} className="flex items-start text-sm text-gray-600">
+                          <span className="mr-2 text-emerald-500 mt-1 shrink-0">•</span>
+                          <span className="leading-relaxed">{desc}</span>
+                        </li>
+                      ))}
+                    </motion.ul>
+                  ) : (
+                    <motion.div
+                      initial={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="mb-4"
+                    >
+                      <p className="text-sm text-gray-500 line-clamp-2">
+                        {project.description[0]}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                <button
+                  onClick={() => toggleProject(project.id)}
+                  className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-lg transition-colors duration-200"
+                >
+                  <span className="text-sm font-medium">
+                    {expandedProject === project.id ? '간략히 보기' : '자세히 보기'}
+                  </span>
+                  {expandedProject === project.id ? (
+                    <ChevronUp className="w-4 h-4" />
+                  ) : (
+                    <ChevronDown className="w-4 h-4" />
+                  )}
+                </button>
               </div>
             </motion.div>
           ))}
