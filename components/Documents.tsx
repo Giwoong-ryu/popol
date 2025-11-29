@@ -12,7 +12,7 @@ interface Document {
 const marketDocuments: Document[] = [
   {
     image: '/app_make/m_1.png',
-    title: '매출 분석 및 전략 수립',
+    title: '플레이스 세팅',
     category: 'Market Analysis',
     icon: <TrendingUp className="w-5 h-5" />,
   },
@@ -23,20 +23,20 @@ const marketDocuments: Document[] = [
     icon: <BarChart3 className="w-5 h-5" />,
   },
   {
-    image: '/app_make/m_3.png',
+    image: '/app_make/m-3.png',
     title: '경쟁사 벤치마킹',
     category: 'Competitive Analysis',
     icon: <Target className="w-5 h-5" />,
   },
   {
     image: '/app_make/m_4.png',
-    title: 'SEO 최적화 전략',
+    title: '경쟁사 분석',
     category: 'Marketing Strategy',
     icon: <TrendingUp className="w-5 h-5" />,
   },
   {
-    image: '/app_make/m_5.png',
-    title: '매출 데이터 분석',
+    image: '/app_make/20251129_063515.png',
+    title: '인테리어 제안서',
     category: 'Data Analysis',
     icon: <BarChart3 className="w-5 h-5" />,
   },
@@ -50,15 +50,33 @@ const educationDocuments: Document[] = [
     icon: <BookOpen className="w-5 h-5" />,
   },
   {
-    image: '/app_make/edu_1.jpg',
+    image: '/app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_8.jpg',
     title: '에스프레소 추출 가이드',
     category: 'Training Manual',
     icon: <FileText className="w-5 h-5" />,
   },
   {
-    image: '/app_make/edu_2.jpg',
-    title: '품질 관리 체크리스트',
+    image: '/app_make/커피 이론 교육자료-제출용/■ 테이스팅 노트 및 체크리스트_제출용_2.jpg',
+    title: '체크리스트',
     category: 'QA Manual',
+    icon: <FileText className="w-5 h-5" />,
+  },
+  {
+    image: '/app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_6.jpg',
+    title: '그라인더 관리법',
+    category: 'Equipment Manual',
+    icon: <FileText className="w-5 h-5" />,
+  },
+  {
+    image: '/app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_4.jpg',
+    title: '원두 배전도 및 추출 특성',
+    category: 'Coffee Theory',
+    icon: <BookOpen className="w-5 h-5" />,
+  },
+  {
+    image: '/app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_11.jpg',
+    title: '스티밍 교육',
+    category: 'Training Manual',
     icon: <FileText className="w-5 h-5" />,
   },
 ];

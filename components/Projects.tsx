@@ -91,7 +91,10 @@ const Projects: React.FC = () => {
                 <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Projects</h2>
                 <h3 className="text-3xl md:text-4xl font-bold text-gray-900">핵심 프로젝트 경험</h3>
             </div>
-            <p className="hidden md:block text-gray-500">카드를 클릭하여 상세 내용을 확인하세요.</p>
+            <p className="text-gray-600 text-sm md:text-base mt-2 md:mt-0 flex items-center gap-2">
+              <span className="inline-block w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+              카드를 클릭하여 상세 내용을 확인하세요
+            </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -100,8 +103,9 @@ const Projects: React.FC = () => {
               key={project.id}
               layoutId={`card-container-${project.id}`}
               onClick={() => setSelectedId(project.id)}
-              className="bg-white rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-shadow duration-300 group"
-              whileHover={{ y: -5 }}
+              className="bg-white rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 group border-2 border-transparent hover:border-emerald-300"
+              whileHover={{ y: -8 }}
+              whileTap={{ scale: 0.98 }}
             >
               <motion.div layoutId={`card-image-${project.id}`} className="relative h-48 overflow-hidden">
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
@@ -115,7 +119,7 @@ const Projects: React.FC = () => {
                   {project.title}
                 </motion.h3>
                 <p className="text-gray-500 line-clamp-2 text-sm">{project.description[0]}</p>
-                <div className="mt-3 flex items-center text-emerald-600 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="mt-3 flex items-center text-emerald-600 text-sm font-semibold group-hover:translate-x-1 transition-all">
                     자세히 보기 <ArrowRight className="w-4 h-4 ml-1" />
                 </div>
               </div>
@@ -141,7 +145,7 @@ const Projects: React.FC = () => {
                   <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover" />
                   <button
                     onClick={(e) => { e.stopPropagation(); setSelectedId(null); }}
-                    className="absolute top-4 right-4 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+                    className="absolute top-4 right-4 bg-white/95 text-gray-900 p-2 rounded-full hover:bg-emerald-500 hover:text-white shadow-lg transition-all hover:scale-110"
                   >
                     <X className="w-5 h-5" />
                   </button>
