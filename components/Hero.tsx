@@ -34,13 +34,20 @@ const Hero: React.FC<HeroProps> = ({ onSectionClick }) => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: index * 0.1, duration: 0.8 }}
-      className={`${className} relative rounded-2xl overflow-hidden cursor-pointer group`}
+      className={`${className} relative rounded-2xl overflow-hidden cursor-pointer group border-2 border-white/30 hover:border-emerald-400 transition-all duration-300 shadow-lg hover:shadow-2xl`}
       onMouseEnter={() => setHoveredIndex(index)}
       onMouseLeave={() => setHoveredIndex(null)}
       onClick={() => handleImageClick(image.section)}
     >
       <img src={image.src} alt={image.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
       <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent group-hover:from-black/60 group-hover:via-black/40 transition-all duration-300" />
+
+      {/* Always visible title badge */}
+      <div className="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-md rounded-lg px-4 py-2 border border-white/30 group-hover:bg-emerald-600/90 transition-all duration-300">
+        <h3 className="text-white text-sm md:text-base font-bold drop-shadow-lg">
+          {image.title}
+        </h3>
+      </div>
 
       {/* Hover overlay with title */}
       <motion.div
@@ -50,10 +57,10 @@ const Hero: React.FC<HeroProps> = ({ onSectionClick }) => {
         className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm"
       >
         <div className="text-center px-4">
-          <h3 className="text-white text-xl md:text-2xl font-bold drop-shadow-lg">
+          <h3 className="text-white text-xl md:text-2xl font-bold drop-shadow-lg mb-2">
             {image.title}
           </h3>
-          <p className="text-white/80 text-sm mt-2">클릭하여 보기</p>
+          <p className="text-white text-base font-semibold bg-emerald-600 px-4 py-2 rounded-full">클릭하여 보기 →</p>
         </div>
       </motion.div>
     </motion.div>

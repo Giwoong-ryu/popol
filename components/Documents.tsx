@@ -35,7 +35,7 @@ const marketDocuments: Document[] = [
     icon: <TrendingUp className="w-5 h-5" />,
   },
   {
-    image: '/app_make/20251129_063515.png',
+    image: '/app_make/m_5.png',
     title: '인테리어 제안서',
     category: 'Data Analysis',
     icon: <BarChart3 className="w-5 h-5" />,
