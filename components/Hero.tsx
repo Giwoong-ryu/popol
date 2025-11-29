@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
 const heroImages = [
-  "/app_make/h_5.png",
-  "/app_make/h_1.webp",
-  "/app_make/h_2.webp",
-  "/app_make/h_3.jpg",
-  "/app_make/h_4.webp",
-  "/app_make/cafe_3.webp",
+  { src: "/app_make/h_1.webp", link: "#about" },
+  { src: "/app_make/h_2.webp", link: "#gallery" },
+  { src: "/app_make/h_3.jpg", link: "#philosophy" },
+  { src: "/app_make/h_4.webp", link: "#projects" },
+  { src: "/app_make/h_5.png", link: "#experience" },
+  { src: "/app_make/cafe_3.webp", link: "#documents" },
 ];
 
 const Hero: React.FC = () => {
@@ -38,20 +38,21 @@ const Hero: React.FC = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto"
         >
-          {heroImages.map((src, index) => (
-            <motion.div
+          {heroImages.map((item, index) => (
+            <motion.a
               key={index}
+              href={item.link}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.1 * index, duration: 0.5 }}
-              className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
+              className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer block"
             >
               <img
-                src={src}
+                src={item.src}
                 alt={`Portfolio ${index + 1}`}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
 
