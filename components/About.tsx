@@ -35,15 +35,16 @@ const About: React.FC = () => {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[3/4]">
+            <div className="relative rounded-3xl overflow-hidden shadow-lg aspect-[3/4]">
               <img
                 src="/app_make/a.jpg"
                 alt="Ryu Gi-Woong Profile"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
             </div>
           </motion.div>
 
@@ -52,6 +53,7 @@ const About: React.FC = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="flex flex-col justify-center"
           >
             <p className="text-xl md:text-2xl font-bold text-gray-900 mb-6 leading-relaxed">
@@ -96,14 +98,14 @@ const About: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="p-8 rounded-3xl bg-gray-50 hover:bg-emerald-50 transition-colors duration-300 group"
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              className="p-8 rounded-3xl bg-gray-50 hover:bg-gray-100 transition-colors duration-500 group"
             >
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-emerald-600 shadow-sm mb-4 group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-emerald-600 mb-4 group-hover:scale-105 transition-transform duration-500">
                 {item.icon}
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h4>
-              <p className="text-gray-500 font-medium">{item.desc}</p>
+              <p className="text-gray-600 font-medium">{item.desc}</p>
             </motion.div>
           ))}
         </div>

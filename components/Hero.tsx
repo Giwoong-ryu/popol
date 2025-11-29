@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
           className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto"
         >
           {heroImages.map((item, index) => (
@@ -44,16 +44,16 @@ const Hero: React.FC = () => {
               href={item.link}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.1 * index, duration: 0.5 }}
-              className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer block relative group"
+              transition={{ delay: 0.15 * index, duration: 0.7 }}
+              className="aspect-[4/3] rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 cursor-pointer block relative group"
             >
               <img
                 src={item.src}
                 alt={`Portfolio ${index + 1}`}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                <span className="text-white text-xl md:text-2xl font-bold opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-500 flex items-center justify-center">
+                <span className="text-white text-xl md:text-2xl font-semibold opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
                   {item.label}
                 </span>
               </div>

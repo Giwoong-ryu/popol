@@ -126,13 +126,13 @@ const Documents: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 onClick={() => setSelectedDoc(doc)}
-                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group cursor-pointer"
+                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 group cursor-pointer"
               >
                 <div className="relative h-64 overflow-hidden bg-gray-100">
                   <img
                     src={doc.image}
                     alt={doc.title}
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                   />
                   <div className="absolute top-3 right-3 bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2">
                     {doc.icon}
@@ -163,13 +163,13 @@ const Documents: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: (marketDocuments.length + index) * 0.1, duration: 0.6 }}
                 onClick={() => setSelectedDoc(doc)}
-                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group cursor-pointer"
+                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 group cursor-pointer"
               >
                 <div className="relative h-64 overflow-hidden bg-gray-100">
                   <img
                     src={doc.image}
                     alt={doc.title}
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                   />
                   <div className="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2">
                     {doc.icon}
@@ -193,19 +193,19 @@ const Documents: React.FC = () => {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6"
         >
-          <div className="bg-white rounded-xl p-6 border-2 border-emerald-100">
+          <div className="bg-white rounded-xl p-6 border border-gray-200">
             <div className="text-4xl font-bold text-emerald-600 mb-2">150%</div>
-            <div className="text-gray-600">매출 회복 달성</div>
+            <div className="text-gray-700 font-medium">매출 회복 달성</div>
             <div className="text-sm text-gray-500 mt-1">데이터 기반 전략 수립</div>
           </div>
-          <div className="bg-white rounded-xl p-6 border-2 border-emerald-100">
+          <div className="bg-white rounded-xl p-6 border border-gray-200">
             <div className="text-4xl font-bold text-emerald-600 mb-2">30%</div>
-            <div className="text-gray-600">교육 시간 단축</div>
+            <div className="text-gray-700 font-medium">교육 시간 단축</div>
             <div className="text-sm text-gray-500 mt-1">체계적 매뉴얼 구축</div>
           </div>
-          <div className="bg-white rounded-xl p-6 border-2 border-emerald-100">
+          <div className="bg-white rounded-xl p-6 border border-gray-200">
             <div className="text-4xl font-bold text-emerald-600 mb-2">200%</div>
-            <div className="text-gray-600">검색 유입 증가</div>
+            <div className="text-gray-700 font-medium">검색 유입 증가</div>
             <div className="text-sm text-gray-500 mt-1">SEO 최적화 전략</div>
           </div>
         </motion.div>
@@ -218,15 +218,17 @@ const Documents: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
             onClick={() => setSelectedDoc(null)}
-            className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-auto shadow-2xl"
+              className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-auto shadow-xl"
             >
               {/* Close Button */}
               <div className="sticky top-0 right-0 flex justify-end p-4 bg-white z-10">

@@ -70,18 +70,18 @@ const Navigation: React.FC = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.4 }}
           className="fixed bottom-8 left-0 right-0 z-40 flex justify-center"
         >
-          <div className="bg-white/95 backdrop-blur-md shadow-2xl rounded-full px-4 md:px-6 py-3 border border-gray-200">
+          <div className="bg-white/95 backdrop-blur-md shadow-lg rounded-full px-4 md:px-6 py-3 border border-gray-200">
             <div className="flex items-center gap-1 md:gap-2">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`relative flex items-center gap-1.5 px-2 md:px-4 py-2 rounded-full transition-all duration-300 ${
+                  className={`relative flex items-center gap-1.5 px-2 md:px-4 py-2 rounded-full transition-all duration-500 ${
                     activeSection === item.id
-                      ? 'bg-emerald-600 text-white shadow-lg scale-105'
+                      ? 'bg-emerald-600 text-white shadow-md scale-[1.02]'
                       : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
                   }`}
                   aria-label={`Navigate to ${item.label}`}

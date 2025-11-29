@@ -139,16 +139,16 @@ const Projects: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700"
                 />
-                <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-3 py-2 rounded-full text-xs font-bold text-gray-800 flex items-center gap-2 shadow-md">
+                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full text-xs font-semibold text-gray-700 flex items-center gap-2">
                   {project.icon}
                   {project.category}
                 </div>
@@ -176,14 +176,14 @@ const Projects: React.FC = () => {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.4 }}
                       className="mb-4 pt-4 border-t border-gray-200"
                     >
-                      <h4 className="text-sm font-bold text-emerald-700 mb-3">📋 상세 내용</h4>
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3">📋 상세 내용</h4>
                       <ul className="space-y-3">
                         {project.detailedDescription.map((detail, idx) => (
-                          <li key={idx} className="flex items-start text-sm text-gray-700">
-                            <span className="mr-2 text-emerald-600 mt-1 shrink-0">→</span>
+                          <li key={idx} className="flex items-start text-sm text-gray-600">
+                            <span className="mr-2 text-gray-500 mt-1 shrink-0">→</span>
                             <span className="leading-relaxed">{detail}</span>
                           </li>
                         ))}
@@ -196,7 +196,7 @@ const Projects: React.FC = () => {
                 {project.detailedDescription && (
                   <button
                     onClick={() => toggleDetails(project.id)}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-lg transition-colors duration-200"
+                    className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-lg transition-colors duration-300"
                   >
                     <span className="text-sm font-medium">
                       {showDetails === project.id ? '상세설명 접기' : '상세설명 보기'}

@@ -90,10 +90,10 @@ const Experience: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="relative pl-8 border-l-4 border-emerald-500"
+              className="relative pl-8 border-l-2 border-emerald-500"
             >
               {/* Timeline dot */}
-              <div className="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-emerald-500 border-4 border-white shadow" />
+              <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white" />
 
               <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
                 <div className="mb-4">
@@ -131,11 +131,11 @@ const Experience: React.FC = () => {
 
                   {exp.achievements && exp.achievements.length > 0 && (
                     <div className="mt-4 pt-4 border-t border-gray-200">
-                      <h5 className="font-bold text-emerald-700 mb-2">주요 성과</h5>
+                      <h5 className="font-bold text-gray-800 mb-2">주요 성과</h5>
                       <ul className="space-y-2">
                         {exp.achievements.map((achievement, idx) => (
                           <li key={idx} className="flex items-start text-gray-700">
-                            <span className="mr-3 text-emerald-600 font-bold">✓</span>
+                            <span className="mr-3 text-emerald-600 font-semibold">✓</span>
                             <span className="font-medium">{achievement}</span>
                           </li>
                         ))}

@@ -45,8 +45,8 @@ const Philosophy: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              className="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-emerald-200 transition-colors duration-300"
+              transition={{ delay: index * 0.15, duration: 0.6 }}
+              className="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-gray-200 transition-colors duration-500"
             >
               <h4 className="text-2xl font-bold text-gray-900 mb-6">
                 {item.title}
@@ -61,8 +61,8 @@ const Philosophy: React.FC = () => {
                   <strong className="text-gray-900">해결:</strong> {item.solution}
                 </p>
 
-                <p className="text-emerald-700 font-medium">
-                  <strong className="text-emerald-900">결과:</strong> {item.result}
+                <p className="text-gray-700 font-medium">
+                  <strong className="text-gray-900">결과:</strong> {item.result}
                 </p>
               </div>
             </motion.div>

@@ -58,11 +58,11 @@ const Gallery: React.FC = () => {
       <div className="container mx-auto px-6">
         {/* Photography Credit Banner */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-emerald-50 to-teal-50 border-2 border-emerald-300 rounded-full shadow-md">
+          <div className="inline-flex items-center gap-3 px-8 py-4 bg-emerald-50 border border-emerald-200 rounded-full">
             <Coffee className="w-5 h-5 text-emerald-600" />
-            <span className="text-base font-bold text-emerald-900">
+            <span className="text-base font-semibold text-emerald-900">
               기획부터 촬영, 편집까지
-              <span className="ml-2 px-3 py-1 bg-emerald-600 text-white rounded-full text-sm">직접 제작</span>
+              <span className="ml-2 px-3 py-1 bg-emerald-600 text-white rounded-full text-sm font-medium">직접 제작</span>
             </span>
           </div>
         </div>
@@ -83,7 +83,7 @@ const Gallery: React.FC = () => {
                   key={`far-left-${currentIndex}`}
                   initial={{ opacity: 0, scale: 0.85 }}
                   animate={{ opacity: 0.5, scale: 0.85 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.5 }}
                   className="hidden lg:block flex-shrink-0 w-40 xl:w-48"
                 >
                   <div className="relative rounded-xl overflow-hidden shadow-sm aspect-square">
@@ -100,10 +100,10 @@ const Gallery: React.FC = () => {
                   key={`left-${currentIndex}`}
                   initial={{ opacity: 0, scale: 0.92 }}
                   animate={{ opacity: 0.7, scale: 0.92 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.5 }}
                   className="hidden md:block flex-shrink-0 w-44 lg:w-52 xl:w-56"
                 >
-                  <div className="relative rounded-xl overflow-hidden shadow-md aspect-square">
+                  <div className="relative rounded-xl overflow-hidden shadow-sm aspect-square">
                     <img
                       src={productImages[getImageIndex(-1, productImages.length, currentIndex)]}
                       alt="Product"
@@ -117,16 +117,16 @@ const Gallery: React.FC = () => {
                   key={`center-${currentIndex}`}
                   initial={{ opacity: 0, scale: 0.95, y: 10 }}
                   animate={{ opacity: 1, scale: 1.0, y: -5 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.5 }}
                   className="flex-shrink-0 w-56 md:w-60 lg:w-64 xl:w-72 z-10"
                 >
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-square border-4 border-emerald-100">
+                  <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-square border-2 border-emerald-100">
                     <img
                       src={productImages[currentIndex]}
                       alt={`Product ${currentIndex + 1}`}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
                   </div>
                 </motion.div>
 
@@ -135,10 +135,10 @@ const Gallery: React.FC = () => {
                   key={`right-${currentIndex}`}
                   initial={{ opacity: 0, scale: 0.92 }}
                   animate={{ opacity: 0.7, scale: 0.92 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.5 }}
                   className="hidden md:block flex-shrink-0 w-44 lg:w-52 xl:w-56"
                 >
-                  <div className="relative rounded-xl overflow-hidden shadow-md aspect-square">
+                  <div className="relative rounded-xl overflow-hidden shadow-sm aspect-square">
                     <img
                       src={productImages[getImageIndex(1, productImages.length, currentIndex)]}
                       alt="Product"
@@ -152,7 +152,7 @@ const Gallery: React.FC = () => {
                   key={`far-right-${currentIndex}`}
                   initial={{ opacity: 0, scale: 0.85 }}
                   animate={{ opacity: 0.5, scale: 0.85 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.5 }}
                   className="hidden lg:block flex-shrink-0 w-40 xl:w-48"
                 >
                   <div className="relative rounded-xl overflow-hidden shadow-sm aspect-square">
@@ -216,10 +216,10 @@ const Gallery: React.FC = () => {
                   key={`cafe-left-${cafeIndex}`}
                   initial={{ opacity: 0, scale: 0.92 }}
                   animate={{ opacity: 0.75, scale: 0.92 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.5 }}
                   className="hidden md:block flex-shrink-0 w-64 lg:w-80 xl:w-96"
                 >
-                  <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-square">
+                  <div className="relative rounded-2xl overflow-hidden shadow-sm aspect-square">
                     <img
                       src={cafeImages[getImageIndex(-1, cafeImages.length, cafeIndex)]}
                       alt="Cafe"
@@ -233,16 +233,16 @@ const Gallery: React.FC = () => {
                   key={`cafe-center-${cafeIndex}`}
                   initial={{ opacity: 0, scale: 0.95, y: 10 }}
                   animate={{ opacity: 1, scale: 1.0, y: -8 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.5 }}
                   className="flex-shrink-0 w-72 md:w-80 lg:w-96 xl:w-[28rem] z-10"
                 >
-                  <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-square border-4 border-emerald-100">
+                  <div className="relative rounded-3xl overflow-hidden shadow-lg aspect-square border-2 border-emerald-100">
                     <img
                       src={cafeImages[cafeIndex]}
                       alt={`Cafe ${cafeIndex + 1}`}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
                   </div>
                 </motion.div>
 
@@ -251,10 +251,10 @@ const Gallery: React.FC = () => {
                   key={`cafe-right-${cafeIndex}`}
                   initial={{ opacity: 0, scale: 0.92 }}
                   animate={{ opacity: 0.75, scale: 0.92 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.5 }}
                   className="hidden md:block flex-shrink-0 w-64 lg:w-80 xl:w-96"
                 >
-                  <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-square">
+                  <div className="relative rounded-2xl overflow-hidden shadow-sm aspect-square">
                     <img
                       src={cafeImages[getImageIndex(1, cafeImages.length, cafeIndex)]}
                       alt="Cafe"
