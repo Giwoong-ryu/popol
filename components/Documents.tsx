@@ -33,7 +33,7 @@ const marketDocuments: Document[] = [
     description: '20곳 이상의 경쟁 카페 벤치마킹을 통한 차별화 전략 도출. 가격, 메뉴 구성, 인테리어, SNS 마케팅 등 다각도로 분석했습니다.',
   },
   {
-    image: '/app_make/m_5.png',
+    image: '/app_make/h_3.jpeg',
     title: '인테리어 제안서',
     category: 'Interior Design',
     icon: <TrendingUp className="w-5 h-5" />,
@@ -69,6 +69,13 @@ const educationDocuments: Document[] = [
     category: 'Equipment Manual',
     icon: <FileText className="w-5 h-5" />,
     description: '그라인더 청소 및 유지보수 가이드. 장비의 수명을 연장하고 항상 최적의 상태를 유지하기 위한 관리 방법을 정리했습니다.',
+  },
+  {
+    image: '/app_make/h_5.jpeg',
+    title: '현장 실습 교육',
+    category: 'Practical Training',
+    icon: <FileText className="w-5 h-5" />,
+    description: '실제 매장 현장에서의 실습 교육 자료. 이론을 실전에 적용하며 직원들의 업무 숙련도를 높이는 교육 프로그램입니다.',
   },
   {
     image: '/app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_4.jpg',
