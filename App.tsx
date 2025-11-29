@@ -15,12 +15,12 @@ const App: React.FC = () => {
       <Navigation />
       <main className="flex flex-col w-full">
         <Hero />
-        <Gallery />
         <About />
         <Philosophy />
         <Projects />
         <Experience />
         <Documents />
+        <Gallery />
       </main>
       <Footer />
     </div>
