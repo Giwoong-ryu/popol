@@ -11,11 +11,11 @@ interface NavItem {
 const navItems: NavItem[] = [
   { id: 'hero', label: '홈', icon: <Home className="w-4 h-4" /> },
   { id: 'about', label: '소개', icon: <User className="w-4 h-4" /> },
-  { id: 'gallery', label: '갤러리', icon: <Image className="w-4 h-4" /> },
   { id: 'philosophy', label: '철학', icon: <Lightbulb className="w-4 h-4" /> },
   { id: 'projects', label: '프로젝트', icon: <Briefcase className="w-4 h-4" /> },
   { id: 'experience', label: '경력', icon: <Award className="w-4 h-4" /> },
   { id: 'documents', label: '문서', icon: <FileText className="w-4 h-4" /> },
+  { id: 'gallery', label: '갤러리', icon: <Image className="w-4 h-4" /> },
 ];
 
 const Navigation: React.FC = () => {
