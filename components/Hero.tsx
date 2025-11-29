@@ -4,10 +4,10 @@ import { ArrowDown } from 'lucide-react';
 
 const heroImages = [
   { src: "/app_make/h_1.webp", link: "#about", label: "카페" },
-  { src: "/app_make/h_3.jpeg", link: "#philosophy", label: "필로소피" },
-  { src: "/app_make/cafe_3.webp", link: "#documents", label: "문서" },
-  { src: "/app_make/h_5.jpeg", link: "#experience", label: "경력" },
-  { src: "/app_make/h_4.jpeg", link: "#projects", label: "프로젝트" },
+  { src: "/app_make/cafe_3.webp", link: "#philosophy", label: "필로소피" },
+  { src: "/app_make/h_3.jpeg", link: "#documents", label: "문서" },
+  { src: "/app_make/h_4.jpeg", link: "#experience", label: "경력" },
+  { src: "/app_make/h_5.jpeg", link: "#projects", label: "프로젝트" },
   { src: "/app_make/h_2.webp", link: "#gallery", label: "갤러리" },
 ];
 
