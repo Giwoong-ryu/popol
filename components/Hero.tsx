@@ -1,129 +1,84 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Coffee, Lightbulb, FileText, Briefcase, FolderOpen } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
-interface HeroImage {
-  src: string;
-  title: string;
-}
-
-const heroImages: HeroImage[] = [
-  { src: "/app_make/h_1.webp", title: "카페 & 프로덕트" },
-  { src: "/app_make/h_2.webp", title: "운영 철학" },
-  { src: "/app_make/h_3.jpg", title: "문서 & 전문성" },
-  { src: "/app_make/h_4.webp", title: "경력 & 성과" },
-  { src: "/app_make/h_5.png", title: "프로젝트" },
+const heroImages = [
+  "/app_make/h_1.webp",
+  "/app_make/h_2.webp",
+  "/app_make/h_3.jpg",
+  "/app_make/h_4.webp",
+  "/app_make/h_5.png",
+  "/app_make/cafe_3.webp",
 ];
 
-interface NavLink {
-  title: string;
-  section: 'gallery' | 'philosophy' | 'documents' | 'experience' | 'projects';
-  icon: React.ReactNode;
-}
-
-const navLinks: NavLink[] = [
-  { title: "카페 & 프로덕트", section: 'gallery', icon: <Coffee className="w-5 h-5" /> },
-  { title: "운영 철학", section: 'philosophy', icon: <Lightbulb className="w-5 h-5" /> },
-  { title: "문서 & 전문성", section: 'documents', icon: <FileText className="w-5 h-5" /> },
-  { title: "경력 & 성과", section: 'experience', icon: <Briefcase className="w-5 h-5" /> },
-  { title: "프로젝트", section: 'projects', icon: <FolderOpen className="w-5 h-5" /> },
-];
-
-interface HeroProps {
-  onSectionClick?: (section: string) => void;
-}
-
-const Hero: React.FC<HeroProps> = ({ onSectionClick }) => {
-  const handleNavClick = (section: string) => {
-    if (onSectionClick) {
-      onSectionClick(section);
-    }
-  };
-
-  const ImageCard = ({ image, index, className }: { image: HeroImage; index: number; className: string }) => (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: index * 0.1, duration: 0.8 }}
-      className={`${className} relative rounded-2xl overflow-hidden`}
-    >
-      <img src={image.src} alt={image.title} className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent" />
-    </motion.div>
-  );
-
+const Hero: React.FC = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Mosaic Grid */}
-      <div className="absolute inset-0 grid grid-cols-6 grid-rows-6 gap-2 p-4">
-        {/* Large image - top left spanning 2x3 */}
-        <ImageCard image={heroImages[0]} index={0} className="col-span-3 row-span-4" />
-
-        {/* Top right - spanning 3x2 */}
-        <ImageCard image={heroImages[1]} index={1} className="col-span-3 row-span-2" />
-
-        {/* Middle right - spanning 2x2 */}
-        <ImageCard image={heroImages[2]} index={2} className="col-span-2 row-span-2" />
-
-        {/* Small right - spanning 1x2 */}
-        <ImageCard image={heroImages[3]} index={3} className="col-span-1 row-span-2" />
-
-        {/* Bottom spanning 3x2 */}
-        <ImageCard image={heroImages[4]} index={4} className="col-span-3 row-span-2" />
-      </div>
-
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/40 backdrop-blur-[2px] pointer-events-none" />
-
-      {/* Hero Text Overlay */}
-      <div className="container mx-auto px-6 z-10 text-center relative">
+    <section className="relative w-full py-20 bg-white">
+      <div className="container mx-auto px-6">
+        {/* Hero Text */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="pointer-events-none"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <span className="inline-block py-2 px-4 rounded-full bg-emerald-500/20 backdrop-blur-md text-emerald-100 text-sm font-semibold mb-6 border border-emerald-400/30">
-            Portfolio
-          </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] mb-6 drop-shadow-2xl">
-            현장에서 문제를 해결하고,<br className="hidden md:block" />
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            현장에서 문제를 해결하고,<br />
             매장을 움직이는 운영·기획 인재.
           </h1>
-          <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto font-medium drop-shadow-lg mb-12">
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             카페 운영 8년 + 신규 매장 기획 + AI 자동화 기반 업무 효율 전문가
           </p>
         </motion.div>
 
-        {/* Navigation Links */}
+        {/* Simple 3x2 Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto pointer-events-auto"
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto"
         >
-          {navLinks.map((link, index) => (
-            <motion.button
+          {heroImages.map((src, index) => (
+            <motion.div
               key={index}
-              onClick={() => handleNavClick(link.section)}
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white/10 backdrop-blur-md hover:bg-emerald-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center gap-2 border border-white/20 hover:border-emerald-400"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.1 * index, duration: 0.5 }}
+              className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
             >
-              {link.icon}
-              <span>{link.title}</span>
-            </motion.button>
+              <img
+                src={src}
+                alt={`Portfolio ${index + 1}`}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </motion.div>
           ))}
+        </motion.div>
+
+        {/* Author Info */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+          className="text-center mt-16"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+            류기웅 <span className="text-gray-600 font-normal">Ryu Gi-Woong</span>
+          </h2>
+          <p className="text-gray-600">
+            카페 운영 8년 경력 | 신규 매장 기획 전문 | AI 자동화 업무 효율화
+          </p>
         </motion.div>
       </div>
 
+      {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 pointer-events-none"
+        transition={{ delay: 1.2, duration: 1 }}
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
       >
-        <ArrowDown className="w-8 h-8 text-white/80 animate-bounce drop-shadow-lg" />
+        <ArrowDown className="w-6 h-6 text-gray-400 animate-bounce" />
       </motion.div>
     </section>
   );
