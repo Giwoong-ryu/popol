@@ -1,30 +1,90 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X } from 'lucide-react';
 import Hero from './components/Hero';
 import About from './components/About';
-import ProductContents from './components/ProductContents';
-import MarketStrategy from './components/MarketStrategy';
+import Projects from './components/Projects';
 import Philosophy from './components/Philosophy';
-import Automation from './components/Automation';
-import Education from './components/Education';
 import Gallery from './components/Gallery';
+import Experience from './components/Experience';
 import Documents from './components/Documents';
 import Footer from './components/Footer';
 
+type ModalSection = 'gallery' | 'philosophy' | 'documents' | 'experience' | 'projects' | null;
+
 const App: React.FC = () => {
+  const [activeModal, setActiveModal] = useState<ModalSection>(null);
+
+  const handleSectionClick = (section: string) => {
+    setActiveModal(section as ModalSection);
+  };
+
+  const closeModal = () => {
+    setActiveModal(null);
+  };
+
+  const renderModalContent = () => {
+    switch (activeModal) {
+      case 'gallery':
+        return <Gallery />;
+      case 'philosophy':
+        return <Philosophy />;
+      case 'documents':
+        return <Documents />;
+      case 'experience':
+        return <Experience />;
+      case 'projects':
+        return <Projects />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#F9FAFB] text-gray-900 font-sans selection:bg-emerald-100 selection:text-emerald-900">
       <main className="flex flex-col w-full">
-        <Hero />
+        <Hero onSectionClick={handleSectionClick} />
         <About />
-        <ProductContents />
-        <MarketStrategy />
-        <Philosophy />
-        <Automation />
-        <Education />
-        <Gallery />
-        <Documents />
       </main>
       <Footer />
+
+      {/* Modal Overlay */}
+      <AnimatePresence>
+        {activeModal && (
+          <div className="fixed inset-0 z-50 overflow-hidden">
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={closeModal}
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            />
+
+            {/* Modal Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{ type: 'spring', damping: 25 }}
+              className="relative h-full overflow-y-auto"
+            >
+              {/* Close Button */}
+              <button
+                onClick={closeModal}
+                className="fixed top-6 right-6 z-50 bg-white/90 backdrop-blur-md text-gray-900 p-3 rounded-full shadow-xl hover:bg-white hover:scale-110 transition-all"
+              >
+                <X className="w-6 h-6" />
+              </button>
+
+              {/* Content Container */}
+              <div className="min-h-screen bg-white">
+                {renderModalContent()}
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
 
       {/* Sticky Call to Action for Mobile */}
       <div className="fixed bottom-6 right-6 z-40 md:hidden">

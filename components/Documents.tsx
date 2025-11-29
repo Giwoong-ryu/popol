@@ -1,113 +1,178 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Download, ExternalLink } from 'lucide-react';
+import { FileText, TrendingUp, BookOpen, BarChart3, Target } from 'lucide-react';
 
-const documents = [
+interface Document {
+  image: string;
+  title: string;
+  category: string;
+  icon: React.ReactNode;
+}
+
+const marketDocuments: Document[] = [
   {
-    title: "포트폴리오 PDF",
-    description: "전체 포트폴리오를 PDF로 다운로드",
-    icon: <FileText className="w-8 h-8" />,
-    color: "bg-emerald-500",
-    downloadUrl: "#"
+    image: '/app_make/m_1.png',
+    title: '매출 분석 및 전략 수립',
+    category: 'Market Analysis',
+    icon: <TrendingUp className="w-5 h-5" />,
   },
   {
-    title: "자기소개서",
-    description: "상세 자기소개서 및 경력 기술서",
-    icon: <FileText className="w-8 h-8" />,
-    color: "bg-blue-500",
-    downloadUrl: "#"
+    image: '/app_make/m_2.png',
+    title: '상권 분석 보고서',
+    category: 'Market Research',
+    icon: <BarChart3 className="w-5 h-5" />,
   },
   {
-    title: "경력증명서",
-    description: "재직증명 및 경력 증빙 자료",
-    icon: <FileText className="w-8 h-8" />,
-    color: "bg-purple-500",
-    downloadUrl: "#"
+    image: '/app_make/m_3.png',
+    title: '경쟁사 벤치마킹',
+    category: 'Competitive Analysis',
+    icon: <Target className="w-5 h-5" />,
+  },
+  {
+    image: '/app_make/m_4.png',
+    title: 'SEO 최적화 전략',
+    category: 'Marketing Strategy',
+    icon: <TrendingUp className="w-5 h-5" />,
+  },
+  {
+    image: '/app_make/m_5.png',
+    title: '매출 데이터 분석',
+    category: 'Data Analysis',
+    icon: <BarChart3 className="w-5 h-5" />,
+  },
+];
+
+const educationDocuments: Document[] = [
+  {
+    image: '/app_make/edu_cover.jpg',
+    title: '커피 이론 교육자료',
+    category: 'Education',
+    icon: <BookOpen className="w-5 h-5" />,
+  },
+  {
+    image: '/app_make/edu_1.jpg',
+    title: '에스프레소 추출 가이드',
+    category: 'Training Manual',
+    icon: <FileText className="w-5 h-5" />,
+  },
+  {
+    image: '/app_make/edu_2.jpg',
+    title: '품질 관리 체크리스트',
+    category: 'QA Manual',
+    icon: <FileText className="w-5 h-5" />,
   },
 ];
 
 const Documents: React.FC = () => {
   return (
-    <section className="py-24 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="inline-flex items-center gap-2 bg-gray-200 text-gray-700 px-4 py-2 rounded-full mb-4">
-              <Download className="w-5 h-5" />
-              <span className="font-bold text-sm">DOCUMENTS</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              제출 서류 다운로드
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              포트폴리오와 관련 문서를 다운로드하여 상세히 확인하실 수 있습니다.
-            </p>
-          </motion.div>
-        </div>
-
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          {documents.map((doc, index) => (
-            <motion.a
-              key={index}
-              href={doc.downloadUrl}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group block"
-            >
-              <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-emerald-300">
-                <div className={`${doc.color} w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform`}>
-                  {doc.icon}
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
-                  {doc.title}
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  {doc.description}
-                </p>
-                <div className="flex items-center gap-2 text-emerald-600 font-semibold group-hover:gap-3 transition-all">
-                  <Download className="w-5 h-5" />
-                  <span>다운로드</span>
-                  <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-              </div>
-            </motion.a>
-          ))}
-        </div>
-
-        {/* Contact CTA */}
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-6 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-3xl p-12 text-white text-center"
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-12"
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            추가 자료가 필요하신가요?
-          </h3>
-          <p className="text-emerald-100 mb-8 text-lg">
-            언제든지 연락 주시면 필요하신 자료를 보내드리겠습니다.
+          <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Documents & Analysis</h2>
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">문서 & 전문성</h3>
+          <p className="text-gray-600 max-w-2xl">
+            데이터 기반 분석과 체계적인 교육 자료로 운영 효율을 극대화합니다.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:ryugw10@naver.com"
-              className="inline-flex items-center gap-2 bg-white text-emerald-600 px-8 py-4 rounded-full font-bold hover:bg-emerald-50 transition-colors shadow-lg"
-            >
-              <span>📧</span>
-              <span>이메일 보내기</span>
-            </a>
-            <a
-              href="tel:010-4838-5400"
-              className="inline-flex items-center gap-2 bg-emerald-700 text-white px-8 py-4 rounded-full font-bold hover:bg-emerald-800 transition-colors shadow-lg"
-            >
-              <span>📞</span>
-              <span>전화 상담하기</span>
-            </a>
+        </motion.div>
+
+        {/* Market Analysis Section */}
+        <div className="mb-16">
+          <h4 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+            <TrendingUp className="w-6 h-6 text-emerald-600" />
+            매출 분석 & 마케팅 전략
+          </h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {marketDocuments.map((doc, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group cursor-pointer"
+              >
+                <div className="relative h-64 overflow-hidden bg-gray-100">
+                  <img
+                    src={doc.image}
+                    alt={doc.title}
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute top-3 right-3 bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2">
+                    {doc.icon}
+                    {doc.category}
+                  </div>
+                </div>
+                <div className="p-5">
+                  <h5 className="font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">
+                    {doc.title}
+                  </h5>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Education Section */}
+        <div>
+          <h4 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+            <BookOpen className="w-6 h-6 text-emerald-600" />
+            교육 자료 & 매뉴얼
+          </h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {educationDocuments.map((doc, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: (marketDocuments.length + index) * 0.1, duration: 0.6 }}
+                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group cursor-pointer"
+              >
+                <div className="relative h-64 overflow-hidden bg-gray-100">
+                  <img
+                    src={doc.image}
+                    alt={doc.title}
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2">
+                    {doc.icon}
+                    {doc.category}
+                  </div>
+                </div>
+                <div className="p-5">
+                  <h5 className="font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">
+                    {doc.title}
+                  </h5>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Achievement Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
+          <div className="bg-white rounded-xl p-6 border-2 border-emerald-100">
+            <div className="text-4xl font-bold text-emerald-600 mb-2">150%</div>
+            <div className="text-gray-600">매출 회복 달성</div>
+            <div className="text-sm text-gray-500 mt-1">데이터 기반 전략 수립</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 border-2 border-emerald-100">
+            <div className="text-4xl font-bold text-emerald-600 mb-2">30%</div>
+            <div className="text-gray-600">교육 시간 단축</div>
+            <div className="text-sm text-gray-500 mt-1">체계적 매뉴얼 구축</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 border-2 border-emerald-100">
+            <div className="text-4xl font-bold text-emerald-600 mb-2">200%</div>
+            <div className="text-gray-600">검색 유입 증가</div>
+            <div className="text-sm text-gray-500 mt-1">SEO 최적화 전략</div>
           </div>
         </motion.div>
       </div>

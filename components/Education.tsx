@@ -3,17 +3,17 @@ import { motion } from 'framer-motion';
 import { BookOpen, GraduationCap } from 'lucide-react';
 
 const eduMaterials = [
-  { image: "app_make/edu_cover.jpg", title: "커피 이론 교육자료 표지" },
-  { image: "app_make/edu_1.jpg", title: "커피의 종류" },
-  { image: "app_make/edu_2.jpg", title: "로스팅의 특성 & 추출" },
-  { image: "app_make/edu_3.jpg", title: "그라인더 명칭 및 분쇄도 조절" },
-  { image: "app_make/edu_4.jpg", title: "커피머신 및 용품 명칭" },
-  { image: "app_make/edu_5.jpg", title: "에스프레소 추출 기본세팅" },
-  { image: "app_make/edu_6.jpg", title: "밀크 스티밍" },
-  { image: "app_make/edu_7.jpg", title: "운영 실무 사례" },
-  { image: "app_make/edu_8.jpg", title: "문제 해결 사례" },
-  { image: "app_make/edu_9.jpg", title: "추가 교육자료 1" },
-  { image: "app_make/edu_10.jpg", title: "추가 교육자료 2" },
+  { image: "/app_make/edu_cover.jpg", title: "커피 이론 교육자료 표지" },
+  { image: "/app_make/edu_1.jpg", title: "커피의 종류" },
+  { image: "/app_make/edu_2.jpg", title: "로스팅의 특성 & 추출" },
+  { image: "/app_make/edu_3.jpg", title: "그라인더 명칭 및 분쇄도 조절" },
+  { image: "/app_make/edu_4.jpg", title: "커피머신 및 용품 명칭" },
+  { image: "/app_make/edu_5.jpg", title: "에스프레소 추출 기본세팅" },
+  { image: "/app_make/edu_6.jpg", title: "밀크 스티밍" },
+  { image: "/app_make/edu_7.jpg", title: "운영 실무 사례" },
+  { image: "/app_make/edu_8.jpg", title: "문제 해결 사례" },
+  { image: "/app_make/edu_9.jpg", title: "추가 교육자료 1" },
+  { image: "/app_make/edu_10.jpg", title: "추가 교육자료 2" },
 ];
 
 const Education: React.FC = () => {

@@ -1,81 +1,89 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
-const heroImages = [
-  "app_make/h_1.webp",
-  "app_make/h_2.webp",
-  "app_make/h_3.jpg",
-  "app_make/h_4.webp",
-  "app_make/h_5.png",
+interface HeroImage {
+  src: string;
+  title: string;
+  section: 'gallery' | 'philosophy' | 'documents' | 'experience' | 'projects';
+}
+
+const heroImages: HeroImage[] = [
+  { src: "/app_make/h_1.webp", title: "카페 & 프로덕트", section: 'gallery' },
+  { src: "/app_make/h_2.webp", title: "운영 철학", section: 'philosophy' },
+  { src: "/app_make/h_3.jpg", title: "문서 & 전문성", section: 'documents' },
+  { src: "/app_make/h_4.webp", title: "경력 & 성과", section: 'experience' },
+  { src: "/app_make/h_5.png", title: "프로젝트", section: 'projects' },
 ];
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  onSectionClick?: (section: string) => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ onSectionClick }) => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const handleImageClick = (section: string) => {
+    if (onSectionClick) {
+      onSectionClick(section);
+    }
+  };
+
+  const ImageCard = ({ image, index, className }: { image: HeroImage; index: number; className: string }) => (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: index * 0.1, duration: 0.8 }}
+      className={`${className} relative rounded-2xl overflow-hidden cursor-pointer group`}
+      onMouseEnter={() => setHoveredIndex(index)}
+      onMouseLeave={() => setHoveredIndex(null)}
+      onClick={() => handleImageClick(image.section)}
+    >
+      <img src={image.src} alt={image.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent group-hover:from-black/60 group-hover:via-black/40 transition-all duration-300" />
+
+      {/* Hover overlay with title */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: hoveredIndex === index ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+        className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm"
+      >
+        <div className="text-center px-4">
+          <h3 className="text-white text-xl md:text-2xl font-bold drop-shadow-lg">
+            {image.title}
+          </h3>
+          <p className="text-white/80 text-sm mt-2">클릭하여 보기</p>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Mosaic Grid */}
       <div className="absolute inset-0 grid grid-cols-6 grid-rows-6 gap-2 p-4">
         {/* Large image - top left spanning 2x3 */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="col-span-3 row-span-4 relative rounded-2xl overflow-hidden"
-        >
-          <img src={heroImages[0]} alt="Hero 1" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent" />
-        </motion.div>
+        <ImageCard image={heroImages[0]} index={0} className="col-span-3 row-span-4" />
 
         {/* Top right - spanning 3x2 */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.1, duration: 0.8 }}
-          className="col-span-3 row-span-2 relative rounded-2xl overflow-hidden"
-        >
-          <img src={heroImages[1]} alt="Hero 2" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-transparent to-black/20" />
-        </motion.div>
+        <ImageCard image={heroImages[1]} index={1} className="col-span-3 row-span-2" />
 
         {/* Middle right - spanning 2x2 */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          className="col-span-2 row-span-2 relative rounded-2xl overflow-hidden"
-        >
-          <img src={heroImages[2]} alt="Hero 3" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/25 via-transparent to-black/15" />
-        </motion.div>
+        <ImageCard image={heroImages[2]} index={2} className="col-span-2 row-span-2" />
 
         {/* Small right - spanning 1x2 */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="col-span-1 row-span-2 relative rounded-2xl overflow-hidden"
-        >
-          <img src={heroImages[3]} alt="Hero 4" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-transparent" />
-        </motion.div>
+        <ImageCard image={heroImages[3]} index={3} className="col-span-1 row-span-2" />
 
         {/* Bottom spanning 3x2 */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="col-span-3 row-span-2 relative rounded-2xl overflow-hidden"
-        >
-          <img src={heroImages[4]} alt="Hero 5" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/35 via-black/15 to-transparent" />
-        </motion.div>
+        <ImageCard image={heroImages[4]} index={4} className="col-span-3 row-span-2" />
       </div>
 
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/40 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/40 backdrop-blur-[2px] pointer-events-none" />
 
       {/* Hero Text Overlay */}
-      <div className="container mx-auto px-6 z-10 text-center relative">
+      <div className="container mx-auto px-6 z-10 text-center relative pointer-events-none">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -98,7 +106,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 pointer-events-none"
       >
         <ArrowDown className="w-8 h-8 text-white/80 animate-bounce drop-shadow-lg" />
       </motion.div>
