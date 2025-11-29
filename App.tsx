@@ -15,8 +15,8 @@ const App: React.FC = () => {
       <Navigation />
       <main className="flex flex-col w-full">
         <Hero />
-        <About />
         <Gallery />
+        <About />
         <Philosophy />
         <Projects />
         <Experience />
