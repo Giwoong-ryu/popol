@@ -5,9 +5,9 @@ import { ArrowDown } from 'lucide-react';
 const heroImages = [
   { src: "/app_make/h_1.webp", link: "#about" },
   { src: "/app_make/h_2.webp", link: "#gallery" },
-  { src: "/app_make/h_3.jpg", link: "#philosophy" },
-  { src: "/app_make/h_4.webp", link: "#projects" },
-  { src: "/app_make/h_5.png", link: "#experience" },
+  { src: "/app_make/h_3.jpeg", link: "#philosophy" },
+  { src: "/app_make/h_4.jpeg", link: "#projects" },
+  { src: "/app_make/h_5.jpeg", link: "#experience" },
   { src: "/app_make/cafe_3.webp", link: "#documents" },
 ];
 
