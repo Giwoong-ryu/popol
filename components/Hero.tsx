@@ -34,35 +34,22 @@ const Hero: React.FC<HeroProps> = ({ onSectionClick }) => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: index * 0.1, duration: 0.8 }}
-      className={`${className} relative rounded-2xl overflow-hidden cursor-pointer group border-2 border-white/30 hover:border-emerald-400 transition-all duration-300 shadow-lg hover:shadow-2xl`}
+      className={`${className} relative rounded-2xl overflow-hidden group`}
       onMouseEnter={() => setHoveredIndex(index)}
       onMouseLeave={() => setHoveredIndex(null)}
-      onClick={() => handleImageClick(image.section)}
     >
-      <img src={image.src} alt={image.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent group-hover:from-black/60 group-hover:via-black/40 transition-all duration-300" />
+      <img src={image.src} alt={image.title} className="w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent" />
 
-      {/* Always visible title badge */}
-      <div className="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-md rounded-lg px-4 py-2 border border-white/30 group-hover:bg-emerald-600/90 transition-all duration-300">
-        <h3 className="text-white text-sm md:text-base font-bold drop-shadow-lg">
-          {image.title}
-        </h3>
-      </div>
-
-      {/* Hover overlay with title */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: hoveredIndex === index ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-        className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm"
+      {/* Clickable overlay button */}
+      <motion.button
+        onClick={() => handleImageClick(image.section)}
+        whileHover={{ scale: 1.05 }}
+        className="absolute bottom-4 left-4 right-4 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-between"
       >
-        <div className="text-center px-4">
-          <h3 className="text-white text-xl md:text-2xl font-bold drop-shadow-lg mb-2">
-            {image.title}
-          </h3>
-          <p className="text-white text-base font-semibold bg-emerald-600 px-4 py-2 rounded-full">클릭하여 보기 →</p>
-        </div>
-      </motion.div>
+        <span>{image.title}</span>
+        <span className="text-xl">→</span>
+      </motion.button>
     </motion.div>
   );
 

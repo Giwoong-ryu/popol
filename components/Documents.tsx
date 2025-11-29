@@ -23,7 +23,7 @@ const marketDocuments: Document[] = [
     icon: <BarChart3 className="w-5 h-5" />,
   },
   {
-    image: '/app_make/m-3.png',
+    image: '/app_make/m_3.png',
     title: '경쟁사 벤치마킹',
     category: 'Competitive Analysis',
     icon: <Target className="w-5 h-5" />,
