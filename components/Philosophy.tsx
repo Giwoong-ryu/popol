@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle2, AlertTriangle, Lightbulb } from 'lucide-react';
 import { PhilosophyItem } from '../types';
 
 const cases: PhilosophyItem[] = [
@@ -47,42 +46,24 @@ const Philosophy: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100 hover:border-emerald-200 transition-colors duration-300"
+              className="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-emerald-200 transition-colors duration-300"
             >
-              <h4 className="text-2xl font-bold text-gray-900 mb-6 pb-4 border-b border-gray-200">
+              <h4 className="text-2xl font-bold text-gray-900 mb-6">
                 {item.title}
               </h4>
 
-              <div className="space-y-6">
-                <div>
-                  <div className="flex items-center gap-2 text-red-500 font-bold mb-2">
-                    <AlertTriangle className="w-5 h-5" />
-                    <span>Problem</span>
-                  </div>
-                  <p className="text-gray-600 leading-relaxed bg-white p-4 rounded-xl shadow-sm">
-                    {item.problem}
-                  </p>
-                </div>
+              <div className="space-y-5 text-gray-700 leading-relaxed">
+                <p>
+                  <strong className="text-gray-900">문제:</strong> {item.problem}
+                </p>
 
-                <div>
-                  <div className="flex items-center gap-2 text-amber-500 font-bold mb-2">
-                    <Lightbulb className="w-5 h-5" />
-                    <span>Solution</span>
-                  </div>
-                  <p className="text-gray-600 leading-relaxed bg-white p-4 rounded-xl shadow-sm">
-                    {item.solution}
-                  </p>
-                </div>
+                <p>
+                  <strong className="text-gray-900">해결:</strong> {item.solution}
+                </p>
 
-                <div>
-                  <div className="flex items-center gap-2 text-emerald-600 font-bold mb-2">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <span>Result</span>
-                  </div>
-                  <p className="text-gray-900 font-medium bg-emerald-50 p-4 rounded-xl border border-emerald-100">
-                    {item.result}
-                  </p>
-                </div>
+                <p className="text-emerald-700 font-medium">
+                  <strong className="text-emerald-900">결과:</strong> {item.result}
+                </p>
               </div>
             </motion.div>
           ))}

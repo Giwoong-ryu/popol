@@ -145,7 +145,7 @@ const Projects: React.FC = () => {
                   <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover" />
                   <button
                     onClick={(e) => { e.stopPropagation(); setSelectedId(null); }}
-                    className="absolute top-4 right-4 bg-white/95 text-gray-900 p-2 rounded-full hover:bg-emerald-500 hover:text-white shadow-lg transition-all hover:scale-110"
+                    className="absolute top-4 right-4 bg-emerald-600 text-white p-2 rounded-full hover:bg-emerald-700 shadow-lg transition-all hover:scale-110"
                   >
                     <X className="w-5 h-5" />
                   </button>

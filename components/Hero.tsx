@@ -1,19 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Coffee, Lightbulb, FileText, Briefcase, FolderOpen } from 'lucide-react';
 
 interface HeroImage {
   src: string;
   title: string;
-  section: 'gallery' | 'philosophy' | 'documents' | 'experience' | 'projects';
 }
 
 const heroImages: HeroImage[] = [
-  { src: "/app_make/h_1.webp", title: "카페 & 프로덕트", section: 'gallery' },
-  { src: "/app_make/h_2.webp", title: "운영 철학", section: 'philosophy' },
-  { src: "/app_make/h_3.jpg", title: "문서 & 전문성", section: 'documents' },
-  { src: "/app_make/h_4.webp", title: "경력 & 성과", section: 'experience' },
-  { src: "/app_make/h_5.png", title: "프로젝트", section: 'projects' },
+  { src: "/app_make/h_1.webp", title: "카페 & 프로덕트" },
+  { src: "/app_make/h_2.webp", title: "운영 철학" },
+  { src: "/app_make/h_3.jpg", title: "문서 & 전문성" },
+  { src: "/app_make/h_4.webp", title: "경력 & 성과" },
+  { src: "/app_make/h_5.png", title: "프로젝트" },
+];
+
+interface NavLink {
+  title: string;
+  section: 'gallery' | 'philosophy' | 'documents' | 'experience' | 'projects';
+  icon: React.ReactNode;
+}
+
+const navLinks: NavLink[] = [
+  { title: "카페 & 프로덕트", section: 'gallery', icon: <Coffee className="w-5 h-5" /> },
+  { title: "운영 철학", section: 'philosophy', icon: <Lightbulb className="w-5 h-5" /> },
+  { title: "문서 & 전문성", section: 'documents', icon: <FileText className="w-5 h-5" /> },
+  { title: "경력 & 성과", section: 'experience', icon: <Briefcase className="w-5 h-5" /> },
+  { title: "프로젝트", section: 'projects', icon: <FolderOpen className="w-5 h-5" /> },
 ];
 
 interface HeroProps {
@@ -21,9 +34,7 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ onSectionClick }) => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-  const handleImageClick = (section: string) => {
+  const handleNavClick = (section: string) => {
     if (onSectionClick) {
       onSectionClick(section);
     }
@@ -34,22 +45,10 @@ const Hero: React.FC<HeroProps> = ({ onSectionClick }) => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: index * 0.1, duration: 0.8 }}
-      className={`${className} relative rounded-2xl overflow-hidden group`}
-      onMouseEnter={() => setHoveredIndex(index)}
-      onMouseLeave={() => setHoveredIndex(null)}
+      className={`${className} relative rounded-2xl overflow-hidden`}
     >
       <img src={image.src} alt={image.title} className="w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent" />
-
-      {/* Clickable overlay button */}
-      <motion.button
-        onClick={() => handleImageClick(image.section)}
-        whileHover={{ scale: 1.05 }}
-        className="absolute bottom-4 left-4 right-4 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-between"
-      >
-        <span>{image.title}</span>
-        <span className="text-xl">→</span>
-      </motion.button>
     </motion.div>
   );
 
@@ -77,11 +76,12 @@ const Hero: React.FC<HeroProps> = ({ onSectionClick }) => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/40 backdrop-blur-[2px] pointer-events-none" />
 
       {/* Hero Text Overlay */}
-      <div className="container mx-auto px-6 z-10 text-center relative pointer-events-none">
+      <div className="container mx-auto px-6 z-10 text-center relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
+          className="pointer-events-none"
         >
           <span className="inline-block py-2 px-4 rounded-full bg-emerald-500/20 backdrop-blur-md text-emerald-100 text-sm font-semibold mb-6 border border-emerald-400/30">
             Portfolio
@@ -90,9 +90,30 @@ const Hero: React.FC<HeroProps> = ({ onSectionClick }) => {
             현장에서 문제를 해결하고,<br className="hidden md:block" />
             매장을 움직이는 운영·기획 인재.
           </h1>
-          <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto font-medium drop-shadow-lg">
+          <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto font-medium drop-shadow-lg mb-12">
             카페 운영 8년 + 신규 매장 기획 + AI 자동화 기반 업무 효율 전문가
           </p>
+        </motion.div>
+
+        {/* Navigation Links */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+          className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto pointer-events-auto"
+        >
+          {navLinks.map((link, index) => (
+            <motion.button
+              key={index}
+              onClick={() => handleNavClick(link.section)}
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white/10 backdrop-blur-md hover:bg-emerald-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center gap-2 border border-white/20 hover:border-emerald-400"
+            >
+              {link.icon}
+              <span>{link.title}</span>
+            </motion.button>
+          ))}
         </motion.div>
       </div>
 
