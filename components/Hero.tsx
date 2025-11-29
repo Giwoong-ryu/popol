@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
 const heroImages = [
-  { src: "/app_make/h_1.webp", link: "#about", label: "카페" },
-  { src: "/app_make/cafe_3.webp", link: "#philosophy", label: "필로소피" },
-  { src: "/app_make/h_3.jpeg", link: "#documents", label: "문서" },
-  { src: "/app_make/h_4.jpeg", link: "#experience", label: "경력" },
-  { src: "/app_make/h_5.jpeg", link: "#projects", label: "프로젝트" },
-  { src: "/app_make/h_2.webp", link: "#gallery", label: "갤러리" },
+  { src: "/app_make/m_1.png", link: "#franchise-value", label: "비용 절감" },
+  { src: "/app_make/m_2.png", link: "#about", label: "데이터 분석" },
+  { src: "/app_make/edu_cover.jpg", link: "#projects", label: "교육 체계화" },
+  { src: "/app_make/w_1.png", link: "#first-90-days", label: "90일 플랜" },
+  { src: "/app_make/cafe_5.webp", link: "#philosophy", label: "브랜드 구축" },
+  { src: "/app_make/cafe_3.webp", link: "#experience", label: "운영 노하우" },
 ];
 
 const Hero: React.FC = () => {
@@ -23,11 +23,11 @@ const Hero: React.FC = () => {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-            현장에서 문제를 해결하고,<br />
-            매장을 움직이는 운영·기획 인재.
+            프랜차이즈 본부의<br />
+            운영 비용을 줄이는 실무 전문가
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            카페 총경력 8년 (운영 경력 5년) + 신규 매장 기획 + AI 활용 가능
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            데이터 분석으로 매출 150% 증대 · 체계화로 인건비 30% 절감 · 자동화로 업무 시간 50% 단축
           </p>
         </motion.div>
 
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
             유기웅 <span className="text-gray-600 font-normal">Ryu Gi-Woong</span>
           </h2>
           <p className="text-gray-600">
-            카페 총경력 8년 (운영 경력 5년) | 신규 매장 기획 전문 | AI 활용 가능
+            프랜차이즈 현장 경력 8년 | 매장 운영 비용 절감 전문 | 데이터 기반 의사결정
           </p>
         </motion.div>
       </div>

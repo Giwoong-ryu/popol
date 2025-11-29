@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { User, Coffee, Map, BarChart, Users, FileText } from 'lucide-react';
 
 const highlights = [
-  { icon: <Coffee className="w-6 h-6" />, title: "카페 총경력 8년 (운영 경력 5년)", desc: "메가커피 매니저, 개인 카페 총괄" },
-  { icon: <Map className="w-6 h-6" />, title: "신규 매장 구축", desc: "상권 분석부터 인테리어 공정 관리까지" },
-  { icon: <BarChart className="w-6 h-6" />, title: "매출 성장", desc: "전략적 운영으로 매출 회복 및 성장" },
-  { icon: <Users className="w-6 h-6" />, title: "교육 및 관리", desc: "직원 교육, 스케줄링, CS 관리" },
-  { icon: <FileText className="w-6 h-6" />, title: "매뉴얼 제작", desc: "에스프레소 추출 및 운영 매뉴얼화" },
-  { icon: <User className="w-6 h-6" />, title: "브랜딩", desc: "Green Wave 등 콘셉트 기획 및 로고 디자인" },
+  { icon: <BarChart className="w-6 h-6" />, title: "매출 150% 증대", desc: "데이터 분석으로 6개월 만에 매출 회복" },
+  { icon: <Users className="w-6 h-6" />, title: "인건비 30% 절감", desc: "시간대별 최적 인력 배치로 비용 효율화" },
+  { icon: <FileText className="w-6 h-6" />, title: "교육 시간 70% 단축", desc: "체계적 매뉴얼로 신입 교육 기간 단축" },
+  { icon: <Coffee className="w-6 h-6" />, title: "품질 표준화", desc: "매뉴얼로 지점 간 맛 편차 제거" },
+  { icon: <Map className="w-6 h-6" />, title: "신규 매장 구축", desc: "상권 분석부터 오픈까지 전 과정 관리" },
+  { icon: <User className="w-6 h-6" />, title: "AI 자동화", desc: "반복 업무 80% 자동화로 업무 효율 증대" },
 ];
 
 const About: React.FC = () => {
@@ -56,20 +56,28 @@ const About: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="flex flex-col justify-center"
           >
-            <p className="text-xl md:text-2xl font-bold text-gray-900 mb-6 leading-relaxed">
-              "혼자만 잘하는 플레이어가 아닌,<br />
-              시스템을 만드는 리더입니다."
-            </p>
+            <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6 rounded-r-lg mb-8">
+              <p className="text-xl md:text-2xl font-bold text-gray-900 mb-4 leading-relaxed">
+                프랜차이즈 본부에게 전하는 메시지
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                "가맹점이 성공해야 본부도 성공합니다.<br />
+                저는 <strong>현장에서 검증된 솔루션</strong>으로<br />
+                가맹점 운영 비용을 줄이고 성공률을 높입니다."
+              </p>
+            </div>
+
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed mb-8">
               <p>
-                현장의 소리를 데이터로 분석하고, AI 도구를 활용하여 업무 효율을 개선합니다.
+                <strong className="text-gray-900">8년 현장 경험</strong>을 바탕으로 프랜차이즈 본부가 직면한 문제를 이해합니다.
               </p>
               <p>
-                단순한 매장 관리를 넘어 브랜드의 성장을 기획합니다.
+                <strong className="text-gray-900">데이터 분석</strong>으로 매출 증대 방법을 찾고, <strong className="text-gray-900">체계화</strong>로 인건비를 절감하며,
+                <strong className="text-gray-900"> AI 자동화</strong>로 업무 효율을 높입니다.
               </p>
               <p>
-                총 8년의 카페 경력(운영 경력 5년)을 바탕으로 신규 매장 구축부터 매출 회복,
-                직원 교육까지 매장 운영의 전 과정을 책임집니다.
+                단순히 카페를 운영하는 것이 아닌, <strong className="text-gray-900">시스템을 만들고 매뉴얼을 구축</strong>하여
+                가맹점이 혼자서도 성공할 수 있도록 돕습니다.
               </p>
             </div>
 
