@@ -8,7 +8,7 @@ const projects: Project[] = [
     id: 'products',
     title: '1300+ SNS 콘텐츠 & 시그니처 메뉴 개발',
     category: 'Product & Contents',
-    image: 'app_make/product_1.jpg',
+    image: '/app_make/product_1.jpg',
     icon: <Coffee className="w-5 h-5"/>,
     description: [
       '1300+ SNS 콘텐츠 기획 및 제작으로 브랜드 인지도 구축',
@@ -20,7 +20,7 @@ const projects: Project[] = [
     id: 'market-strategy',
     title: '매출 분석 & 마케팅 전략 수립',
     category: 'Market Strategy',
-    image: 'app_make/m_1.png',
+    image: '/app_make/m_1.png',
     icon: <TrendingUp className="w-5 h-5"/>,
     description: [
       '일 단위 매출 데이터 분석으로 150% 매출 회복 달성',
@@ -32,7 +32,7 @@ const projects: Project[] = [
     id: 'education',
     title: '에스프레소 추출 매뉴얼 제작',
     category: 'Education & QA',
-    image: 'app_make/edu_cover.jpg',
+    image: '/app_make/edu_cover.jpg',
     icon: <BookOpen className="w-5 h-5"/>,
     description: [
       '매장 전용 추출 기준 확립 (도징량, 추출 시간, 수율)',
@@ -44,7 +44,7 @@ const projects: Project[] = [
     id: 'branding',
     title: '브랜드 콘셉트 개발 (GREEN WAVE)',
     category: 'Branding',
-    image: 'app_make/cafe_5.webp',
+    image: '/app_make/cafe_5.webp',
     icon: <PenTool className="w-5 h-5"/>,
     description: [
       '자연 친화적 색감 및 "도심 속 휴식" 콘셉트 기획',
@@ -56,7 +56,7 @@ const projects: Project[] = [
     id: 'ai-automation',
     title: 'AI 자동화 & 업무 효율화',
     category: 'AI & Automation',
-    image: 'app_make/w_1.png',
+    image: '/app_make/w_1.png',
     icon: <Cpu className="w-5 h-5"/>,
     description: [
       'n8n 자동화 워크플로우 구축으로 반복 업무 80% 감소',
@@ -68,7 +68,7 @@ const projects: Project[] = [
     id: 'operation',
     title: '실전 운영 노하우 (8년 경력)',
     category: 'Operations',
-    image: 'app_make/cafe_10.webp',
+    image: '/app_make/cafe_10.webp',
     icon: <Coffee className="w-5 h-5"/>,
     description: [
       '8년 실무 기반의 탄탄한 운영 능력',

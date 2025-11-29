@@ -9,11 +9,11 @@ interface HeroImage {
 }
 
 const heroImages: HeroImage[] = [
-  { src: "app_make/h_1.webp", title: "카페 & 프로덕트", section: 'gallery' },
-  { src: "app_make/h_2.webp", title: "운영 철학", section: 'philosophy' },
-  { src: "app_make/h_3.jpg", title: "문서 & 전문성", section: 'documents' },
-  { src: "app_make/h_4.webp", title: "경력 & 성과", section: 'experience' },
-  { src: "app_make/h_5.png", title: "프로젝트", section: 'projects' },
+  { src: "/app_make/h_1.webp", title: "카페 & 프로덕트", section: 'gallery' },
+  { src: "/app_make/h_2.webp", title: "운영 철학", section: 'philosophy' },
+  { src: "/app_make/h_3.jpg", title: "문서 & 전문성", section: 'documents' },
+  { src: "/app_make/h_4.webp", title: "경력 & 성과", section: 'experience' },
+  { src: "/app_make/h_5.png", title: "프로젝트", section: 'projects' },
 ];
 
 interface HeroProps {

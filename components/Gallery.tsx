@@ -2,13 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const cafeImages = [
-  "app_make/cafe_3.webp",
-  "app_make/cafe_5.webp",
-  "app_make/cafe_6.webp",
-  "app_make/cafe_7.webp",
-  "app_make/cafe_8.webp",
-  "app_make/cafe_9.webp",
-  "app_make/cafe_10.webp",
+  "/app_make/cafe_3.webp",
+  "/app_make/cafe_5.webp",
+  "/app_make/cafe_6.webp",
+  "/app_make/cafe_7.webp",
+  "/app_make/cafe_8.webp",
+  "/app_make/cafe_9.webp",
+  "/app_make/cafe_10.webp",
 ];
 
 const Gallery: React.FC = () => {

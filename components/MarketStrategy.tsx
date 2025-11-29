@@ -4,35 +4,35 @@ import { TrendingUp, MapPin, Target, BarChart } from 'lucide-react';
 
 const strategies = [
   {
-    image: "app_make/m_1.png",
+    image: "/app_make/m_1.png",
     icon: <TrendingUp className="w-6 h-6" />,
     title: "매출 분석 및 전략 수립",
     description: "데이터 기반 매출 분석으로 전월 대비 150% 매출 회복 달성",
     tags: ["매출 데이터", "배달 최적화", "운영 전략"]
   },
   {
-    image: "app_make/m_2.png",
+    image: "/app_make/m_2.png",
     icon: <MapPin className="w-6 h-6" />,
     title: "상권 분석 및 입지 선정",
     description: "경쟁 매장 20곳 분석을 통한 신규 매장 입지 전략 수립",
     tags: ["상권 분석", "경쟁사 조사", "타깃 설정"]
   },
   {
-    image: "app_make/m-3.png",
+    image: "/app_make/m-3.png",
     icon: <Target className="w-6 h-6" />,
     title: "네이버 플레이스 SEO 전략",
     description: "키워드 최적화로 검색 유입 200% 증가 및 리뷰 관리 시스템 구축",
     tags: ["SEO 최적화", "리뷰 관리", "온라인 마케팅"]
   },
   {
-    image: "app_make/m_4.png",
+    image: "/app_make/m_4.png",
     icon: <BarChart className="w-6 h-6" />,
     title: "운영 데이터 관리",
     description: "매출/재고/스케줄 통합 관리로 업무 효율 30% 향상",
     tags: ["데이터 관리", "재고 최적화", "엑셀 자동화"]
   },
   {
-    image: "app_make/m_5.png",
+    image: "/app_make/m_5.png",
     icon: <BarChart className="w-6 h-6" />,
     title: "신규 매장 입점 기획서",
     description: "상권 분석부터 예산 계획까지 완성도 높은 입점 제안서 작성",

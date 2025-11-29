@@ -67,7 +67,7 @@ const Automation: React.FC = () => {
           </div>
 
           <img
-            src="app_make/w_1.png"
+            src="/app_make/w_1.png"
             alt="n8n Workflow"
             className="w-full h-auto rounded-xl mt-8"
           />
