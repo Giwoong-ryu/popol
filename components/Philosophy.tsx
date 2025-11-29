@@ -25,7 +25,7 @@ const cases: PhilosophyItem[] = [
 
 const Philosophy: React.FC = () => {
   return (
-    <section className="py-24 bg-white relative z-10">
+    <section id="philosophy" className="py-24 bg-white relative z-10">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">Philosophy & Case Study</h2>
