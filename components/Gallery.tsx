@@ -27,7 +27,8 @@ const cafeImages = [
 ];
 
 const Gallery: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(2);
+  const [cafeIndex, setCafeIndex] = useState(2);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev > 0 ? prev - 1 : productImages.length - 1));
@@ -37,15 +38,31 @@ const Gallery: React.FC = () => {
     setCurrentIndex((prev) => (prev < productImages.length - 1 ? prev + 1 : 0));
   };
 
+  const handleCafePrev = () => {
+    setCafeIndex((prev) => (prev > 0 ? prev - 1 : cafeImages.length - 1));
+  };
+
+  const handleCafeNext = () => {
+    setCafeIndex((prev) => (prev < cafeImages.length - 1 ? prev + 1 : 0));
+  };
+
+  const getImageIndex = (offset: number, total: number, current: number) => {
+    const index = current + offset;
+    if (index < 0) return total + index;
+    if (index >= total) return index - total;
+    return index;
+  };
+
   return (
     <section id="gallery" className="py-12 bg-white">
       <div className="container mx-auto px-6">
         {/* Photography Credit Banner */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-50 border border-emerald-200 rounded-full">
-            <Coffee className="w-4 h-4 text-emerald-600" />
-            <span className="text-sm font-semibold text-emerald-800">
-              기획·촬영·편집 All In-house Production
+          <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-emerald-50 to-teal-50 border-2 border-emerald-300 rounded-full shadow-md">
+            <Coffee className="w-5 h-5 text-emerald-600" />
+            <span className="text-base font-bold text-emerald-900">
+              기획부터 촬영, 편집까지
+              <span className="ml-2 px-3 py-1 bg-emerald-600 text-white rounded-full text-sm">직접 제작</span>
             </span>
           </div>
         </div>
@@ -53,26 +70,43 @@ const Gallery: React.FC = () => {
         {/* Product Carousel Section */}
         <div className="mb-12">
           <div className="text-center mb-8">
-            <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Products</h2>
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">제품소개</h3>
+            <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">SNS Contents</h2>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">SNS 게시물</h3>
           </div>
 
-          {/* Carousel Layout */}
-          <div className="relative max-w-6xl mx-auto">
+          {/* Carousel Layout - 5 visible items */}
+          <div className="relative max-w-7xl mx-auto">
             <div className="overflow-hidden py-8">
-              <div className="flex items-center justify-center gap-4 md:gap-6">
+              <div className="flex items-center justify-center gap-3 md:gap-4">
+                {/* Far Left Item */}
+                <motion.div
+                  key={`far-left-${currentIndex}`}
+                  initial={{ opacity: 0, scale: 0.85 }}
+                  animate={{ opacity: 0.5, scale: 0.85 }}
+                  transition={{ duration: 0.3 }}
+                  className="hidden lg:block flex-shrink-0 w-40 xl:w-48"
+                >
+                  <div className="relative rounded-xl overflow-hidden shadow-sm aspect-square">
+                    <img
+                      src={productImages[getImageIndex(-2, productImages.length, currentIndex)]}
+                      alt="Product"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </motion.div>
+
                 {/* Left Item */}
                 <motion.div
                   key={`left-${currentIndex}`}
-                  initial={{ opacity: 0, scale: 0.7 }}
-                  animate={{ opacity: 0.6, scale: 0.7 }}
+                  initial={{ opacity: 0, scale: 0.92 }}
+                  animate={{ opacity: 0.7, scale: 0.92 }}
                   transition={{ duration: 0.3 }}
-                  className="hidden md:block flex-shrink-0 w-48 lg:w-64"
+                  className="hidden md:block flex-shrink-0 w-44 lg:w-52 xl:w-56"
                 >
                   <div className="relative rounded-xl overflow-hidden shadow-md aspect-square">
                     <img
-                      src={productImages[currentIndex > 0 ? currentIndex - 1 : productImages.length - 1]}
-                      alt="Previous product"
+                      src={productImages[getImageIndex(-1, productImages.length, currentIndex)]}
+                      alt="Product"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -82,9 +116,9 @@ const Gallery: React.FC = () => {
                 <motion.div
                   key={`center-${currentIndex}`}
                   initial={{ opacity: 0, scale: 0.95, y: 10 }}
-                  animate={{ opacity: 1, scale: 1.05, y: -5 }}
+                  animate={{ opacity: 1, scale: 1.0, y: -5 }}
                   transition={{ duration: 0.3 }}
-                  className="flex-shrink-0 w-64 md:w-72 lg:w-96 z-10"
+                  className="flex-shrink-0 w-56 md:w-60 lg:w-64 xl:w-72 z-10"
                 >
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-square border-4 border-emerald-100">
                     <img
@@ -99,15 +133,32 @@ const Gallery: React.FC = () => {
                 {/* Right Item */}
                 <motion.div
                   key={`right-${currentIndex}`}
-                  initial={{ opacity: 0, scale: 0.7 }}
-                  animate={{ opacity: 0.6, scale: 0.7 }}
+                  initial={{ opacity: 0, scale: 0.92 }}
+                  animate={{ opacity: 0.7, scale: 0.92 }}
                   transition={{ duration: 0.3 }}
-                  className="hidden md:block flex-shrink-0 w-48 lg:w-64"
+                  className="hidden md:block flex-shrink-0 w-44 lg:w-52 xl:w-56"
                 >
                   <div className="relative rounded-xl overflow-hidden shadow-md aspect-square">
                     <img
-                      src={productImages[currentIndex < productImages.length - 1 ? currentIndex + 1 : 0]}
-                      alt="Next product"
+                      src={productImages[getImageIndex(1, productImages.length, currentIndex)]}
+                      alt="Product"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Far Right Item */}
+                <motion.div
+                  key={`far-right-${currentIndex}`}
+                  initial={{ opacity: 0, scale: 0.85 }}
+                  animate={{ opacity: 0.5, scale: 0.85 }}
+                  transition={{ duration: 0.3 }}
+                  className="hidden lg:block flex-shrink-0 w-40 xl:w-48"
+                >
+                  <div className="relative rounded-xl overflow-hidden shadow-sm aspect-square">
+                    <img
+                      src={productImages[getImageIndex(2, productImages.length, currentIndex)]}
+                      alt="Product"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -156,24 +207,129 @@ const Gallery: React.FC = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900">현장의 순간들</h3>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {cafeImages.slice(0, 4).map((src, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.03 }}
-                className="rounded-xl overflow-hidden group relative shadow-md hover:shadow-xl transition-all duration-300 aspect-square"
-              >
-                <img
-                  src={src}
-                  alt={`Cafe Gallery ${index + 1}`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          {/* Cafe Carousel Layout - 5 visible items */}
+          <div className="relative max-w-7xl mx-auto">
+            <div className="overflow-hidden py-8">
+              <div className="flex items-center justify-center gap-3 md:gap-4">
+                {/* Far Left Item */}
+                <motion.div
+                  key={`cafe-far-left-${cafeIndex}`}
+                  initial={{ opacity: 0, scale: 0.85 }}
+                  animate={{ opacity: 0.5, scale: 0.85 }}
+                  transition={{ duration: 0.3 }}
+                  className="hidden lg:block flex-shrink-0 w-40 xl:w-48"
+                >
+                  <div className="relative rounded-xl overflow-hidden shadow-sm aspect-square">
+                    <img
+                      src={cafeImages[getImageIndex(-2, cafeImages.length, cafeIndex)]}
+                      alt="Cafe"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Left Item */}
+                <motion.div
+                  key={`cafe-left-${cafeIndex}`}
+                  initial={{ opacity: 0, scale: 0.92 }}
+                  animate={{ opacity: 0.7, scale: 0.92 }}
+                  transition={{ duration: 0.3 }}
+                  className="hidden md:block flex-shrink-0 w-44 lg:w-52 xl:w-56"
+                >
+                  <div className="relative rounded-xl overflow-hidden shadow-md aspect-square">
+                    <img
+                      src={cafeImages[getImageIndex(-1, cafeImages.length, cafeIndex)]}
+                      alt="Cafe"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Center Item (Active) */}
+                <motion.div
+                  key={`cafe-center-${cafeIndex}`}
+                  initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                  animate={{ opacity: 1, scale: 1.0, y: -5 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex-shrink-0 w-56 md:w-60 lg:w-64 xl:w-72 z-10"
+                >
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-square border-4 border-emerald-100">
+                    <img
+                      src={cafeImages[cafeIndex]}
+                      alt={`Cafe ${cafeIndex + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                  </div>
+                </motion.div>
+
+                {/* Right Item */}
+                <motion.div
+                  key={`cafe-right-${cafeIndex}`}
+                  initial={{ opacity: 0, scale: 0.92 }}
+                  animate={{ opacity: 0.7, scale: 0.92 }}
+                  transition={{ duration: 0.3 }}
+                  className="hidden md:block flex-shrink-0 w-44 lg:w-52 xl:w-56"
+                >
+                  <div className="relative rounded-xl overflow-hidden shadow-md aspect-square">
+                    <img
+                      src={cafeImages[getImageIndex(1, cafeImages.length, cafeIndex)]}
+                      alt="Cafe"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Far Right Item */}
+                <motion.div
+                  key={`cafe-far-right-${cafeIndex}`}
+                  initial={{ opacity: 0, scale: 0.85 }}
+                  animate={{ opacity: 0.5, scale: 0.85 }}
+                  transition={{ duration: 0.3 }}
+                  className="hidden lg:block flex-shrink-0 w-40 xl:w-48"
+                >
+                  <div className="relative rounded-xl overflow-hidden shadow-sm aspect-square">
+                    <img
+                      src={cafeImages[getImageIndex(2, cafeImages.length, cafeIndex)]}
+                      alt="Cafe"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={handleCafePrev}
+              className="absolute left-0 top-1/2 -translate-y-1/2 p-3 bg-white/90 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-20"
+              aria-label="Previous cafe photo"
+            >
+              <ChevronLeft className="w-6 h-6 text-gray-700" />
+            </button>
+            <button
+              onClick={handleCafeNext}
+              className="absolute right-0 top-1/2 -translate-y-1/2 p-3 bg-white/90 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-20"
+              aria-label="Next cafe photo"
+            >
+              <ChevronRight className="w-6 h-6 text-gray-700" />
+            </button>
+
+            {/* Indicators */}
+            <div className="flex justify-center gap-2 mt-6">
+              {cafeImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCafeIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === cafeIndex
+                      ? 'bg-emerald-600 w-8'
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                  aria-label={`Go to cafe photo ${index + 1}`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </motion.div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
