@@ -2,7 +2,6 @@ import React from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
 import Gallery from './components/Gallery';
-import Philosophy from './components/Philosophy';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Documents from './components/Documents';
@@ -18,7 +17,6 @@ const App: React.FC = () => {
       <main className="flex flex-col w-full">
         <Hero />
         <About />
-        <Philosophy />
         <Projects />
         <Experience />
         <Documents />

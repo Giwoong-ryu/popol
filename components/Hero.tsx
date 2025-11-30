@@ -8,8 +8,8 @@ const heroImages = [
   { src: getAssetPath("app_make/m_2.png"), link: "#about", label: "소개" },
   { src: getAssetPath("app_make/edu_cover.jpg"), link: "#projects", label: "산출물" },
   { src: getAssetPath("app_make/w_1.png"), link: "#experience", label: "경력" },
-  { src: getAssetPath("app_make/cafe_5.webp"), link: "#philosophy", label: "철학" },
   { src: getAssetPath("app_make/cafe_3.webp"), link: "#documents", label: "교육 자료" },
+  { src: getAssetPath("app_make/cafe_5.webp"), link: "#gallery", label: "갤러리" },
 ];
 
 const Hero: React.FC = () => {

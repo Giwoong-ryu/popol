@@ -181,28 +181,18 @@ const Documents: React.FC = () => {
           </div>
         </div>
 
-        {/* Achievement Stats */}
+        {/* Summary */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="mt-16 pt-8 border-t-2 border-gray-200"
         >
-          <div className="bg-white rounded-xl p-6 border border-gray-200">
-            <div className="text-2xl font-bold text-emerald-600 mb-2">47페이지</div>
-            <div className="text-gray-700 font-medium">커피 이론 교육자료</div>
-            <div className="text-sm text-gray-500 mt-1">2년간 실제 사용하며 검증</div>
-          </div>
-          <div className="bg-white rounded-xl p-6 border border-gray-200">
-            <div className="text-2xl font-bold text-emerald-600 mb-2">11개</div>
-            <div className="text-gray-700 font-medium">교육용 매뉴얼 문서</div>
-            <div className="text-sm text-gray-500 mt-1">추출, 스티밍, 체크리스트 등</div>
-          </div>
-          <div className="bg-white rounded-xl p-6 border border-gray-200">
-            <div className="text-2xl font-bold text-emerald-600 mb-2">4개</div>
-            <div className="text-gray-700 font-medium">상권 분석 문서</div>
-            <div className="text-sm text-gray-500 mt-1">신규 오픈 준비 자료</div>
-          </div>
+          <p className="text-center text-gray-700 text-lg">
+            <strong className="text-emerald-600">커피 이론 교육자료 47페이지</strong> (2년간 자활센터 실사용) |
+            <strong className="text-emerald-600"> 교육 매뉴얼 11개</strong> |
+            <strong className="text-emerald-600"> 상권 분석 문서 4개</strong>
+          </p>
         </motion.div>
       </div>
 
