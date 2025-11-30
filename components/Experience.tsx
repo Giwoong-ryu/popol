@@ -13,18 +13,18 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    company: '신규 매장 구축 & 매출 회복 프로젝트',
+    company: '신규 매장 구축 & 운영 개선 프로젝트',
     position: '카페사업단 팀장 | 부산동래지역자활센터',
     period: '2023.02 ~ 2025.01',
     location: '부산',
     responsibilities: [
-      '🎯 프랜차이즈 인사이트: 초기 매출 부진 매장을 데이터로 회복시키는 법',
-      '📊 핵심 노하우: 배달앱 알고리즘 이해 → 노출 최적화 → 6개월 만에 매출 150% 회복',
-      '👥 교육 체계화: 신입 적응 기간을 2주→5일로 단축하여 운영 효율 극대화',
+      '신규 매장 3곳 오픈 및 안정화 과정 총괄',
+      '배달앱 운영 최적화를 통한 매출 개선 전략 수립 및 실행',
+      '신입 직원 교육 체계 구축 및 운영 매뉴얼 정비',
     ],
     achievements: [
-      '본부 적용 방안: 부진 가맹점 조기 발견 시스템 구축 → 데이터 기반 개선안 제시',
-      '핵심 가치: 가맹점이 스스로 매출을 회복할 수 있는 가이드라인 제공',
+      '본부 적용 방안: 매장 운영 데이터 분석을 통한 개선 포인트 도출 체계 구축',
+      '핵심 가치: 가맹점이 자체적으로 운영 상태를 점검할 수 있는 체크리스트 개발',
     ],
   },
   {
@@ -32,9 +32,9 @@ const experiences: ExperienceItem[] = [
     position: '매니저 | 메가커피',
     period: '2022.08 ~ 2023.02',
     responsibilities: [
-      '🎯 프랜차이즈 인사이트: 체계화된 운영 매뉴얼이 가맹점 성공의 핵심',
-      '📋 핵심 학습: 표준화된 재고 관리, 발주 시스템, 품질 관리 프로세스 이해',
-      '⚡ 효율성: 명확한 매뉴얼로 신입도 빠르게 독립 운영 가능',
+      '대형 프랜차이즈의 표준화된 운영 매뉴얼 학습 및 적용',
+      '재고 관리, 발주 시스템, 품질 관리 프로세스 실무 경험',
+      '체계화된 매뉴얼을 통한 일관된 서비스 품질 유지',
     ],
     achievements: [
       '본부 적용 방안: 프랜차이즈 성공의 핵심은 "간단하고 명확한 매뉴얼"',
@@ -42,32 +42,32 @@ const experiences: ExperienceItem[] = [
     ],
   },
   {
-    company: '브랜드 구축 & 콘텐츠 마케팅 전략',
+    company: '브랜드 구축 & 콘텐츠 마케팅',
     position: '운영 총괄 | 씨리얼 (개인 카페)',
     period: '2018.11 ~ 2022.05',
     location: '부산',
     responsibilities: [
-      '🎯 프랜차이즈 인사이트: 저비용 고효율 마케팅으로 브랜드 인지도 구축',
-      '📸 핵심 노하우: SNS 콘텐츠 1300+ 건 직접 제작 → 외주 비용 0원 → 고객 유입 증가',
-      '🎨 차별화 전략: 시즌 메뉴 50+ 개 개발 → 고객 재방문율 30% 향상',
+      '개인 카페 창업부터 운영까지 전 과정 총괄',
+      'SNS 콘텐츠 직접 기획 및 제작으로 마케팅 비용 절감',
+      '시즌별 신메뉴 개발 및 고객 피드백 기반 메뉴 개선',
     ],
     achievements: [
-      '본부 적용 방안: 가맹점이 저비용으로 자체 마케팅할 수 있는 시스템 구축',
-      '핵심 가치: 고가 마케팅 대행사 없이도 브랜드를 성장시킬 수 있는 실전 노하우',
+      '본부 적용 방안: 가맹점이 저비용으로 자체 마케팅할 수 있는 템플릿 제공',
+      '핵심 가치: 현장에서 직접 검증한 실전 마케팅 노하우 보유',
     ],
   },
   {
-    company: '상업 공간 설계 & 비용 최적화',
+    company: '상업 공간 설계 & 시공 관리',
     position: '과장 | 대○인테리어',
     period: '2014.02 ~ 2017.01',
     responsibilities: [
-      '🎯 프랜차이즈 인사이트: 신규 가맹점 인테리어 비용을 줄이는 실전 노하우',
-      '💰 핵심 경험: 자재 선택, 공간 구성, 협력업체 선정으로 비용 30% 절감',
-      '🏗️ 검증된 프로세스: 상업 공간 시공 현장 관리 경험으로 실패 리스크 최소화',
+      '상업 공간 인테리어 설계 및 시공 현장 관리',
+      '자재 선정, 협력업체 관리, 공정 스케줄 조율',
+      '고객 요구사항 분석 및 예산 내 최적 설계안 제시',
     ],
     achievements: [
-      '본부 적용 방안: 신규 가맹점 인테리어 컨설팅으로 초기 투자 비용 절감',
-      '핵심 가치: 현장 경험 기반의 실용적 공간 설계로 불필요한 비용 제거',
+      '본부 적용 방안: 신규 가맹점 인테리어 컨설팅으로 효율적인 공간 구성 지원',
+      '핵심 가치: 현장 경험 기반의 실용적 공간 설계 역량',
     ],
   },
 ];
@@ -150,7 +150,7 @@ const Experience: React.FC = () => {
           ))}
         </div>
 
-        {/* Summary Stats - Franchise Value Focused */}
+        {/* Summary Stats - Experience Based */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -158,20 +158,20 @@ const Experience: React.FC = () => {
           className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4"
         >
           <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">
-            <div className="text-3xl font-bold text-emerald-600">8년</div>
-            <div className="text-sm text-gray-600 mt-1">프랜차이즈 현장 경험</div>
-          </div>
-          <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">
-            <div className="text-3xl font-bold text-emerald-600">30%</div>
-            <div className="text-sm text-gray-600 mt-1">평균 비용 절감</div>
-          </div>
-          <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">
-            <div className="text-3xl font-bold text-emerald-600">150%</div>
-            <div className="text-sm text-gray-600 mt-1">매출 회복 실적</div>
+            <div className="text-3xl font-bold text-emerald-600">8년+</div>
+            <div className="text-sm text-gray-600 mt-1">F&B 현장 경험</div>
           </div>
           <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">
             <div className="text-3xl font-bold text-emerald-600">3곳</div>
-            <div className="text-sm text-gray-600 mt-1">신규 매장 성공 구축</div>
+            <div className="text-sm text-gray-600 mt-1">신규 매장 구축</div>
+          </div>
+          <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">
+            <div className="text-3xl font-bold text-emerald-600">4곳</div>
+            <div className="text-sm text-gray-600 mt-1">다양한 업종 경험</div>
+          </div>
+          <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">
+            <div className="text-3xl font-bold text-emerald-600">창업~운영</div>
+            <div className="text-sm text-gray-600 mt-1">전 과정 경험</div>
           </div>
         </motion.div>
       </div>
