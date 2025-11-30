@@ -55,35 +55,36 @@ const experiences: ExperienceItem[] = [
     achievements: [
       '콘텐츠 제작 역량: SNS 게시물 1,300건 직접 제작 및 운영',
       '핵심 노하우: 저비용 촬영 세팅 및 가맹점용 템플릿 제작 가능',
+      '매각 성과: 코로나 시기 운영(2인 운영, 월매출 1,200~1,500만원), 수제 제작으로 원가율 20%대 초반 유지',
+      '※ 매각 사유: 지점 운영 계획 중 동업자와 의견 차이로 손해 없이 매각',
     ],
   },
   {
-    company: '대형 프랜차이즈 현장 운영 경험',
+    company: '대형 프랜차이즈 현장 경험',
     position: '직원 | 파리바게트 삼성역점',
     period: '2017.02 ~ 2018.08',
-    location: '서울',
+    location: '서울 삼성역 오피스상권',
     responsibilities: [
       '국내 대표 프랜차이즈의 표준화된 운영 시스템 현장 학습',
       '본부 주도의 품질 관리, 재고 관리 프로세스 실무 경험',
-      '고객 응대 및 매장 운영 기본기 습득',
+      '고객 응대 및 매장 운영 기본기 습득 (서울 삼성역 오피스상권 번화가 근무)',
     ],
     achievements: [
       '교육받는 입장 경험: 본부 매뉴얼을 직접 학습하며 효과적인 교육법 체득',
       '핵심 인사이트: 현장에서 실제로 따라할 수 있는 매뉴얼이 가장 중요',
+      '위생, 포스, 고객 대응 등 프랜차이즈 현장 운영 노하우 습득',
     ],
   },
   {
-    company: '상업 공간 설계 & 시공 관리',
+    company: '상업 공간 설계 & 시공 관리 경험',
     position: '과장 | 대○인테리어',
     period: '2014.02 ~ 2017.01',
     responsibilities: [
       '상업 공간 인테리어 설계 및 시공 현장 관리',
       '자재 선정, 협력업체 관리, 공정 스케줄 조율',
-      '고객 요구사항 분석 및 예산 내 최적 설계안 제시',
     ],
     achievements: [
-      '신규 오픈 지원 역량: 인테리어 견적 협의, 시공 감리, 동선 설계 가능',
-      '핵심 강점: 매장 공간 설계 감각으로 신규 오픈 준비 지원 가능',
+      '신규 오픈 지원: 인테리어 견적 협의, 시공 감리, 동선 설계 경험',
     ],
   },
 ];
@@ -91,17 +92,17 @@ const experiences: ExperienceItem[] = [
 const Experience: React.FC = () => {
   return (
     <section id="experience" className="py-20 bg-white">
-      <div className="container mx-auto px-6 max-w-5xl">
+      <div className="container mx-auto px-6 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Experience & Growth</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">10년 현장 경험으로 쌓은 교육 노하우</h3>
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">11년 현장 경험으로 쌓은 교육 노하우</h3>
         </motion.div>
 
-        <div className="space-y-12">
+        <div className="space-y-8">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
@@ -134,12 +135,16 @@ const Experience: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="space-y-4">
+                {/* 2-Column Layout for larger screens */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   <div>
-                    <h5 className="font-bold text-gray-800 mb-2">주요 업무</h5>
+                    <h5 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                      <span className="w-1 h-4 bg-emerald-500 rounded"></span>
+                      주요 업무
+                    </h5>
                     <ul className="space-y-2">
                       {exp.responsibilities.map((resp, idx) => (
-                        <li key={idx} className="flex items-start text-gray-600">
+                        <li key={idx} className="flex items-start text-gray-600 text-sm">
                           <span className="mr-3 text-emerald-500 mt-1">•</span>
                           <span>{resp}</span>
                         </li>
@@ -148,11 +153,14 @@ const Experience: React.FC = () => {
                   </div>
 
                   {exp.achievements && exp.achievements.length > 0 && (
-                    <div className="mt-4 pt-4 border-t border-gray-200">
-                      <h5 className="font-bold text-gray-800 mb-2">주요 성과</h5>
+                    <div>
+                      <h5 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                        <span className="w-1 h-4 bg-blue-500 rounded"></span>
+                        주요 성과
+                      </h5>
                       <ul className="space-y-2">
                         {exp.achievements.map((achievement, idx) => (
-                          <li key={idx} className="flex items-start text-gray-700">
+                          <li key={idx} className="flex items-start text-gray-700 text-sm">
                             <span className="mr-3 text-emerald-600 font-semibold">✓</span>
                             <span className="font-medium">{achievement}</span>
                           </li>
@@ -174,7 +182,7 @@ const Experience: React.FC = () => {
           className="mt-12 pt-8 border-t-2 border-gray-200"
         >
           <p className="text-center text-gray-700 text-lg">
-            <strong className="text-emerald-600">F&B 7년 + 공간설계 3년</strong> |
+            <strong className="text-emerald-600">F&B 8년 + 공간설계 3년</strong> |
             신규 매장 3곳 구축 |
             개인·프랜차이즈·공공기관 전 경험
           </p>
