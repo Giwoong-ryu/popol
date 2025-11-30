@@ -23,7 +23,7 @@ const experiences: ExperienceItem[] = [
       '신입 직원 교육 체계 구축 및 운영 매뉴얼 정비',
     ],
     achievements: [
-      '본부 적용 방안: 매장 운영 데이터 분석을 통한 개선 포인트 도출 체계 구축',
+      'SV 역량: 가맹점 정기 점검 및 매출 분석 리포트 작성 가능',
       '핵심 가치: 가맹점이 자체적으로 운영 상태를 점검할 수 있는 체크리스트 개발',
     ],
   },
@@ -37,8 +37,9 @@ const experiences: ExperienceItem[] = [
       '체계화된 매뉴얼을 통한 일관된 서비스 품질 유지',
     ],
     achievements: [
-      '본부 적용 방안: 프랜차이즈 성공의 핵심은 "간단하고 명확한 매뉴얼"',
+      'SV 역량: 대형 프랜차이즈 본부 시스템 숙지, 가맹점 교육 가능',
       '핵심 가치: 복잡한 시스템보다 누구나 따라할 수 있는 체크리스트가 중요',
+      '※ 매장관리 팀장 포지션 제안으로 자활센터로 이직',
     ],
   },
   {
@@ -52,8 +53,23 @@ const experiences: ExperienceItem[] = [
       '시즌별 신메뉴 개발 및 고객 피드백 기반 메뉴 개선',
     ],
     achievements: [
-      '본부 적용 방안: 가맹점이 저비용으로 자체 마케팅할 수 있는 템플릿 제공',
+      'SV 역량: 가맹점 자체 마케팅 지원 및 코칭 가능',
       '핵심 가치: 현장에서 직접 검증한 실전 마케팅 노하우 보유',
+    ],
+  },
+  {
+    company: '대형 프랜차이즈 현장 운영 경험',
+    position: '직원 | 파리바게트 삼성역점',
+    period: '2017.02 ~ 2018.08',
+    location: '서울',
+    responsibilities: [
+      '국내 대표 프랜차이즈의 표준화된 운영 시스템 현장 학습',
+      '본부 주도의 품질 관리, 재고 관리 프로세스 실무 경험',
+      '고객 응대 및 매장 운영 기본기 습득',
+    ],
+    achievements: [
+      'SV 역량: 가맹점 직원 관점에서 본부 매뉴얼의 실효성 검증 경험',
+      '핵심 가치: "현장에서 실제로 따라할 수 있는 매뉴얼"의 중요성 체득',
     ],
   },
   {
@@ -66,7 +82,7 @@ const experiences: ExperienceItem[] = [
       '고객 요구사항 분석 및 예산 내 최적 설계안 제시',
     ],
     achievements: [
-      '본부 적용 방안: 신규 가맹점 인테리어 컨설팅으로 효율적인 공간 구성 지원',
+      'SV 역량: 신규 오픈 현장 관리 및 시공 감리 가능',
       '핵심 가치: 현장 경험 기반의 실용적 공간 설계 역량',
     ],
   },
@@ -82,7 +98,7 @@ const Experience: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Franchise Insights</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">8년 경험에서 도출한 가맹점 성공 법칙</h3>
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">10년 경험에서 도출한 가맹점 성공 법칙</h3>
         </motion.div>
 
         <div className="space-y-12">
@@ -158,7 +174,7 @@ const Experience: React.FC = () => {
           className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4"
         >
           <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">
-            <div className="text-3xl font-bold text-emerald-600">8년+</div>
+            <div className="text-3xl font-bold text-emerald-600">7년+</div>
             <div className="text-sm text-gray-600 mt-1">F&B 현장 경험</div>
           </div>
           <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">
@@ -166,7 +182,7 @@ const Experience: React.FC = () => {
             <div className="text-sm text-gray-600 mt-1">신규 매장 구축</div>
           </div>
           <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">
-            <div className="text-3xl font-bold text-emerald-600">4곳</div>
+            <div className="text-3xl font-bold text-emerald-600">5곳</div>
             <div className="text-sm text-gray-600 mt-1">다양한 업종 경험</div>
           </div>
           <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">

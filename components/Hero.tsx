@@ -4,12 +4,12 @@ import { ArrowDown } from 'lucide-react';
 import { getAssetPath } from '../utils/getAssetPath';
 
 const heroImages = [
-  { src: getAssetPath("app_make/m_1.png"), link: "#franchise-value", label: "비용 절감" },
+  { src: getAssetPath("app_make/m_1.png"), link: "#franchise-value", label: "마케팅" },
   { src: getAssetPath("app_make/m_2.png"), link: "#about", label: "데이터 분석" },
-  { src: getAssetPath("app_make/edu_cover.jpg"), link: "#projects", label: "교육 체계화" },
-  { src: getAssetPath("app_make/w_1.png"), link: "#first-90-days", label: "90일 플랜" },
+  { src: getAssetPath("app_make/edu_cover.jpg"), link: "#projects", label: "교육 체계" },
+  { src: getAssetPath("app_make/w_1.png"), link: "#experience", label: "현장 운영" },
   { src: getAssetPath("app_make/cafe_5.webp"), link: "#philosophy", label: "브랜드 구축" },
-  { src: getAssetPath("app_make/cafe_3.webp"), link: "#experience", label: "운영 노하우" },
+  { src: getAssetPath("app_make/cafe_3.webp"), link: "#documents", label: "공간 설계" },
 ];
 
 const Hero: React.FC = () => {
@@ -69,11 +69,14 @@ const Hero: React.FC = () => {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="text-center mt-16"
         >
+          <div className="inline-block bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-3">
+            🎯 프랜차이즈 본부 SV / 운영지원 포지션 구직 중
+          </div>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
             유기웅 <span className="text-gray-600 font-normal">Ryu Gi-Woong</span>
           </h2>
           <p className="text-gray-600">
-            프랜차이즈 현장 경력 8년 | 매장 운영 비용 절감 전문 | 데이터 기반 의사결정
+            F&B 7년 + 공간설계 3년 | 매장 운영 비용 절감 전문 | 데이터 기반 의사결정
           </p>
         </motion.div>
       </div>

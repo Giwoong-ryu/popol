@@ -17,7 +17,7 @@ const marketDocuments: Document[] = [
     title: '플레이스 세팅',
     category: 'Market Analysis',
     icon: <TrendingUp className="w-5 h-5" />,
-    description: '네이버 플레이스 최적화를 통한 검색 노출 극대화 전략. SEO 최적화로 검색 유입 200% 증가를 달성했습니다.',
+    description: '네이버 플레이스 최적화를 통한 검색 노출 극대화 전략. SEO 최적화로 검색 노출을 개선했습니다.',
   },
   {
     image: getAssetPath('app_make/m_2.png'),
@@ -195,19 +195,19 @@ const Documents: React.FC = () => {
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           <div className="bg-white rounded-xl p-6 border border-gray-200">
-            <div className="text-4xl font-bold text-emerald-600 mb-2">150%</div>
-            <div className="text-gray-700 font-medium">매출 회복 달성</div>
-            <div className="text-sm text-gray-500 mt-1">데이터 기반 전략 수립</div>
+            <div className="text-2xl font-bold text-emerald-600 mb-2">매출 분석</div>
+            <div className="text-gray-700 font-medium">데이터 기반 매출 분석 역량</div>
+            <div className="text-sm text-gray-500 mt-1">부진 매장 운영 개선 경험</div>
           </div>
           <div className="bg-white rounded-xl p-6 border border-gray-200">
-            <div className="text-4xl font-bold text-emerald-600 mb-2">30%</div>
-            <div className="text-gray-700 font-medium">교육 시간 단축</div>
-            <div className="text-sm text-gray-500 mt-1">체계적 매뉴얼 구축</div>
+            <div className="text-2xl font-bold text-emerald-600 mb-2">교육 체계</div>
+            <div className="text-gray-700 font-medium">표준화된 교육 시스템 구축</div>
+            <div className="text-sm text-gray-500 mt-1">체계적 매뉴얼로 교육 효율화</div>
           </div>
           <div className="bg-white rounded-xl p-6 border border-gray-200">
-            <div className="text-4xl font-bold text-emerald-600 mb-2">200%</div>
-            <div className="text-gray-700 font-medium">검색 유입 증가</div>
-            <div className="text-sm text-gray-500 mt-1">SEO 최적화 전략</div>
+            <div className="text-2xl font-bold text-emerald-600 mb-2">마케팅</div>
+            <div className="text-gray-700 font-medium">온라인 마케팅 채널 운영</div>
+            <div className="text-sm text-gray-500 mt-1">네이버 플레이스 최적화 노하우</div>
           </div>
         </motion.div>
       </div>

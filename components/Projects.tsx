@@ -102,7 +102,7 @@ const projects: Project[] = [
     image: getAssetPath('app_make/cafe_10.webp'),
     icon: <Coffee className="w-5 h-5"/>,
     description: [
-      '8년 현장 경험으로 가맹점의 모든 돌발 상황 대응 가능',
+      '7년 F&B 현장 경험으로 가맹점의 모든 돌발 상황 대응 가능',
       '인력 배치 최적화로 인건비 절감 노하우 전수',
       '재고 관리 시스템으로 폐기율 최소화'
     ],
