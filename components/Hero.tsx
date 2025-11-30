@@ -4,12 +4,12 @@ import { ArrowDown } from 'lucide-react';
 import { getAssetPath } from '../utils/getAssetPath';
 
 const heroImages = [
-  { src: getAssetPath("app_make/m_1.png"), link: "#franchise-value", label: "비용 절감" },
+  { src: getAssetPath("app_make/m_1.png"), link: "#franchise-value", label: "마케팅" },
   { src: getAssetPath("app_make/m_2.png"), link: "#about", label: "데이터 분석" },
-  { src: getAssetPath("app_make/edu_cover.jpg"), link: "#projects", label: "교육 체계화" },
-  { src: getAssetPath("app_make/w_1.png"), link: "#first-90-days", label: "90일 플랜" },
+  { src: getAssetPath("app_make/edu_cover.jpg"), link: "#projects", label: "교육 체계" },
+  { src: getAssetPath("app_make/w_1.png"), link: "#experience", label: "현장 운영" },
   { src: getAssetPath("app_make/cafe_5.webp"), link: "#philosophy", label: "브랜드 구축" },
-  { src: getAssetPath("app_make/cafe_3.webp"), link: "#experience", label: "운영 노하우" },
+  { src: getAssetPath("app_make/cafe_3.webp"), link: "#documents", label: "공간 설계" },
 ];
 
 const Hero: React.FC = () => {
