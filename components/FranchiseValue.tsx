@@ -14,51 +14,51 @@ interface ValueItem {
 
 const values: ValueItem[] = [
   {
-    icon: <TrendingUp className="w-8 h-8" />,
-    title: "매출 분석",
-    metric: "📊",
-    description: "데이터 기반 매출 분석으로 개선점 도출",
-    image: getAssetPath("app_make/m_1.png"),
+    icon: <GraduationCap className="w-8 h-8" />,
+    title: "교육 자료 제작",
+    metric: "📚",
+    description: "현장 경험을 체계적인 교육 콘텐츠로 문서화",
+    image: getAssetPath("app_make/edu_cover.jpg"),
     details: [
-      "네이버 플레이스 SEO 최적화로 검색 노출 개선",
-      "일 단위 매출 데이터 분석으로 최적 시간대 파악",
-      "배달앱 운영 최적화로 부진 매장 매출 회복 경험"
+      "커피 이론 교육자료 47페이지 직접 제작",
+      "신입 교육 기간 2주 → 5일로 단축 실적",
+      "에스프레소 추출, 스티밍 등 실무 매뉴얼 완비"
+    ]
+  },
+  {
+    icon: <TrendingUp className="w-8 h-8" />,
+    title: "콘텐츠 제작",
+    metric: "📸",
+    description: "SNS 콘텐츠 1,300건 제작 경험",
+    image: getAssetPath("app_make/product_1.jpg"),
+    details: [
+      "촬영부터 편집까지 직접 수행한 실전 경험",
+      "저비용 촬영 세팅으로 마케팅 비용 절감",
+      "가맹점용 SNS 템플릿 제작 가능"
     ]
   },
   {
     icon: <DollarSign className="w-8 h-8" />,
-    title: "비용 절감",
-    metric: "💰",
-    description: "체계화된 운영으로 인건비 효율 개선",
+    title: "신규 오픈 지원",
+    metric: "🏪",
+    description: "상권 분석부터 오픈까지 전 과정 경험",
     image: getAssetPath("app_make/m_2.png"),
     details: [
-      "시간대별 필요 인원 최적화로 인건비 효율화",
-      "재고 관리 시스템 구축으로 폐기율 최소화",
-      "상권 분석 기반 입지 선정으로 실패 리스크 감소"
+      "개인 카페 + 자활센터 3곳 오픈 준비 총괄",
+      "인테리어 배경으로 공간 설계 및 견적 협의 가능",
+      "상권 분석 20곳 이상 벤치마킹 실무 경험"
     ]
   },
   {
     icon: <Zap className="w-8 h-8" />,
-    title: "업무 효율",
+    title: "업무 효율화",
     metric: "⚡",
-    description: "AI 자동화로 반복 업무 시간 단축",
+    description: "체크리스트와 자동화로 업무 표준화",
     image: getAssetPath("app_make/w_1.png"),
     details: [
-      "n8n 워크플로우로 반복 업무 자동화 구현",
-      "ChatGPT 활용 리뷰 분석 및 대응 시간 단축",
-      "뉴스레터 자동 발송으로 마케팅 업무 효율화"
-    ]
-  },
-  {
-    icon: <GraduationCap className="w-8 h-8" />,
-    title: "교육 체계",
-    metric: "📚",
-    description: "체계적 매뉴얼로 신입 교육 효율화",
-    image: getAssetPath("app_make/edu_cover.jpg"),
-    details: [
-      "에스프레소 추출 매뉴얼로 맛 편차 제거",
-      "체계적 교육 자료로 신입 교육 기간 단축",
-      "체크리스트 표준화로 품질 균일성 확보"
+      "오픈/마감/품질 체크리스트 제작으로 누락 제로",
+      "n8n, ChatGPT 활용 반복 업무 자동화",
+      "가맹점 대상 효율화 가이드 제공 가능"
     ]
   }
 ];
@@ -75,14 +75,14 @@ const FranchiseValue: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">
-            Franchise Value
+            Core Competencies
           </h2>
           <h3 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-            프랜차이즈 본부가 얻는 4가지 가치
+            가맹점 교육 담당으로서의 4가지 강점
           </h3>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            10년 현장 경험 (F&B 7년 + 공간설계 3년)을 바탕으로 본부의 운영 비용을 줄이고,<br className="hidden md:block" />
-            가맹점 성공률을 높이는 실전 노하우를 제공합니다
+            10년 현장 경험 (F&B 7년 + 공간설계 3년)을 바탕으로<br className="hidden md:block" />
+            가맹점주와 직원이 실제로 사용할 수 있는 교육 콘텐츠를 제작합니다
           </p>
         </motion.div>
 
@@ -143,20 +143,20 @@ const FranchiseValue: React.FC = () => {
           className="bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl p-8 md:p-12 text-center text-white"
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            가맹점 성공률을 높이는 파트너가 필요하신가요?
+            가맹점 교육을 체계화하고 싶으신가요?
           </h3>
           <p className="text-emerald-50 mb-6 text-lg">
-            현장에서 검증된 솔루션으로 프랜차이즈 본부의 성장을 함께 만들어갑니다
+            7년 현장 경험과 실제 제작한 교육 자료로 가맹점 성공률을 높입니다
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
-              <span className="font-semibold">📊 데이터 기반 의사결정</span>
+              <span className="font-semibold">📚 47페이지 교육자료</span>
             </div>
             <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
-              <span className="font-semibold">⚡ 즉시 적용 가능한 솔루션</span>
+              <span className="font-semibold">📸 1,300건 콘텐츠</span>
             </div>
             <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
-              <span className="font-semibold">🎯 검증된 현장 경험</span>
+              <span className="font-semibold">🎯 검증된 실무 경험</span>
             </div>
           </div>
         </motion.div>

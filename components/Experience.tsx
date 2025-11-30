@@ -23,8 +23,8 @@ const experiences: ExperienceItem[] = [
       '신입 직원 교육 체계 구축 및 운영 매뉴얼 정비',
     ],
     achievements: [
-      'SV 역량: 가맹점 정기 점검 및 매출 분석 리포트 작성 가능',
-      '핵심 가치: 가맹점이 자체적으로 운영 상태를 점검할 수 있는 체크리스트 개발',
+      '교육 체계 구축: 신입 교육 커리큘럼 설계 및 매뉴얼 제작 경험',
+      '핵심 성과: 체계적 교육으로 신입 적응 기간 2주→5일로 단축',
     ],
   },
   {
@@ -37,8 +37,8 @@ const experiences: ExperienceItem[] = [
       '체계화된 매뉴얼을 통한 일관된 서비스 품질 유지',
     ],
     achievements: [
-      'SV 역량: 대형 프랜차이즈 본부 시스템 숙지, 가맹점 교육 가능',
-      '핵심 가치: 복잡한 시스템보다 누구나 따라할 수 있는 체크리스트가 중요',
+      '프랜차이즈 시스템 학습: 대형 본부의 표준화된 매뉴얼 및 교육 방식 체득',
+      '핵심 인사이트: 복잡한 시스템보다 실행 가능한 체크리스트가 중요함을 학습',
       '※ 매장관리 팀장 포지션 제안으로 자활센터로 이직',
     ],
   },
@@ -53,8 +53,8 @@ const experiences: ExperienceItem[] = [
       '시즌별 신메뉴 개발 및 고객 피드백 기반 메뉴 개선',
     ],
     achievements: [
-      'SV 역량: 가맹점 자체 마케팅 지원 및 코칭 가능',
-      '핵심 가치: 현장에서 직접 검증한 실전 마케팅 노하우 보유',
+      '콘텐츠 제작 역량: SNS 게시물 1,300건 직접 제작 및 운영',
+      '핵심 노하우: 저비용 촬영 세팅 및 가맹점용 템플릿 제작 가능',
     ],
   },
   {
@@ -68,8 +68,8 @@ const experiences: ExperienceItem[] = [
       '고객 응대 및 매장 운영 기본기 습득',
     ],
     achievements: [
-      'SV 역량: 가맹점 직원 관점에서 본부 매뉴얼의 실효성 검증 경험',
-      '핵심 가치: "현장에서 실제로 따라할 수 있는 매뉴얼"의 중요성 체득',
+      '교육받는 입장 경험: 본부 매뉴얼을 직접 학습하며 효과적인 교육법 체득',
+      '핵심 인사이트: 현장에서 실제로 따라할 수 있는 매뉴얼이 가장 중요',
     ],
   },
   {
@@ -82,8 +82,8 @@ const experiences: ExperienceItem[] = [
       '고객 요구사항 분석 및 예산 내 최적 설계안 제시',
     ],
     achievements: [
-      'SV 역량: 신규 오픈 현장 관리 및 시공 감리 가능',
-      '핵심 가치: 현장 경험 기반의 실용적 공간 설계 역량',
+      '신규 오픈 지원 역량: 인테리어 견적 협의, 시공 감리, 동선 설계 가능',
+      '핵심 강점: 매장 공간 설계 감각으로 신규 오픈 준비 지원 가능',
     ],
   },
 ];
@@ -97,8 +97,8 @@ const Experience: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Franchise Insights</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">10년 경험에서 도출한 가맹점 성공 법칙</h3>
+          <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Experience & Growth</h2>
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">10년 현장 경험으로 쌓은 교육 노하우</h3>
         </motion.div>
 
         <div className="space-y-12">

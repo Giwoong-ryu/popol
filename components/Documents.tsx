@@ -106,10 +106,11 @@ const Documents: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Documents & Analysis</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">문서 & 전문성</h3>
+          <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Education Materials</h2>
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">실제 제작한 교육 자료</h3>
           <p className="text-gray-600 max-w-2xl">
-            데이터 기반 분석과 체계적인 교육 자료로 운영 효율을 극대화합니다.
+            7년 현장 경험을 바탕으로 직접 제작한 교육 자료와 분석 문서입니다.<br />
+            가맹점 교육에 즉시 활용 가능한 검증된 콘텐츠입니다.
           </p>
         </motion.div>
 
@@ -195,19 +196,19 @@ const Documents: React.FC = () => {
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           <div className="bg-white rounded-xl p-6 border border-gray-200">
-            <div className="text-2xl font-bold text-emerald-600 mb-2">매출 분석</div>
-            <div className="text-gray-700 font-medium">데이터 기반 매출 분석 역량</div>
-            <div className="text-sm text-gray-500 mt-1">부진 매장 운영 개선 경험</div>
+            <div className="text-2xl font-bold text-emerald-600 mb-2">47페이지</div>
+            <div className="text-gray-700 font-medium">커피 이론 교육자료</div>
+            <div className="text-sm text-gray-500 mt-1">2년간 실제 사용하며 검증</div>
           </div>
           <div className="bg-white rounded-xl p-6 border border-gray-200">
-            <div className="text-2xl font-bold text-emerald-600 mb-2">교육 체계</div>
-            <div className="text-gray-700 font-medium">표준화된 교육 시스템 구축</div>
-            <div className="text-sm text-gray-500 mt-1">체계적 매뉴얼로 교육 효율화</div>
+            <div className="text-2xl font-bold text-emerald-600 mb-2">11개</div>
+            <div className="text-gray-700 font-medium">교육용 매뉴얼 문서</div>
+            <div className="text-sm text-gray-500 mt-1">추출, 스티밍, 체크리스트 등</div>
           </div>
           <div className="bg-white rounded-xl p-6 border border-gray-200">
-            <div className="text-2xl font-bold text-emerald-600 mb-2">마케팅</div>
-            <div className="text-gray-700 font-medium">온라인 마케팅 채널 운영</div>
-            <div className="text-sm text-gray-500 mt-1">네이버 플레이스 최적화 노하우</div>
+            <div className="text-2xl font-bold text-emerald-600 mb-2">4개</div>
+            <div className="text-gray-700 font-medium">상권 분석 문서</div>
+            <div className="text-sm text-gray-500 mt-1">신규 오픈 준비 자료</div>
           </div>
         </motion.div>
       </div>

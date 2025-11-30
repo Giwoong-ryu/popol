@@ -4,12 +4,10 @@ import { User, Coffee, Map, BarChart, Users, FileText } from 'lucide-react';
 import { getAssetPath } from '../utils/getAssetPath';
 
 const highlights = [
-  { icon: <BarChart className="w-6 h-6" />, title: "데이터 기반 매출 개선", desc: "매출 데이터 분석으로 부진 원인 파악 및 개선" },
-  { icon: <Users className="w-6 h-6" />, title: "인력 배치 최적화", desc: "시간대별 수요에 맞춘 효율적 인력 운영" },
-  { icon: <FileText className="w-6 h-6" />, title: "교육 체계화", desc: "체계적 매뉴얼로 신입 교육 기간 단축" },
-  { icon: <Coffee className="w-6 h-6" />, title: "품질 표준화", desc: "매뉴얼로 지점 간 맛 편차 제거" },
-  { icon: <Map className="w-6 h-6" />, title: "신규 매장 구축", desc: "상권 분석부터 오픈까지 전 과정 관리" },
-  { icon: <User className="w-6 h-6" />, title: "업무 자동화", desc: "반복 업무 자동화로 업무 효율 증대" },
+  { icon: <FileText className="w-6 h-6" />, title: "교육 자료 제작", desc: "커피 이론부터 실무까지, 47페이지 교육자료 직접 제작" },
+  { icon: <Coffee className="w-6 h-6" />, title: "신입 교육 체계화", desc: "체계적 매뉴얼로 교육 기간 2주→5일 단축" },
+  { icon: <Map className="w-6 h-6" />, title: "신규 오픈 지원", desc: "상권 분석, 인테리어 협의, 오픈 준비 전 과정 경험" },
+  { icon: <User className="w-6 h-6" />, title: "SNS 콘텐츠 제작", desc: "1,300건 직접 제작, 가맹점용 템플릿 제공 가능" },
 ];
 
 const About: React.FC = () => {
@@ -59,26 +57,26 @@ const About: React.FC = () => {
           >
             <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6 rounded-r-lg mb-8">
               <p className="text-xl md:text-2xl font-bold text-gray-900 mb-4 leading-relaxed">
-                프랜차이즈 본부에게 전하는 메시지
+                가맹점 교육 담당자로서의 강점
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                "가맹점이 성공해야 본부도 성공합니다.<br />
-                저는 <strong>현장에서 검증된 솔루션</strong>으로<br />
-                가맹점 운영 비용을 줄이고 성공률을 높입니다."
+                "7년 현장 경험을 <strong>교육 자료로 만들어</strong><br />
+                가맹점주와 직원이 <strong>혼자서도 성공</strong>할 수 있도록<br />
+                체계적인 교육 시스템을 구축합니다."
               </p>
             </div>
 
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed mb-8">
               <p>
-                <strong className="text-gray-900">10년 현장 경험 (F&B 7년 + 공간설계 3년)</strong>을 바탕으로 프랜차이즈 본부가 직면한 문제를 이해합니다.
+                <strong className="text-gray-900">10년 현장 경험 (F&B 7년 + 공간설계 3년)</strong>을 바탕으로 실전형 교육 자료를 제작합니다.
               </p>
               <p>
-                <strong className="text-gray-900">데이터 분석</strong>으로 매출 증대 방법을 찾고, <strong className="text-gray-900">체계화</strong>로 인건비를 절감하며,
-                <strong className="text-gray-900"> AI 자동화</strong>로 업무 효율을 높입니다.
+                개인카페부터 대형 프랜차이즈까지, <strong className="text-gray-900">직원·매니저·팀장</strong>을 모두 경험하며
+                <strong className="text-gray-900"> 교육받는 입장과 교육하는 입장</strong>을 모두 이해합니다.
               </p>
               <p>
-                단순히 카페를 운영하는 것이 아닌, <strong className="text-gray-900">시스템을 만들고 매뉴얼을 구축</strong>하여
-                가맹점이 혼자서도 성공할 수 있도록 돕습니다.
+                <strong className="text-gray-900">바리스타 2급, 매장관리사</strong> 자격증을 보유하고,
+                <strong className="text-gray-900"> 운전면허 1종</strong>으로 전국 가맹점 출장 교육이 가능합니다.
               </p>
             </div>
 

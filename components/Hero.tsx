@@ -24,11 +24,11 @@ const Hero: React.FC = () => {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-            프랜차이즈 본부의<br />
-            운영 비용을 줄이는 실무 전문가
+            7년 현장 경험 기반<br />
+            가맹점 교육 전문가
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            데이터 기반 매출 개선 · 매뉴얼 체계화로 교육 효율화 · 반복 업무 자동화
+            교육 자료 제작 · 신입 교육 체계화 · 오픈 지원
           </p>
         </motion.div>
 
@@ -70,13 +70,13 @@ const Hero: React.FC = () => {
           className="text-center mt-16"
         >
           <div className="inline-block bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-3">
-            🎯 프랜차이즈 본부 SV / 운영지원 포지션 구직 중
+            🎯 가맹점 교육 담당 / 오픈 지원팀 구직 중
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
             유기웅 <span className="text-gray-600 font-normal">Ryu Gi-Woong</span>
           </h2>
           <p className="text-gray-600">
-            F&B 7년 + 공간설계 3년 | 매장 운영 비용 절감 전문 | 데이터 기반 의사결정
+            F&B 7년 + 공간설계 3년 | 바리스타 2급 · 매장관리사 · 운전면허 1종
           </p>
         </motion.div>
       </div>
