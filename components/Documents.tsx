@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FileText, TrendingUp, BookOpen, BarChart3, Target, X } from 'lucide-react';
+import { FileText, TrendingUp, BookOpen, BarChart3, Target, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getAssetPath } from '../utils/getAssetPath';
 
 interface Document {
@@ -9,13 +9,43 @@ interface Document {
   category: string;
   icon: React.ReactNode;
   description?: string;
+  gallery?: string[];
 }
 
-const marketDocuments: Document[] = [
+const educationImages = [
+  getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_1.jpg'),
+  getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_2.jpg'),
+  getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_3.jpg'),
+  getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_4.jpg'),
+  getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_5.jpg'),
+  getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_6.jpg'),
+  getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_7.jpg'),
+  getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_8.jpg'),
+  getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_9.jpg'),
+  getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_10.jpg'),
+  getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_11.jpg'),
+];
+
+const documents: Document[] = [
+  {
+    image: getAssetPath('app_make/edu_cover.jpg'),
+    title: '커피 이론 교육자료',
+    category: 'Education',
+    icon: <BookOpen className="w-5 h-5" />,
+    description: '신입 바리스타를 위한 체계적인 커피 이론 교육 자료 (47페이지). 원두의 종류, 배전도, 추출 원리 등 커피의 기본부터 심화까지 다룹니다. 2년간 자활센터에서 실사용하여 검증된 교육 자료입니다.',
+    gallery: educationImages,
+  },
+  {
+    image: getAssetPath('app_make/커피 이론 교육자료-제출용/■ 테이스팅 노트 및 체크리스트_제출용_1.jpg'),
+    title: '체크리스트',
+    category: 'QA Manual',
+    icon: <FileText className="w-5 h-5" />,
+    description: '매장 운영 품질 관리를 위한 체크리스트. 개점 전 준비사항, 위생 관리, 제품 품질 확인 등을 표준화했습니다. 오픈 15항목, 마감 12항목, 품질 관리 10항목으로 업무 누락을 방지합니다.',
+  },
   {
     image: getAssetPath('app_make/m_1.png'),
     title: '플레이스 세팅',
-    category: 'Market Analysis',
+    category: 'Marketing',
     icon: <TrendingUp className="w-5 h-5" />,
     description: '네이버 플레이스 최적화를 통한 검색 노출 극대화 전략. SEO 최적화로 검색 노출을 개선했습니다.',
   },
@@ -34,7 +64,7 @@ const marketDocuments: Document[] = [
     description: '20곳 이상의 경쟁 카페 벤치마킹을 통한 차별화 전략 도출. 가격, 메뉴 구성, 인테리어, SNS 마케팅 등 다각도로 분석했습니다.',
   },
   {
-    image: getAssetPath('app_make/인테리어.png'),
+    image: getAssetPath('app_make/h_3.jpeg'),
     title: '인테리어 제안서',
     category: 'Interior Design',
     icon: <TrendingUp className="w-5 h-5" />,
@@ -42,53 +72,28 @@ const marketDocuments: Document[] = [
   },
 ];
 
-const educationDocuments: Document[] = [
-  {
-    image: getAssetPath('app_make/edu_cover.jpg'),
-    title: '커피 이론 교육자료',
-    category: 'Education',
-    icon: <BookOpen className="w-5 h-5" />,
-    description: '신입 바리스타를 위한 체계적인 커피 이론 교육 자료. 원두의 종류, 배전도, 추출 원리 등 커피의 기본부터 심화까지 다룹니다.',
-  },
-  {
-    image: getAssetPath('app_make/커피 이론 교육자료-제출용/■ 테이스팅 노트 및 체크리스트_제출용_2.jpg'),
-    title: '체크리스트',
-    category: 'QA Manual',
-    icon: <FileText className="w-5 h-5" />,
-    description: '매장 운영 품질 관리를 위한 체크리스트. 개점 전 준비사항, 위생 관리, 제품 품질 확인 등을 표준화했습니다.',
-  },
-  {
-    image: getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_8.jpg'),
-    title: '에스프레소 추출 가이드',
-    category: 'Training Manual',
-    icon: <FileText className="w-5 h-5" />,
-    description: '매장 전용 에스프레소 추출 매뉴얼. 도징량, 추출 시간, 수율 등의 기준을 확립하여 지점 간 맛의 편차를 최소화했습니다.',
-  },
-  {
-    image: getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_6.jpg'),
-    title: '그라인더 관리법',
-    category: 'Equipment Manual',
-    icon: <FileText className="w-5 h-5" />,
-    description: '그라인더 청소 및 유지보수 가이드. 장비의 수명을 연장하고 항상 최적의 상태를 유지하기 위한 관리 방법을 정리했습니다.',
-  },
-  {
-    image: getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_4.jpg'),
-    title: '원두 배전도 및 추출 특성',
-    category: 'Coffee Theory',
-    icon: <BookOpen className="w-5 h-5" />,
-    description: '배전도에 따른 원두의 특성과 최적의 추출 방법. 각 배전도별 맛의 특징과 추천 추출 레시피를 제공합니다.',
-  },
-  {
-    image: getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_11.jpg'),
-    title: '스티밍 교육',
-    category: 'Training Manual',
-    icon: <FileText className="w-5 h-5" />,
-    description: '우유 스티밍 기술 교육 자료. 온도, 텍스처, 거품의 양 등을 정확히 조절하여 완벽한 라떼를 만드는 방법을 안내합니다.',
-  },
-];
-
 const Documents: React.FC = () => {
   const [selectedDoc, setSelectedDoc] = useState<Document | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleNextImage = () => {
+    if (selectedDoc?.gallery) {
+      setCurrentImageIndex((prev) => (prev + 1) % selectedDoc.gallery.length);
+    }
+  };
+
+  const handlePrevImage = () => {
+    if (selectedDoc?.gallery) {
+      setCurrentImageIndex((prev) =>
+        prev === 0 ? selectedDoc.gallery.length - 1 : prev - 1
+      );
+    }
+  };
+
+  const handleDocClick = (doc: Document) => {
+    setSelectedDoc(doc);
+    setCurrentImageIndex(0);
+  };
 
   return (
     <section id="documents" className="py-20 bg-gray-50">
@@ -102,83 +107,45 @@ const Documents: React.FC = () => {
           <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Education Materials</h2>
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">실제 제작한 교육 자료</h3>
           <p className="text-gray-600 max-w-2xl">
-            7년 현장 경험을 바탕으로 직접 제작한 교육 자료와 분석 문서입니다.<br />
+            8년 현장 경험을 바탕으로 직접 제작한 교육 자료와 분석 문서입니다.<br />
             가맹점 교육에 즉시 활용 가능한 검증된 콘텐츠입니다.
           </p>
         </motion.div>
 
-        {/* Market Analysis Section */}
-        <div className="mb-16">
-          <h4 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-            <TrendingUp className="w-6 h-6 text-emerald-600" />
-            매출 분석 & 마케팅 전략
-          </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {marketDocuments.map((doc, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                onClick={() => setSelectedDoc(doc)}
-                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 group cursor-pointer"
-              >
-                <div className="relative h-64 overflow-hidden bg-gray-100">
-                  <img
-                    src={doc.image}
-                    alt={doc.title}
-                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
-                  />
-                  <div className="absolute top-3 right-3 bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2">
-                    {doc.icon}
-                    {doc.category}
+        {/* All Documents */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {documents.map((doc, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              onClick={() => handleDocClick(doc)}
+              className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 group cursor-pointer"
+            >
+              <div className="relative h-64 overflow-hidden bg-gray-100">
+                <img
+                  src={doc.image}
+                  alt={doc.title}
+                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                />
+                <div className="absolute top-3 right-3 bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2">
+                  {doc.icon}
+                  {doc.category}
+                </div>
+                {doc.gallery && (
+                  <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-emerald-600">
+                    📚 {doc.gallery.length}장
                   </div>
-                </div>
-                <div className="p-5">
-                  <h5 className="font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">
-                    {doc.title}
-                  </h5>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Education Section */}
-        <div>
-          <h4 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-            <BookOpen className="w-6 h-6 text-emerald-600" />
-            교육 자료 & 매뉴얼
-          </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {educationDocuments.map((doc, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: (marketDocuments.length + index) * 0.1, duration: 0.6 }}
-                onClick={() => setSelectedDoc(doc)}
-                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 group cursor-pointer"
-              >
-                <div className="relative h-64 overflow-hidden bg-gray-100">
-                  <img
-                    src={doc.image}
-                    alt={doc.title}
-                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
-                  />
-                  <div className="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2">
-                    {doc.icon}
-                    {doc.category}
-                  </div>
-                </div>
-                <div className="p-5">
-                  <h5 className="font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">
-                    {doc.title}
-                  </h5>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                )}
+              </div>
+              <div className="p-5">
+                <h5 className="font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">
+                  {doc.title}
+                </h5>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
         {/* Summary */}
@@ -196,7 +163,7 @@ const Documents: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Modal */}
+      {/* Modal with Gallery Support */}
       <AnimatePresence>
         {selectedDoc && (
           <motion.div
@@ -213,10 +180,10 @@ const Documents: React.FC = () => {
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-auto shadow-xl"
+              className="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-auto shadow-xl"
             >
               {/* Close Button */}
-              <div className="sticky top-0 right-0 flex justify-end p-4 bg-white z-10">
+              <div className="sticky top-0 right-0 flex justify-end p-4 bg-white z-10 border-b">
                 <button
                   onClick={() => setSelectedDoc(null)}
                   className="bg-gray-100 hover:bg-gray-200 p-2 rounded-full transition-colors"
@@ -241,14 +208,72 @@ const Documents: React.FC = () => {
                   </p>
                 </div>
 
-                {/* Image */}
-                <div className="rounded-xl overflow-hidden shadow-lg">
-                  <img
-                    src={selectedDoc.image}
-                    alt={selectedDoc.title}
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
+                {/* Gallery or Single Image */}
+                {selectedDoc.gallery ? (
+                  <div className="relative">
+                    <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100">
+                      <img
+                        src={selectedDoc.gallery[currentImageIndex]}
+                        alt={`${selectedDoc.title} - ${currentImageIndex + 1}`}
+                        className="w-full h-auto object-contain max-h-[60vh]"
+                      />
+                    </div>
+
+                    {/* Gallery Controls */}
+                    <div className="flex items-center justify-between mt-4">
+                      <button
+                        onClick={handlePrevImage}
+                        className="bg-emerald-600 hover:bg-emerald-700 text-white p-3 rounded-full transition-colors shadow-md"
+                        aria-label="Previous image"
+                      >
+                        <ChevronLeft className="w-6 h-6" />
+                      </button>
+
+                      <div className="text-center">
+                        <p className="text-gray-600 font-semibold">
+                          {currentImageIndex + 1} / {selectedDoc.gallery.length}
+                        </p>
+                      </div>
+
+                      <button
+                        onClick={handleNextImage}
+                        className="bg-emerald-600 hover:bg-emerald-700 text-white p-3 rounded-full transition-colors shadow-md"
+                        aria-label="Next image"
+                      >
+                        <ChevronRight className="w-6 h-6" />
+                      </button>
+                    </div>
+
+                    {/* Thumbnail Navigation */}
+                    <div className="grid grid-cols-6 md:grid-cols-11 gap-2 mt-4">
+                      {selectedDoc.gallery.map((img, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setCurrentImageIndex(idx)}
+                          className={`aspect-square rounded-lg overflow-hidden border-2 transition-all ${
+                            idx === currentImageIndex
+                              ? 'border-emerald-600 scale-105'
+                              : 'border-gray-300 hover:border-emerald-400'
+                          }`}
+                        >
+                          <img
+                            src={img}
+                            alt={`Thumbnail ${idx + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="rounded-xl overflow-hidden shadow-lg">
+                    <img
+                      src={selectedDoc.image}
+                      alt={selectedDoc.title}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                )}
               </div>
             </motion.div>
           </motion.div>

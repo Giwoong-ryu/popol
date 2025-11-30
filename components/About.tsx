@@ -60,22 +60,22 @@ const About: React.FC = () => {
                 가맹점 교육 담당자로서의 강점
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                "7년 현장 경험을 <strong>교육 자료로 만들어</strong><br />
-                가맹점주와 직원이 <strong>혼자서도 성공</strong>할 수 있도록<br />
+                "8년 현장 경험을 <strong>교육 자료로 만들어</strong><br />
+                가맹점주와 직원이 <strong>독립적으로 운영</strong>할 수 있도록<br />
                 체계적인 교육 시스템을 구축합니다."
               </p>
             </div>
 
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed mb-8">
               <p>
-                <strong className="text-gray-900">10년 현장 경험 (F&B 7년 + 공간설계 3년)</strong>을 바탕으로 실전형 교육 자료를 제작합니다.
+                <strong className="text-gray-900">11년 현장 경험 (F&B 8년 + 공간설계 3년)</strong>을 바탕으로 실전형 교육 자료를 제작합니다.
               </p>
               <p>
                 개인카페부터 대형 프랜차이즈까지, <strong className="text-gray-900">직원·매니저·팀장</strong>을 모두 경험하며
                 <strong className="text-gray-900"> 교육받는 입장과 교육하는 입장</strong>을 모두 이해합니다.
               </p>
               <p>
-                <strong className="text-gray-900">바리스타 2급, 매장관리사</strong> 자격증을 보유하고,
+                <strong className="text-gray-900">바리스타 2급</strong> 자격증을 보유하고,
                 <strong className="text-gray-900"> 운전면허 1종</strong>으로 전국 가맹점 출장 교육이 가능합니다.
               </p>
             </div>

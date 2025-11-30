@@ -5,7 +5,7 @@ import { getAssetPath } from '../utils/getAssetPath';
 
 const heroImages = [
   { src: getAssetPath("app_make/m_1.png"), link: "#franchise-value", label: "핵심 역량" },
-  { src: getAssetPath("app_make/m_2.png"), link: "#about", label: "소개" },
+  { src: getAssetPath("app_make/a.jpg"), link: "#about", label: "소개" },
   { src: getAssetPath("app_make/edu_cover.jpg"), link: "#projects", label: "산출물" },
   { src: getAssetPath("app_make/w_1.png"), link: "#experience", label: "경력" },
   { src: getAssetPath("app_make/cafe_3.webp"), link: "#documents", label: "교육 자료" },
@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-            7년 현장 경험 기반<br />
+            8년 현장 경험 기반<br />
             가맹점 교육 전문가
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
             유기웅 <span className="text-gray-600 font-normal">Ryu Gi-Woong</span>
           </h2>
           <p className="text-gray-600">
-            F&B 7년 + 공간설계 3년 | 바리스타 2급 · 매장관리사 · 운전면허 1종
+            F&B 8년 + 공간설계 3년 | 바리스타 2급 · 운전면허 1종
           </p>
         </motion.div>
       </div>
