@@ -63,7 +63,7 @@ const experiences: ExperienceItem[] = [
     location: '서울',
     responsibilities: [
       '국내 대표 프랜차이즈의 표준화된 운영 시스템 현장 학습',
-      '본부 주도의 품질 관리, 위생 관리 프로세스 실무 경험',
+      '본부 주도의 품질 관리, 재고 관리 프로세스 실무 경험',
       '고객 응대 및 매장 운영 기본기 습득',
     ],
     achievements: [
