@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Workflow, Bot, Database, FileJson } from 'lucide-react';
+import { getAssetPath } from '../utils/getAssetPath';
 
 const skills = [
   { icon: <Workflow className="w-5 h-5" />, title: "n8n Automation", color: "bg-emerald-500" },
@@ -67,7 +68,7 @@ const Automation: React.FC = () => {
           </div>
 
           <img
-            src="/app_make/w_1.png"
+            src={getAssetPath("app_make/w_1.png")}
             alt="n8n Workflow"
             className="w-full h-auto rounded-xl mt-8"
           />

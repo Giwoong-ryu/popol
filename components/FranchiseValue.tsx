@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, DollarSign, Zap, GraduationCap } from 'lucide-react';
+import { getAssetPath } from '../utils/getAssetPath';
 
 interface ValueItem {
   icon: React.ReactNode;
@@ -17,7 +18,7 @@ const values: ValueItem[] = [
     title: "매출 증대",
     metric: "150%",
     description: "데이터 분석으로 매출 회복 및 성장 달성",
-    image: "/app_make/m_1.png",
+    image: getAssetPath("app_make/m_1.png"),
     details: [
       "네이버 플레이스 SEO 최적화로 검색 유입 200% 증가",
       "일 단위 매출 데이터 분석으로 최적 시간대 파악",
@@ -29,7 +30,7 @@ const values: ValueItem[] = [
     title: "비용 절감",
     metric: "30%",
     description: "체계화된 운영으로 인건비 효율 개선",
-    image: "/app_make/m_2.png",
+    image: getAssetPath("app_make/m_2.png"),
     details: [
       "시간대별 필요 인원 최적화로 인건비 15% 절감",
       "재고 관리 시스템 구축으로 폐기율 5% 이하 유지",
@@ -41,7 +42,7 @@ const values: ValueItem[] = [
     title: "업무 효율",
     metric: "50%",
     description: "AI 자동화로 반복 업무 시간 대폭 단축",
-    image: "/app_make/w_1.png",
+    image: getAssetPath("app_make/w_1.png"),
     details: [
       "n8n 워크플로우로 반복 업무 80% 자동화",
       "ChatGPT 활용 리뷰 분석 및 대응으로 30분→5분 단축",
@@ -53,7 +54,7 @@ const values: ValueItem[] = [
     title: "교육 체계",
     metric: "70%",
     description: "체계적 매뉴얼로 신입 교육 기간 단축",
-    image: "/app_make/edu_cover.jpg",
+    image: getAssetPath("app_make/edu_cover.jpg"),
     details: [
       "에스프레소 추출 매뉴얼로 맛 편차 제거",
       "신입 교육 시간 2주→5일로 70% 단축",

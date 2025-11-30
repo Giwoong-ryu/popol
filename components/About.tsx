@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { User, Coffee, Map, BarChart, Users, FileText } from 'lucide-react';
+import { getAssetPath } from '../utils/getAssetPath';
 
 const highlights = [
   { icon: <BarChart className="w-6 h-6" />, title: "매출 150% 증대", desc: "데이터 분석으로 6개월 만에 매출 회복" },
@@ -40,7 +41,7 @@ const About: React.FC = () => {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-lg aspect-[3/4]">
               <img
-                src="/app_make/a.jpg"
+                src={getAssetPath("app_make/a.jpg")}
                 alt="Ryu Gi-Woong Profile"
                 className="w-full h-full object-cover"
               />
