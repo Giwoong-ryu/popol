@@ -86,8 +86,8 @@ const FranchiseValue: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Value Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        {/* Value Items */}
+        <div className="space-y-12 mb-16">
           {values.map((value, index) => (
             <motion.div
               key={index}
@@ -95,42 +95,23 @@ const FranchiseValue: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 group"
+              className="border-l-4 border-emerald-500 pl-6"
             >
-              {/* Image Section */}
-              <div className="relative h-56 overflow-hidden bg-gray-100">
-                <img
-                  src={value.image}
-                  alt={value.title}
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="bg-white/90 backdrop-blur-sm p-2 rounded-lg text-emerald-600">
-                      {value.icon}
-                    </div>
-                    <h4 className="text-2xl font-bold text-white">{value.title}</h4>
-                  </div>
+              <div className="flex items-center gap-3 mb-3">
+                <div className="text-emerald-600">
+                  {value.icon}
                 </div>
+                <h4 className="text-2xl font-bold text-gray-900">{value.title}</h4>
               </div>
-
-              {/* Content Section */}
-              <div className="p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="text-4xl font-bold text-emerald-600">{value.metric}</div>
-                  <p className="text-gray-700 font-medium flex-1">{value.description}</p>
-                </div>
-
-                <ul className="space-y-2">
-                  {value.details.map((detail, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-gray-600">
-                      <span className="mr-2 text-emerald-500 mt-1 shrink-0">✓</span>
-                      <span className="leading-relaxed">{detail}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <p className="text-gray-700 mb-4">{value.description}</p>
+              <ul className="space-y-2">
+                {value.details.map((detail, idx) => (
+                  <li key={idx} className="flex items-start text-sm text-gray-600">
+                    <span className="mr-2 text-emerald-500 mt-1 shrink-0">•</span>
+                    <span className="leading-relaxed">{detail}</span>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>

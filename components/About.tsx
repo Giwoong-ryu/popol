@@ -97,25 +97,28 @@ const About: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Bottom: Highlights Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {highlights.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="p-8 rounded-3xl bg-gray-50 hover:bg-gray-100 transition-colors duration-500 group"
-            >
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-emerald-600 mb-4 group-hover:scale-105 transition-transform duration-500">
-                {item.icon}
+        {/* Bottom: Highlights */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="border-t-2 border-gray-200 pt-8"
+        >
+          <h4 className="text-xl font-bold text-gray-900 mb-6">주요 역량</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {highlights.map((item, index) => (
+              <div key={index} className="flex items-start gap-3">
+                <div className="text-emerald-600 mt-1 flex-shrink-0">
+                  {item.icon}
+                </div>
+                <div>
+                  <h5 className="font-bold text-gray-900 mb-1">{item.title}</h5>
+                  <p className="text-sm text-gray-600">{item.desc}</p>
+                </div>
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h4>
-              <p className="text-gray-600 font-medium">{item.desc}</p>
-            </motion.div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

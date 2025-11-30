@@ -166,29 +166,18 @@ const Experience: React.FC = () => {
           ))}
         </div>
 
-        {/* Summary Stats - Experience Based */}
+        {/* Summary */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4"
+          className="mt-12 pt-8 border-t-2 border-gray-200"
         >
-          <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">
-            <div className="text-3xl font-bold text-emerald-600">7년+</div>
-            <div className="text-sm text-gray-600 mt-1">F&B 현장 경험</div>
-          </div>
-          <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">
-            <div className="text-3xl font-bold text-emerald-600">3곳</div>
-            <div className="text-sm text-gray-600 mt-1">신규 매장 구축</div>
-          </div>
-          <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">
-            <div className="text-3xl font-bold text-emerald-600">5곳</div>
-            <div className="text-sm text-gray-600 mt-1">다양한 업종 경험</div>
-          </div>
-          <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">
-            <div className="text-3xl font-bold text-emerald-600">창업~운영</div>
-            <div className="text-sm text-gray-600 mt-1">전 과정 경험</div>
-          </div>
+          <p className="text-center text-gray-700 text-lg">
+            <strong className="text-emerald-600">F&B 7년 + 공간설계 3년</strong> |
+            신규 매장 3곳 구축 |
+            개인·프랜차이즈·공공기관 전 경험
+          </p>
         </motion.div>
       </div>
     </section>
