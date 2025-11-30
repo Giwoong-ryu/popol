@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpen, TrendingUp, PenTool, Cpu, Coffee, ChevronDown, ChevronUp } from 'lucide-react';
 import { Project } from '../types';
+import { getAssetPath } from '../utils/getAssetPath';
 
 const projects: Project[] = [
   {
     id: 'products',
     title: '가맹점 마케팅 자립화 시스템',
     category: 'Marketing Independence',
-    image: '/app_make/product_1.jpg',
+    image: getAssetPath('app_make/product_1.jpg'),
     icon: <Coffee className="w-5 h-5"/>,
     description: [
       '가맹점주가 스스로 SNS 콘텐츠를 제작할 수 있는 가이드 제공',
@@ -26,7 +27,7 @@ const projects: Project[] = [
     id: 'market-strategy',
     title: '저조 가맹점 매출 회복 솔루션',
     category: 'Revenue Recovery',
-    image: '/app_make/m_1.png',
+    image: getAssetPath('app_make/m_1.png'),
     icon: <TrendingUp className="w-5 h-5"/>,
     description: [
       '매출 부진 가맹점을 6개월 만에 150% 회복시킨 데이터 분석 노하우',
@@ -44,7 +45,7 @@ const projects: Project[] = [
     id: 'education',
     title: '가맹점 교육 체계화로 성공률 향상',
     category: 'Training System',
-    image: '/app_make/edu_cover.jpg',
+    image: getAssetPath('app_make/edu_cover.jpg'),
     icon: <BookOpen className="w-5 h-5"/>,
     description: [
       '체계적 매뉴얼로 신입 교육 기간 2주 → 5일 단축 (인건비 절감)',
@@ -62,7 +63,7 @@ const projects: Project[] = [
     id: 'branding',
     title: '신규 가맹점 브랜드 아이덴티티 구축',
     category: 'Brand Identity',
-    image: '/app_make/cafe_5.webp',
+    image: getAssetPath('app_make/cafe_5.webp'),
     icon: <PenTool className="w-5 h-5"/>,
     description: [
       '저비용으로 브랜드 콘셉트를 확립하여 차별화 달성',
@@ -80,7 +81,7 @@ const projects: Project[] = [
     id: 'ai-automation',
     title: '가맹점 업무 자동화로 인건비 절감',
     category: 'Labor Cost Reduction',
-    image: '/app_make/w_1.png',
+    image: getAssetPath('app_make/w_1.png'),
     icon: <Cpu className="w-5 h-5"/>,
     description: [
       '반복 업무 자동화로 직원 1명분 업무량 절감 (월 200만원 인건비)',
@@ -98,7 +99,7 @@ const projects: Project[] = [
     id: 'operation',
     title: '가맹점 현장 문제 즉각 해결 시스템',
     category: 'Problem Solving',
-    image: '/app_make/cafe_10.webp',
+    image: getAssetPath('app_make/cafe_10.webp'),
     icon: <Coffee className="w-5 h-5"/>,
     description: [
       '8년 현장 경험으로 가맹점의 모든 돌발 상황 대응 가능',

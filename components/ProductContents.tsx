@@ -1,18 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { getAssetPath } from '../utils/getAssetPath';
 
 const products = [
-  { image: "/app_make/product_1.jpg", title: "시그니처 음료" },
-  { image: "/app_make/product_2.jpg", title: "바닐라빈 라떼" },
-  { image: "/app_make/product_3.jpg", title: "디저트 메뉴" },
-  { image: "/app_make/product_4.jpg", title: "에그타르트" },
-  { image: "/app_make/product_5.jpg", title: "레몬에이드" },
-  { image: "/app_make/product_6.jpg", title: "앙버터 스콘" },
-  { image: "/app_make/product_7.jpg", title: "휘낭시에" },
-  { image: "/app_make/product_8.jpg", title: "다쿠아즈" },
-  { image: "/app_make/product_9.jpg", title: "브랜딩 콘텐츠" },
-  { image: "/app_make/product_10.jpg", title: "SNS 피드" },
-  { image: "/app_make/product_11.jpg", title: "매장 전경" },
+  { image: getAssetPath("app_make/product_1.jpg"), title: "시그니처 음료" },
+  { image: getAssetPath("app_make/product_2.jpg"), title: "바닐라빈 라떼" },
+  { image: getAssetPath("app_make/product_3.jpg"), title: "디저트 메뉴" },
+  { image: getAssetPath("app_make/product_4.jpg"), title: "에그타르트" },
+  { image: getAssetPath("app_make/product_5.jpg"), title: "레몬에이드" },
+  { image: getAssetPath("app_make/product_6.jpg"), title: "앙버터 스콘" },
+  { image: getAssetPath("app_make/product_7.jpg"), title: "휘낭시에" },
+  { image: getAssetPath("app_make/product_8.jpg"), title: "다쿠아즈" },
+  { image: getAssetPath("app_make/product_9.jpg"), title: "브랜딩 콘텐츠" },
+  { image: getAssetPath("app_make/product_10.jpg"), title: "SNS 피드" },
+  { image: getAssetPath("app_make/product_11.jpg"), title: "매장 전경" },
 ];
 
 const ProductContents: React.FC = () => {

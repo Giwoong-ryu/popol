@@ -1,30 +1,31 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Coffee, ChevronLeft, ChevronRight } from 'lucide-react';
+import { getAssetPath } from '../utils/getAssetPath';
 
 const productImages = [
-  "/app_make/product_1.jpg",
-  "/app_make/product_2.jpg",
-  "/app_make/product_3.jpg",
-  "/app_make/product_4.jpg",
-  "/app_make/product_5.jpg",
-  "/app_make/product_6.jpg",
-  "/app_make/product_7.jpg",
-  "/app_make/product_8.jpg",
-  "/app_make/product_9.jpg",
-  "/app_make/product_10.jpg",
-  "/app_make/product_11.jpg",
-];
+  "app_make/product_1.jpg",
+  "app_make/product_2.jpg",
+  "app_make/product_3.jpg",
+  "app_make/product_4.jpg",
+  "app_make/product_5.jpg",
+  "app_make/product_6.jpg",
+  "app_make/product_7.jpg",
+  "app_make/product_8.jpg",
+  "app_make/product_9.jpg",
+  "app_make/product_10.jpg",
+  "app_make/product_11.jpg",
+].map(getAssetPath);
 
 const cafeImages = [
-  "/app_make/cafe_3.webp",
-  "/app_make/cafe_6.webp",
-  "/app_make/cafe_5.webp",
-  "/app_make/cafe_8.webp",
-  "/app_make/cafe_7.webp",
-  "/app_make/cafe_9.webp",
-  "/app_make/cafe_10.webp",
-];
+  "app_make/cafe_3.webp",
+  "app_make/cafe_6.webp",
+  "app_make/cafe_5.webp",
+  "app_make/cafe_8.webp",
+  "app_make/cafe_7.webp",
+  "app_make/cafe_9.webp",
+  "app_make/cafe_10.webp",
+].map(getAssetPath);
 
 const Gallery: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(2);

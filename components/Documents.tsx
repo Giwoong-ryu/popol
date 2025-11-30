@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FileText, TrendingUp, BookOpen, BarChart3, Target, X } from 'lucide-react';
+import { getAssetPath } from '../utils/getAssetPath';
 
 interface Document {
   image: string;
@@ -12,28 +13,28 @@ interface Document {
 
 const marketDocuments: Document[] = [
   {
-    image: '/app_make/m_1.png',
+    image: getAssetPath('app_make/m_1.png'),
     title: '플레이스 세팅',
     category: 'Market Analysis',
     icon: <TrendingUp className="w-5 h-5" />,
     description: '네이버 플레이스 최적화를 통한 검색 노출 극대화 전략. SEO 최적화로 검색 유입 200% 증가를 달성했습니다.',
   },
   {
-    image: '/app_make/m_2.png',
+    image: getAssetPath('app_make/m_2.png'),
     title: '상권 분석 보고서',
     category: 'Market Research',
     icon: <BarChart3 className="w-5 h-5" />,
     description: '데이터 기반 상권 분석 및 타겟 고객층 파악. 유동인구, 소비 패턴, 경쟁 업체 등을 종합 분석하여 매장 운영 전략을 수립했습니다.',
   },
   {
-    image: '/app_make/m_4.png',
+    image: getAssetPath('app_make/m_4.png'),
     title: '경쟁사 분석',
     category: 'Competitive Analysis',
     icon: <Target className="w-5 h-5" />,
     description: '20곳 이상의 경쟁 카페 벤치마킹을 통한 차별화 전략 도출. 가격, 메뉴 구성, 인테리어, SNS 마케팅 등 다각도로 분석했습니다.',
   },
   {
-    image: '/app_make/h_3.jpeg',
+    image: getAssetPath('app_make/h_3.jpeg'),
     title: '인테리어 제안서',
     category: 'Interior Design',
     icon: <TrendingUp className="w-5 h-5" />,
@@ -43,49 +44,49 @@ const marketDocuments: Document[] = [
 
 const educationDocuments: Document[] = [
   {
-    image: '/app_make/edu_cover.jpg',
+    image: getAssetPath('app_make/edu_cover.jpg'),
     title: '커피 이론 교육자료',
     category: 'Education',
     icon: <BookOpen className="w-5 h-5" />,
     description: '신입 바리스타를 위한 체계적인 커피 이론 교육 자료. 원두의 종류, 배전도, 추출 원리 등 커피의 기본부터 심화까지 다룹니다.',
   },
   {
-    image: '/app_make/커피 이론 교육자료-제출용/■ 테이스팅 노트 및 체크리스트_제출용_2.jpg',
+    image: getAssetPath('app_make/커피 이론 교육자료-제출용/■ 테이스팅 노트 및 체크리스트_제출용_2.jpg'),
     title: '체크리스트',
     category: 'QA Manual',
     icon: <FileText className="w-5 h-5" />,
     description: '매장 운영 품질 관리를 위한 체크리스트. 개점 전 준비사항, 위생 관리, 제품 품질 확인 등을 표준화했습니다.',
   },
   {
-    image: '/app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_8.jpg',
+    image: getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_8.jpg'),
     title: '에스프레소 추출 가이드',
     category: 'Training Manual',
     icon: <FileText className="w-5 h-5" />,
     description: '매장 전용 에스프레소 추출 매뉴얼. 도징량, 추출 시간, 수율 등의 기준을 확립하여 지점 간 맛의 편차를 최소화했습니다.',
   },
   {
-    image: '/app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_6.jpg',
+    image: getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_6.jpg'),
     title: '그라인더 관리법',
     category: 'Equipment Manual',
     icon: <FileText className="w-5 h-5" />,
     description: '그라인더 청소 및 유지보수 가이드. 장비의 수명을 연장하고 항상 최적의 상태를 유지하기 위한 관리 방법을 정리했습니다.',
   },
   {
-    image: '/app_make/h_5.jpeg',
+    image: getAssetPath('app_make/h_5.jpeg'),
     title: '현장 실습 교육',
     category: 'Practical Training',
     icon: <FileText className="w-5 h-5" />,
     description: '실제 매장 현장에서의 실습 교육 자료. 이론을 실전에 적용하며 직원들의 업무 숙련도를 높이는 교육 프로그램입니다.',
   },
   {
-    image: '/app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_4.jpg',
+    image: getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_4.jpg'),
     title: '원두 배전도 및 추출 특성',
     category: 'Coffee Theory',
     icon: <BookOpen className="w-5 h-5" />,
     description: '배전도에 따른 원두의 특성과 최적의 추출 방법. 각 배전도별 맛의 특징과 추천 추출 레시피를 제공합니다.',
   },
   {
-    image: '/app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_11.jpg',
+    image: getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_11.jpg'),
     title: '스티밍 교육',
     category: 'Training Manual',
     icon: <FileText className="w-5 h-5" />,
