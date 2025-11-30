@@ -57,6 +57,21 @@ const experiences: ExperienceItem[] = [
     ],
   },
   {
+    company: '대형 프랜차이즈 현장 운영 경험',
+    position: '직원 | 파리바게트 삼성역점',
+    period: '2017.02 ~ 2018.08',
+    location: '서울',
+    responsibilities: [
+      '국내 대표 프랜차이즈의 표준화된 운영 시스템 현장 학습',
+      '본부 주도의 품질 관리, 위생 관리 프로세스 실무 경험',
+      '고객 응대 및 매장 운영 기본기 습득',
+    ],
+    achievements: [
+      '본부 적용 방안: 가맹점 직원 관점에서 본부 매뉴얼의 실효성 검증 경험',
+      '핵심 가치: "현장에서 실제로 따라할 수 있는 매뉴얼"의 중요성 체득',
+    ],
+  },
+  {
     company: '상업 공간 설계 & 시공 관리',
     position: '과장 | 대○인테리어',
     period: '2014.02 ~ 2017.01',
@@ -166,7 +181,7 @@ const Experience: React.FC = () => {
             <div className="text-sm text-gray-600 mt-1">신규 매장 구축</div>
           </div>
           <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">
-            <div className="text-3xl font-bold text-emerald-600">4곳</div>
+            <div className="text-3xl font-bold text-emerald-600">5곳</div>
             <div className="text-sm text-gray-600 mt-1">다양한 업종 경험</div>
           </div>
           <div className="bg-emerald-50 rounded-xl p-6 text-center border border-emerald-100">
