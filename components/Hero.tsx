@@ -69,11 +69,14 @@ const Hero: React.FC = () => {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="text-center mt-16"
         >
+          <div className="inline-block bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-3">
+            🎯 프랜차이즈 본부 SV / 운영지원 포지션 구직 중
+          </div>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
             유기웅 <span className="text-gray-600 font-normal">Ryu Gi-Woong</span>
           </h2>
           <p className="text-gray-600">
-            프랜차이즈 현장 경력 8년 | 매장 운영 비용 절감 전문 | 데이터 기반 의사결정
+            F&B 7년 + 공간설계 3년 | 매장 운영 비용 절감 전문 | 데이터 기반 의사결정
           </p>
         </motion.div>
       </div>

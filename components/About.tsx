@@ -70,7 +70,7 @@ const About: React.FC = () => {
 
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed mb-8">
               <p>
-                <strong className="text-gray-900">8년 현장 경험</strong>을 바탕으로 프랜차이즈 본부가 직면한 문제를 이해합니다.
+                <strong className="text-gray-900">10년 현장 경험 (F&B 7년 + 공간설계 3년)</strong>을 바탕으로 프랜차이즈 본부가 직면한 문제를 이해합니다.
               </p>
               <p>
                 <strong className="text-gray-900">데이터 분석</strong>으로 매출 증대 방법을 찾고, <strong className="text-gray-900">체계화</strong>로 인건비를 절감하며,

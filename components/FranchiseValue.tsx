@@ -15,49 +15,49 @@ interface ValueItem {
 const values: ValueItem[] = [
   {
     icon: <TrendingUp className="w-8 h-8" />,
-    title: "매출 증대",
-    metric: "150%",
-    description: "데이터 분석으로 매출 회복 및 성장 달성",
+    title: "매출 분석",
+    metric: "📊",
+    description: "데이터 기반 매출 분석으로 개선점 도출",
     image: getAssetPath("app_make/m_1.png"),
     details: [
-      "네이버 플레이스 SEO 최적화로 검색 유입 200% 증가",
+      "네이버 플레이스 SEO 최적화로 검색 노출 개선",
       "일 단위 매출 데이터 분석으로 최적 시간대 파악",
-      "배달앱 알고리즘 대응으로 6개월 만에 매출 회복"
+      "배달앱 운영 최적화로 부진 매장 매출 회복 경험"
     ]
   },
   {
     icon: <DollarSign className="w-8 h-8" />,
     title: "비용 절감",
-    metric: "30%",
+    metric: "💰",
     description: "체계화된 운영으로 인건비 효율 개선",
     image: getAssetPath("app_make/m_2.png"),
     details: [
-      "시간대별 필요 인원 최적화로 인건비 15% 절감",
-      "재고 관리 시스템 구축으로 폐기율 5% 이하 유지",
-      "상권 분석 기반 입지 선정으로 실패 리스크 최소화"
+      "시간대별 필요 인원 최적화로 인건비 효율화",
+      "재고 관리 시스템 구축으로 폐기율 최소화",
+      "상권 분석 기반 입지 선정으로 실패 리스크 감소"
     ]
   },
   {
     icon: <Zap className="w-8 h-8" />,
     title: "업무 효율",
-    metric: "50%",
-    description: "AI 자동화로 반복 업무 시간 대폭 단축",
+    metric: "⚡",
+    description: "AI 자동화로 반복 업무 시간 단축",
     image: getAssetPath("app_make/w_1.png"),
     details: [
-      "n8n 워크플로우로 반복 업무 80% 자동화",
-      "ChatGPT 활용 리뷰 분석 및 대응으로 30분→5분 단축",
-      "뉴스레터 자동 발송으로 마케팅 업무 50% 절감"
+      "n8n 워크플로우로 반복 업무 자동화 구현",
+      "ChatGPT 활용 리뷰 분석 및 대응 시간 단축",
+      "뉴스레터 자동 발송으로 마케팅 업무 효율화"
     ]
   },
   {
     icon: <GraduationCap className="w-8 h-8" />,
     title: "교육 체계",
-    metric: "70%",
-    description: "체계적 매뉴얼로 신입 교육 기간 단축",
+    metric: "📚",
+    description: "체계적 매뉴얼로 신입 교육 효율화",
     image: getAssetPath("app_make/edu_cover.jpg"),
     details: [
       "에스프레소 추출 매뉴얼로 맛 편차 제거",
-      "신입 교육 시간 2주→5일로 70% 단축",
+      "체계적 교육 자료로 신입 교육 기간 단축",
       "체크리스트 표준화로 품질 균일성 확보"
     ]
   }
@@ -81,7 +81,7 @@ const FranchiseValue: React.FC = () => {
             프랜차이즈 본부가 얻는 4가지 가치
           </h3>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            8년 현장 경험을 바탕으로 프랜차이즈 본부의 운영 비용을 줄이고,<br className="hidden md:block" />
+            10년 현장 경험 (F&B 7년 + 공간설계 3년)을 바탕으로 본부의 운영 비용을 줄이고,<br className="hidden md:block" />
             가맹점 성공률을 높이는 실전 노하우를 제공합니다
           </p>
         </motion.div>
