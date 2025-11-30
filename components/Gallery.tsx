@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Coffee, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getAssetPath } from '../utils/getAssetPath';
 
@@ -17,19 +17,8 @@ const productImages = [
   "app_make/product_11.jpg",
 ].map(getAssetPath);
 
-const cafeImages = [
-  "app_make/cafe_3.webp",
-  "app_make/cafe_6.webp",
-  "app_make/cafe_5.webp",
-  "app_make/cafe_8.webp",
-  "app_make/cafe_7.webp",
-  "app_make/cafe_9.webp",
-  "app_make/cafe_10.webp",
-].map(getAssetPath);
-
 const Gallery: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(2);
-  const [cafeIndex, setCafeIndex] = useState(2);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev > 0 ? prev - 1 : productImages.length - 1));
@@ -37,14 +26,6 @@ const Gallery: React.FC = () => {
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev < productImages.length - 1 ? prev + 1 : 0));
-  };
-
-  const handleCafePrev = () => {
-    setCafeIndex((prev) => (prev > 0 ? prev - 1 : cafeImages.length - 1));
-  };
-
-  const handleCafeNext = () => {
-    setCafeIndex((prev) => (prev < cafeImages.length - 1 ? prev + 1 : 0));
   };
 
   const getImageIndex = (offset: number, total: number, current: number) => {
@@ -195,105 +176,6 @@ const Gallery: React.FC = () => {
                       : 'bg-gray-300 hover:bg-gray-400'
                   }`}
                   aria-label={`Go to product ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Cafe Gallery Section */}
-        <div>
-          <div className="text-center mb-8">
-            <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Gallery</h2>
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">현장의 순간들</h3>
-          </div>
-
-          {/* Cafe Carousel Layout - 3 visible items */}
-          <div className="relative max-w-6xl mx-auto">
-            <div className="overflow-hidden py-8">
-              <div className="flex items-center justify-center gap-4 md:gap-6">
-                {/* Left Item */}
-                <motion.div
-                  key={`cafe-left-${cafeIndex}`}
-                  initial={{ opacity: 0, scale: 0.92 }}
-                  animate={{ opacity: 0.75, scale: 0.92 }}
-                  transition={{ duration: 0.5 }}
-                  className="hidden md:block flex-shrink-0 w-64 lg:w-80 xl:w-96"
-                >
-                  <div className="relative rounded-2xl overflow-hidden shadow-sm aspect-square">
-                    <img
-                      src={cafeImages[getImageIndex(-1, cafeImages.length, cafeIndex)]}
-                      alt="Cafe"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </motion.div>
-
-                {/* Center Item (Active) */}
-                <motion.div
-                  key={`cafe-center-${cafeIndex}`}
-                  initial={{ opacity: 0, scale: 0.95, y: 10 }}
-                  animate={{ opacity: 1, scale: 1.0, y: -8 }}
-                  transition={{ duration: 0.5 }}
-                  className="flex-shrink-0 w-72 md:w-80 lg:w-96 xl:w-[28rem] z-10"
-                >
-                  <div className="relative rounded-3xl overflow-hidden shadow-lg aspect-square border-2 border-emerald-100">
-                    <img
-                      src={cafeImages[cafeIndex]}
-                      alt={`Cafe ${cafeIndex + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
-                  </div>
-                </motion.div>
-
-                {/* Right Item */}
-                <motion.div
-                  key={`cafe-right-${cafeIndex}`}
-                  initial={{ opacity: 0, scale: 0.92 }}
-                  animate={{ opacity: 0.75, scale: 0.92 }}
-                  transition={{ duration: 0.5 }}
-                  className="hidden md:block flex-shrink-0 w-64 lg:w-80 xl:w-96"
-                >
-                  <div className="relative rounded-2xl overflow-hidden shadow-sm aspect-square">
-                    <img
-                      src={cafeImages[getImageIndex(1, cafeImages.length, cafeIndex)]}
-                      alt="Cafe"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-
-            {/* Navigation Buttons */}
-            <button
-              onClick={handleCafePrev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 p-3 bg-white/90 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-20"
-              aria-label="Previous cafe photo"
-            >
-              <ChevronLeft className="w-6 h-6 text-gray-700" />
-            </button>
-            <button
-              onClick={handleCafeNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 p-3 bg-white/90 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-20"
-              aria-label="Next cafe photo"
-            >
-              <ChevronRight className="w-6 h-6 text-gray-700" />
-            </button>
-
-            {/* Indicators */}
-            <div className="flex justify-center gap-2 mt-6">
-              {cafeImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCafeIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === cafeIndex
-                      ? 'bg-emerald-600 w-8'
-                      : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                  aria-label={`Go to cafe photo ${index + 1}`}
                 />
               ))}
             </div>

@@ -4,12 +4,12 @@ import { User, Coffee, Map, BarChart, Users, FileText } from 'lucide-react';
 import { getAssetPath } from '../utils/getAssetPath';
 
 const highlights = [
-  { icon: <BarChart className="w-6 h-6" />, title: "매출 150% 증대", desc: "데이터 분석으로 6개월 만에 매출 회복" },
-  { icon: <Users className="w-6 h-6" />, title: "인건비 30% 절감", desc: "시간대별 최적 인력 배치로 비용 효율화" },
-  { icon: <FileText className="w-6 h-6" />, title: "교육 시간 70% 단축", desc: "체계적 매뉴얼로 신입 교육 기간 단축" },
+  { icon: <BarChart className="w-6 h-6" />, title: "데이터 기반 매출 개선", desc: "매출 데이터 분석으로 부진 원인 파악 및 개선" },
+  { icon: <Users className="w-6 h-6" />, title: "인력 배치 최적화", desc: "시간대별 수요에 맞춘 효율적 인력 운영" },
+  { icon: <FileText className="w-6 h-6" />, title: "교육 체계화", desc: "체계적 매뉴얼로 신입 교육 기간 단축" },
   { icon: <Coffee className="w-6 h-6" />, title: "품질 표준화", desc: "매뉴얼로 지점 간 맛 편차 제거" },
   { icon: <Map className="w-6 h-6" />, title: "신규 매장 구축", desc: "상권 분석부터 오픈까지 전 과정 관리" },
-  { icon: <User className="w-6 h-6" />, title: "AI 자동화", desc: "반복 업무 80% 자동화로 업무 효율 증대" },
+  { icon: <User className="w-6 h-6" />, title: "업무 자동화", desc: "반복 업무 자동화로 업무 효율 증대" },
 ];
 
 const About: React.FC = () => {

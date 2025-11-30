@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
             운영 비용을 줄이는 실무 전문가
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            데이터 분석으로 매출 150% 증대 · 체계화로 인건비 30% 절감 · 자동화로 업무 시간 50% 단축
+            데이터 기반 매출 개선 · 매뉴얼 체계화로 교육 효율화 · 반복 업무 자동화
           </p>
         </motion.div>
 
