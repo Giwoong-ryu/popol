@@ -160,7 +160,7 @@ n8n-franchise-report/
 
 - **자동화**: n8n (self-hosted / cloud)
 - **데이터**: Google Sheets
-- **AI**: OpenAI GPT-4o-mini
+- **AI**: Google Gemini 2.5 Flash (최신)
 - **알림**: Telegram Bot API
 
 ## 비용 추정
@@ -168,11 +168,21 @@ n8n-franchise-report/
 | 항목 | 비용 |
 |------|------|
 | n8n Cloud | $20/월 (또는 self-hosted 무료) |
-| OpenAI API | ~$0.5/월 (일일 1회 기준) |
+| Gemini API | ~$0.3/월 (일일 1회 기준) |
 | Telegram | 무료 |
 | Google Sheets | 무료 |
 
 **총 예상 비용: $20/월 이하**
+
+### Gemini vs GPT 비교
+
+| 항목 | Gemini 2.5 Flash | GPT-4o-mini |
+|------|------------------|-------------|
+| 가격 | **$0.10/1M tokens** | $0.15/1M tokens |
+| 성능 | 우수 | 우수 |
+| n8n 지원 | 기본 노드 | 기본 노드 |
+
+→ Gemini 선택 이유: **33% 저렴** + 프로젝트 통일성
 
 ## 라이선스
 
