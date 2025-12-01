@@ -64,7 +64,7 @@ const documents: Document[] = [
     description: '20곳 이상의 경쟁 카페 벤치마킹을 통한 차별화 전략 도출. 가격, 메뉴 구성, 인테리어, SNS 마케팅 등 다각도로 분석했습니다.',
   },
   {
-    image: getAssetPath('app_make/h_3.jpeg'),
+    image: getAssetPath('app_make/인테리어.png'),
     title: '인테리어 제안서',
     category: 'Interior Design',
     icon: <TrendingUp className="w-5 h-5" />,

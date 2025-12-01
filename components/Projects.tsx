@@ -48,7 +48,7 @@ const projects: Project[] = [
     id: 'opening',
     title: '신규 오픈 준비 가이드',
     category: 'Store Opening',
-    image: getAssetPath('app_make/h_3.jpeg'),
+    image: getAssetPath('app_make/타임테이블.png'),
     icon: <TrendingUp className="w-5 h-5"/>,
     description: [
       '2025년 9월: 해운회사 카페 신규 매장 구축 프로젝트 총괄 (1개월)',

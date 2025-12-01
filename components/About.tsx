@@ -39,7 +39,7 @@ const About: React.FC = () => {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-lg aspect-[3/4]">
               <img
-                src={getAssetPath("app_make/a.jpg")}
+                src={getAssetPath("app_make/ai교육_1.jpg")}
                 alt="Ryu Gi-Woong Profile"
                 className="w-full h-full object-cover"
               />
