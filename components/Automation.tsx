@@ -137,7 +137,7 @@ const Automation: React.FC = () => {
           {activeTab === 'workflow' && (
             <>
               <img
-                src={getAssetPath("app_make/auto_workflow.png")}
+                src={getAssetPath("app_make/1-1.png")}
                 alt="n8n Workflow"
                 className="w-full h-auto rounded-xl mt-8"
               />
@@ -150,11 +150,23 @@ const Automation: React.FC = () => {
 
           {activeTab === 'result' && (
             <>
-              <img
-                src={getAssetPath("app_make/auto_telegram.png")}
-                alt="Telegram Report"
-                className="w-full h-auto rounded-xl mt-8 max-w-md mx-auto"
-              />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                <img
+                  src={getAssetPath("app_make/1-2.png")}
+                  alt="Telegram Report 1"
+                  className="w-full h-auto rounded-xl"
+                />
+                <img
+                  src={getAssetPath("app_make/1-3.png")}
+                  alt="Telegram Report 2"
+                  className="w-full h-auto rounded-xl"
+                />
+                <img
+                  src={getAssetPath("app_make/1-4.png")}
+                  alt="Telegram Report 3"
+                  className="w-full h-auto rounded-xl"
+                />
+              </div>
               <div className="mt-6 text-center">
                 <h3 className="text-xl font-bold mb-2">텔레그램 리포트 결과</h3>
                 <p className="text-gray-400">매일 오전 9시, AI가 분석한 일일 리포트가 자동 전송됩니다</p>
@@ -165,7 +177,7 @@ const Automation: React.FC = () => {
           {activeTab === 'data' && (
             <>
               <img
-                src={getAssetPath("app_make/auto_sheets.png")}
+                src={getAssetPath("app_make/1-5.png")}
                 alt="Google Sheets Data"
                 className="w-full h-auto rounded-xl mt-8"
               />
