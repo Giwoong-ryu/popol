@@ -1,0 +1,289 @@
+{
+  "name": "가맹점 일일 리포트 자동화",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 9 * * *"
+            }
+          ]
+        }
+      },
+      "id": "schedule-trigger",
+      "name": "매일 오전 9시 실행",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [0, 0],
+      "notes": "매일 오전 9시에 자동 실행\n어제 매출 데이터를 분석하여 리포트 생성"
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "1VnOc5BH_ORMEq7Km6sUd93VAnMFvHWK-UPtUlO-MYk0",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "지점A",
+          "mode": "name"
+        },
+        "options": {
+          "range": "A:AL"
+        }
+      },
+      "id": "read-store-a",
+      "name": "지점A 데이터",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [220, -150],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YOUR_CREDENTIAL_ID",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "1VnOc5BH_ORMEq7Km6sUd93VAnMFvHWK-UPtUlO-MYk0",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "지점B",
+          "mode": "name"
+        },
+        "options": {
+          "range": "A:AL"
+        }
+      },
+      "id": "read-store-b",
+      "name": "지점B 데이터",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [220, -50],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YOUR_CREDENTIAL_ID",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "1VnOc5BH_ORMEq7Km6sUd93VAnMFvHWK-UPtUlO-MYk0",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "지점C",
+          "mode": "name"
+        },
+        "options": {
+          "range": "A:AL"
+        }
+      },
+      "id": "read-store-c",
+      "name": "지점C 데이터",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [220, 50],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YOUR_CREDENTIAL_ID",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "1VnOc5BH_ORMEq7Km6sUd93VAnMFvHWK-UPtUlO-MYk0",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "지점D",
+          "mode": "name"
+        },
+        "options": {
+          "range": "A:AL"
+        }
+      },
+      "id": "read-store-d",
+      "name": "지점D 데이터",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [220, 150],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YOUR_CREDENTIAL_ID",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "id": "merge-all-data",
+      "name": "전체 데이터 병합",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [440, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "// ============================================\n// 가맹점 일일 리포트 - 고급 분석 코드\n// ============================================\n\nconst CONFIG = {\n  inventory: {\n    bean: { warning: 3, critical: 1.5 },\n    milk: { warning: 4, critical: 2 },\n    syrup: { warning: 4, critical: 2 },\n    cup: { warning: 200, critical: 100 }\n  },\n  performance: {\n    salesGrowthTarget: 5,\n    revisitRateTarget: 40,\n    wasteRateLimit: 3,\n    productivityTarget: 400000\n  }\n};\n\n// 날짜 유틸리티\nconst formatDate = (date) => date.toISOString().split('T')[0];\n\nconst getDateRange = () => {\n  const today = new Date();\n  const yesterday = new Date(today);\n  yesterday.setDate(yesterday.getDate() - 1);\n  \n  const dayBefore = new Date(yesterday);\n  dayBefore.setDate(dayBefore.getDate() - 1);\n  \n  const weekAgo = new Date(yesterday);\n  weekAgo.setDate(weekAgo.getDate() - 7);\n  \n  const monthAgo = new Date(yesterday);\n  monthAgo.setDate(monthAgo.getDate() - 30);\n  \n  return {\n    today: formatDate(today),\n    yesterday: formatDate(yesterday),\n    dayBefore: formatDate(dayBefore),\n    weekAgo: formatDate(weekAgo),\n    monthAgo: formatDate(monthAgo)\n  };\n};\n\n// 데이터 필터링\nconst filterByDate = (data, dateStr) => data.filter(r => r['날짜'] === dateStr);\nconst filterByDateRange = (data, startDate, endDate) => \n  data.filter(r => r['날짜'] >= startDate && r['날짜'] <= endDate);\n\n// 통계 함수\nconst sum = (arr, key) => arr.reduce((acc, r) => acc + (parseInt(r[key]) || 0), 0);\nconst avg = (arr, key) => arr.length ? sum(arr, key) / arr.length : 0;\nconst calcChangeRate = (current, previous) => \n  previous ? ((current - previous) / previous * 100).toFixed(1) : 0;\n\n// 입력 데이터\nconst allData = $input.all().map(item => item.json);\nconst dates = getDateRange();\n\n// 데이터 필터링\nconst todayData = filterByDate(allData, dates.yesterday);\nconst yesterdayData = filterByDate(allData, dates.dayBefore);\nconst weekData = filterByDateRange(allData, dates.weekAgo, dates.yesterday);\nconst monthData = filterByDateRange(allData, dates.monthAgo, dates.yesterday);\n\nif (todayData.length === 0) {\n  return [{ json: { error: true, message: `${dates.yesterday} 데이터가 없습니다.` }}];\n}\n\n// 매출 분석\nconst todaySales = sum(todayData, '총매출');\nconst yesterdaySales = sum(yesterdayData, '총매출');\nconst salesChange = calcChangeRate(todaySales, yesterdaySales);\n\n// 지점별 분석\nconst storeAnalysis = todayData.map(store => {\n  const prevStore = yesterdayData.find(y => y['지점코드'] === store['지점코드']);\n  const prevSales = prevStore ? parseInt(prevStore['총매출']) : 0;\n  const storeSales = parseInt(store['총매출']) || 0;\n  \n  return {\n    name: store['가맹점명'],\n    code: store['지점코드'],\n    sales: storeSales,\n    salesFormatted: storeSales.toLocaleString(),\n    change: calcChangeRate(storeSales, prevSales),\n    customers: parseInt(store['총고객수']) || 0,\n    avgTicket: parseInt(store['객단가']) || 0,\n    americano: parseInt(store['아메리카노']) || 0,\n    latte: parseInt(store['카페라떼']) || 0,\n    newMenu: parseInt(store['신메뉴']) || 0,\n    beanStock: parseFloat(store['원두재고(kg)']) || 0,\n    milkStock: parseInt(store['우유재고(박스)']) || 0,\n    staffCount: parseInt(store['근무인원']) || 1,\n    productivity: Math.round(storeSales / (parseInt(store['근무인원']) || 1)),\n    waste: parseInt(store['폐기량(잔)']) || 0,\n    weather: store['날씨'],\n    event: store['특이사항'] || ''\n  };\n}).sort((a, b) => b.sales - a.sales);\n\n// 재고 알림 생성\nconst inventoryAlerts = [];\nstoreAnalysis.forEach(store => {\n  if (store.beanStock <= CONFIG.inventory.bean.critical) {\n    inventoryAlerts.push(`🚨 ${store.name}: 원두 긴급 발주 (${store.beanStock}kg)`);\n  } else if (store.beanStock <= CONFIG.inventory.bean.warning) {\n    inventoryAlerts.push(`⚠️ ${store.name}: 원두 발주 필요 (${store.beanStock}kg)`);\n  }\n  if (store.milkStock <= CONFIG.inventory.milk.critical) {\n    inventoryAlerts.push(`🚨 ${store.name}: 우유 긴급 발주 (${store.milkStock}박스)`);\n  } else if (store.milkStock <= CONFIG.inventory.milk.warning) {\n    inventoryAlerts.push(`⚠️ ${store.name}: 우유 발주 필요 (${store.milkStock}박스)`);\n  }\n});\n\n// 메뉴별 분석\nconst menuSales = {\n  americano: sum(todayData, '아메리카노'),\n  latte: sum(todayData, '카페라떼'),\n  vanillaLatte: sum(todayData, '바닐라라떼'),\n  coldBrew: sum(todayData, '콜드브루'),\n  nonCoffee: sum(todayData, '논커피음료'),\n  newMenu: sum(todayData, '신메뉴')\n};\n\nconst totalDrinks = Object.values(menuSales).reduce((a, b) => a + b, 0);\n\n// 주간 트렌드\nconst weeklyTrend = [];\nfor (let i = 6; i >= 0; i--) {\n  const d = new Date();\n  d.setDate(d.getDate() - i - 1);\n  const dateStr = formatDate(d);\n  const dayData = filterByDate(allData, dateStr);\n  weeklyTrend.push({\n    date: dateStr.slice(5),\n    sales: sum(dayData, '총매출')\n  });\n}\n\n// 인사이트 생성\nconst insights = [];\nconst recommendations = [];\n\nif (parseFloat(salesChange) > 10) {\n  insights.push(`📈 전일 대비 매출 ${salesChange}% 상승`);\n} else if (parseFloat(salesChange) < -10) {\n  insights.push(`📉 전일 대비 매출 ${salesChange}% 하락`);\n  recommendations.push('매출 하락 원인 분석 필요');\n}\n\nconst topStore = storeAnalysis[0];\nconst bottomStore = storeAnalysis[storeAnalysis.length - 1];\ninsights.push(`🏆 최고 매출: ${topStore.name} (${topStore.salesFormatted}원)`);\n\nif (menuSales.newMenu > 0) {\n  const newMenuRatio = ((menuSales.newMenu / totalDrinks) * 100).toFixed(1);\n  insights.push(`✨ 신메뉴 판매 ${menuSales.newMenu}잔 (전체 ${newMenuRatio}%)`);\n}\n\nreturn [{\n  json: {\n    date: dates.yesterday,\n    summary: {\n      totalSales: todaySales.toLocaleString(),\n      salesChange: `${parseFloat(salesChange) >= 0 ? '+' : ''}${salesChange}%`,\n      totalCustomers: sum(todayData, '총고객수'),\n      avgTicket: Math.round(avg(todayData, '객단가')).toLocaleString(),\n      storeCount: todayData.length\n    },\n    stores: storeAnalysis,\n    menu: menuSales,\n    totalDrinks,\n    weeklyTrend,\n    inventoryAlerts,\n    insights,\n    recommendations\n  }\n}];"
+      },
+      "id": "analyze-data",
+      "name": "데이터 분석",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [660, 0],
+      "notes": "매출/고객/메뉴/재고 종합 분석\n경향 파악 및 인사이트 생성"
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini",
+        "messages": {
+          "values": [
+            {
+              "content": "당신은 프랜차이즈 카페 본사의 데이터 분석 전문가입니다.\n아래 분석 데이터를 바탕으로 경영진이 빠르게 의사결정할 수 있는 일일 리포트를 작성해주세요.\n\n## 분석 데이터\n날짜: {{ $json.date }}\n\n### 매출 요약\n- 총 매출: {{ $json.summary.totalSales }}원\n- 전일 대비: {{ $json.summary.salesChange }}\n- 총 고객수: {{ $json.summary.totalCustomers }}명\n- 객단가: {{ $json.summary.avgTicket }}원\n- 운영 매장: {{ $json.summary.storeCount }}개\n\n### 지점별 실적\n{{ JSON.stringify($json.stores, null, 2) }}\n\n### 메뉴 판매량\n{{ JSON.stringify($json.menu, null, 2) }}\n\n### 주간 매출 추이\n{{ JSON.stringify($json.weeklyTrend, null, 2) }}\n\n### 재고 알림\n{{ $json.inventoryAlerts.join('\\n') }}\n\n### 인사이트\n{{ $json.insights.join('\\n') }}\n\n### 권고사항\n{{ $json.recommendations.join('\\n') }}\n\n## 리포트 형식\n\n```\n━━━━━━━━━━━━━━━━━━━━\n📊 [날짜] 가맹점 일일 리포트\n━━━━━━━━━━━━━━━━━━━━\n\n💰 매출 현황\n  - 총 매출: X원 (전일 대비 X%)\n  - 고객수: X명 | 객단가: X원\n\n🏪 지점별 순위\n  1️⃣ [지점명] X원 (+X%)\n  2️⃣ [지점명] X원 (+X%)\n  3️⃣ [지점명] X원 (-X%)\n  4️⃣ [지점명] X원 (-X%)\n\n☕ 베스트 메뉴\n  - 아메리카노 X잔 (X%)\n  - 카페라떼 X잔 (X%)\n\n📦 재고 알림\n  [있으면 표시]\n\n📈 주간 트렌드\n  [간단한 추세 설명]\n\n💡 오늘의 인사이트\n  [핵심 1-2개]\n\n🎯 액션 아이템\n  [구체적 조치사항]\n━━━━━━━━━━━━━━━━━━━━\n```\n\n텔레그램/카카오톡에 적합하게 이모지 활용하여 가독성 있게 작성해주세요."
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0.7,
+          "maxTokens": 1500
+        }
+      },
+      "id": "generate-report",
+      "name": "GPT 리포트 생성",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.4,
+      "position": [880, 0],
+      "credentials": {
+        "openAiApi": {
+          "id": "YOUR_OPENAI_CREDENTIAL_ID",
+          "name": "OpenAI"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "={{ $json.message.content }}",
+        "additionalFields": {
+          "parse_mode": "HTML"
+        }
+      },
+      "id": "send-telegram",
+      "name": "텔레그램 발송",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1100, -50],
+      "credentials": {
+        "telegramApi": {
+          "id": "YOUR_TELEGRAM_CREDENTIAL_ID",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://YOUR_KAKAO_WEBHOOK_URL",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "message",
+              "value": "={{ $json.message.content }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "send-kakao",
+      "name": "카카오톡 발송 (선택)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1100, 50],
+      "notes": "카카오 비즈니스 API 또는 웹훅 사용\n선택적으로 연결"
+    }
+  ],
+  "connections": {
+    "매일 오전 9시 실행": {
+      "main": [
+        [
+          { "node": "지점A 데이터", "type": "main", "index": 0 },
+          { "node": "지점B 데이터", "type": "main", "index": 0 },
+          { "node": "지점C 데이터", "type": "main", "index": 0 },
+          { "node": "지점D 데이터", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "지점A 데이터": {
+      "main": [
+        [{ "node": "전체 데이터 병합", "type": "main", "index": 0 }]
+      ]
+    },
+    "지점B 데이터": {
+      "main": [
+        [{ "node": "전체 데이터 병합", "type": "main", "index": 0 }]
+      ]
+    },
+    "지점C 데이터": {
+      "main": [
+        [{ "node": "전체 데이터 병합", "type": "main", "index": 0 }]
+      ]
+    },
+    "지점D 데이터": {
+      "main": [
+        [{ "node": "전체 데이터 병합", "type": "main", "index": 0 }]
+      ]
+    },
+    "전체 데이터 병합": {
+      "main": [
+        [{ "node": "데이터 분석", "type": "main", "index": 0 }]
+      ]
+    },
+    "데이터 분석": {
+      "main": [
+        [{ "node": "GPT 리포트 생성", "type": "main", "index": 0 }]
+      ]
+    },
+    "GPT 리포트 생성": {
+      "main": [
+        [
+          { "node": "텔레그램 발송", "type": "main", "index": 0 },
+          { "node": "카카오톡 발송 (선택)", "type": "main", "index": 0 }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Seoul"
+  },
+  "staticData": null,
+  "tags": ["프랜차이즈", "일일리포트", "자동화"],
+  "triggerCount": 1,
+  "pinData": {}
+}
