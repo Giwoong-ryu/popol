@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BookOpen, TrendingUp, PenTool, Coffee, ChevronDown, ChevronUp } from 'lucide-react';
+import { BookOpen, TrendingUp, PenTool, Coffee } from 'lucide-react';
 import { Project } from '../types';
 import { getAssetPath } from '../utils/getAssetPath';
 
@@ -60,9 +60,6 @@ const projects: Project[] = [
 ];
 
 const Projects: React.FC = () => {
-  const [showAll, setShowAll] = useState(false);
-  const visibleProjects = showAll ? projects : projects.slice(0, 3);
-
   return (
     <section id="projects" className="py-24 bg-gray-50">
       <div className="container mx-auto px-6 max-w-7xl">
@@ -74,9 +71,9 @@ const Projects: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <AnimatePresence>
-            {visibleProjects.map((project, index) => (
+            {projects.map((project, index) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -85,7 +82,7 @@ const Projects: React.FC = () => {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col"
               >
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative h-64 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -115,33 +112,6 @@ const Projects: React.FC = () => {
             ))}
           </AnimatePresence>
         </div>
-
-        {/* Show More/Less Button */}
-        {projects.length > 3 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="flex justify-center mt-12"
-          >
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-semibold transition-colors duration-300 shadow-md hover:shadow-lg"
-            >
-              {showAll ? (
-                <>
-                  <span>접기</span>
-                  <ChevronUp className="w-5 h-5" />
-                </>
-              ) : (
-                <>
-                  <span>상세보기 ({projects.length - 3}개 더보기)</span>
-                  <ChevronDown className="w-5 h-5" />
-                </>
-              )}
-            </button>
-          </motion.div>
-        )}
       </div>
     </section>
   );

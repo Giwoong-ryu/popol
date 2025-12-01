@@ -5,11 +5,11 @@ import { getAssetPath } from '../utils/getAssetPath';
 
 const heroImages = [
   { src: getAssetPath("app_make/m_1.png"), link: "#franchise-value", label: "핵심 역량" },
-  { src: getAssetPath("app_make/a.jpg"), link: "#about", label: "소개" },
-  { src: getAssetPath("app_make/edu_cover.jpg"), link: "#projects", label: "산출물" },
+  { src: getAssetPath("app_make/ai교육_1.jpg"), link: "#about", label: "소개" },
+  { src: getAssetPath("app_make/h_1.webp"), link: "#projects", label: "산출물" },
   { src: getAssetPath("app_make/w_1.png"), link: "#experience", label: "경력" },
-  { src: getAssetPath("app_make/cafe_3.webp"), link: "#documents", label: "교육 자료" },
-  { src: getAssetPath("app_make/cafe_5.webp"), link: "#gallery", label: "갤러리" },
+  { src: getAssetPath("app_make/h_3.jpeg"), link: "#documents", label: "교육 자료" },
+  { src: getAssetPath("app_make/h_4.jpeg"), link: "#gallery", label: "갤러리" },
 ];
 
 const Hero: React.FC = () => {
