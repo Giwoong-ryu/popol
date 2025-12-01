@@ -4,9 +4,9 @@ import { ArrowDown } from 'lucide-react';
 import { getAssetPath } from '../utils/getAssetPath';
 
 const heroImages = [
-  { src: getAssetPath("app_make/m_2.png"), link: "#franchise-value", label: "핵심 역량" },
+  { src: getAssetPath("app_make/m_2.png"), link: "#projects", label: "핵심 역량" },
   { src: getAssetPath("app_make/ai교육.png"), link: "#about", label: "소개" },
-  { src: getAssetPath("app_make/타임테이블.png"), link: "#projects", label: "산출물" },
+  { src: getAssetPath("app_make/h_5.jpeg"), link: "#automation", label: "AI 자동화" },
   { src: getAssetPath("app_make/ai교육_1.jpg"), link: "#experience", label: "경력" },
   { src: getAssetPath("app_make/h_3.jpeg"), link: "#documents", label: "교육 자료" },
   { src: getAssetPath("app_make/h_4.jpeg"), link: "#gallery", label: "갤러리" },
