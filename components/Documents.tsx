@@ -32,7 +32,7 @@ const documents: Document[] = [
     title: '커피 이론 교육자료',
     category: 'Education',
     icon: <BookOpen className="w-5 h-5" />,
-    description: '신입 바리스타를 위한 체계적인 커피 이론 교육 자료 (47페이지). 원두의 종류, 배전도, 추출 원리 등 커피의 기본부터 심화까지 다룹니다. 2년간 자활센터에서 실사용하여 검증된 교육 자료입니다.',
+    description: '신입 바리스타를 위한 체계적인 커피 이론 교육 자료 (11페이지). 원두의 종류, 배전도, 추출 원리 등 커피의 기본부터 심화까지 다룹니다. 2년간 자활센터에서 실사용하여 검증된 교육 자료입니다.',
     gallery: educationImages,
   },
   {
@@ -156,8 +156,7 @@ const Documents: React.FC = () => {
           className="mt-16 pt-8 border-t-2 border-gray-200"
         >
           <p className="text-center text-gray-700 text-lg">
-            <strong className="text-emerald-600">커피 이론 교육자료 47페이지</strong> (2년간 자활센터 실사용) |
-            <strong className="text-emerald-600"> 교육 매뉴얼 11개</strong> |
+            <strong className="text-emerald-600">커피 이론 교육자료 11페이지</strong> (2년간 자활센터 실사용) |
             <strong className="text-emerald-600"> 상권 분석 문서 4개</strong>
           </p>
         </motion.div>
