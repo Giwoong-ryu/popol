@@ -36,12 +36,13 @@ const documents: Document[] = [
     gallery: educationImages,
   },
   {
-    image: getAssetPath('app_make/product_10.jpg'),
+    image: getAssetPath('app_make/h_4.jpeg'),
     title: 'SNS 콘텐츠',
     category: 'Content Marketing',
     icon: <FileText className="w-5 h-5" />,
     description: '인스타그램 콘텐츠 기획·촬영·편집·업로드 전 과정을 직접 수행했습니다. 3.5년간 1,300건 이상의 게시물을 제작하며 팔로워 2,000명을 확보했습니다.',
     gallery: [
+      getAssetPath('app_make/h_4.jpeg'),
       getAssetPath('app_make/product_10.jpg'),
       getAssetPath('app_make/product_12_1.png'),
       getAssetPath('app_make/product_1.jpg'),

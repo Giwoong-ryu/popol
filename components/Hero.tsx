@@ -5,8 +5,7 @@ import { getAssetPath } from '../utils/getAssetPath';
 
 const heroImages = [
   { src: getAssetPath("app_make/ai교육.png"), link: "#about", label: "소개" },
-  { src: getAssetPath("app_make/m_2.png"), link: "#projects", label: "핵심 역량" },
-  { src: getAssetPath("app_make/h_3.jpeg"), link: "#documents", label: "교육 자료" },
+  { src: getAssetPath("app_make/k1.png"), link: "#projects", label: "핵심 역량" },
   { src: getAssetPath("app_make/ai교육_1.jpg"), link: "#experience", label: "경력" },
   { src: getAssetPath("app_make/h_5.jpeg"), link: "#automation", label: "업무 자동화" },
 ];
@@ -36,7 +35,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto"
         >
           {heroImages.map((item, index) => (
             <motion.a
