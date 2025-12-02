@@ -113,7 +113,7 @@ const Documents: React.FC = () => {
           className="mb-12"
         >
           <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Education Materials</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">실제 제작한 교육 자료</h3>
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">제작 및 결과물</h3>
           <p className="text-gray-600 max-w-2xl">
             8년 현장 경험을 바탕으로 직접 제작한 교육 자료와 분석 문서입니다.<br />
             가맹점 교육에 즉시 활용 가능한 검증된 콘텐츠입니다.

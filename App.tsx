@@ -18,10 +18,10 @@ const App: React.FC = () => {
       <main className="flex flex-col w-full">
         <Hero />
         <About />
-        <Automation />
         <Projects />
-        <Experience />
         <Documents />
+        <Experience />
+        <Automation />
         <Gallery />
       </main>
       <Footer />
