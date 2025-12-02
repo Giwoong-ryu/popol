@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이력서 - 유기웅</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f5f5;
+    }
+
+    .resume-container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* 헤더 */
+    .resume-header {
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      color: white;
+      padding: 40px;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .profile-photo {
+      width: 140px;
+      height: 180px;
+      object-fit: cover;
+      border: 3px solid white;
+      border-radius: 5px;
+    }
+
+    .header-info h1 {
+      font-size: 32px;
+      margin-bottom: 5px;
+      letter-spacing: 2px;
+    }
+
+    .header-info .title {
+      font-size: 15px;
+      color: #bdc3c7;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 14px;
+    }
+
+    .contact-info span {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* 본문 */
+    .resume-body {
+      padding: 40px;
+    }
+
+    .section {
+      margin-bottom: 35px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 4px;
+      height: 20px;
+      background: #3498db;
+    }
+
+    /* 경력사항 */
+    .career-item {
+      margin-bottom: 25px;
+      padding-left: 15px;
+      border-left: 2px solid #ecf0f1;
+    }
+
+    .career-item:hover {
+      border-left-color: #3498db;
+    }
+
+    .career-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .career-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .career-period {
+      font-size: 13px;
+      color: #7f8c8d;
+      background: #ecf0f1;
+      padding: 2px 10px;
+      border-radius: 3px;
+    }
+
+    .career-desc {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .career-desc li {
+      margin-bottom: 5px;
+      list-style: none;
+      position: relative;
+      padding-left: 15px;
+    }
+
+    .career-desc li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #3498db;
+    }
+
+    /* 프로젝트 */
+    .project-item {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      border-left: 3px solid #3498db;
+    }
+
+    .project-item h4 {
+      color: #2c3e50;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .project-item p {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* 핵심역량 */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-tag {
+      background: #e8f4fc;
+      color: #2980b9;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      border: 1px solid #bde0f7;
+    }
+
+    .skill-tag.highlight {
+      background: #2980b9;
+      color: white;
+    }
+
+    /* 자기소개 */
+    .intro-text {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #444;
+      text-align: justify;
+    }
+
+    .intro-text p {
+      margin-bottom: 15px;
+    }
+
+    .intro-text strong {
+      color: #2c3e50;
+    }
+
+    /* 푸터 */
+    .resume-footer {
+      text-align: center;
+      padding: 30px;
+      background: #f9f9f9;
+      font-size: 13px;
+      color: #7f8c8d;
+    }
+
+    /* 인쇄용 스타일 */
+    @media print {
+      body {
+        background: white;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .resume-container {
+        box-shadow: none;
+        margin: 0;
+      }
+
+      .resume-header {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .download-btn {
+        display: none;
+      }
+
+      .section {
+        page-break-inside: avoid;
+      }
+    }
+
+    /* 다운로드 버튼 */
+    .download-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 14px;
+      box-shadow: 0 4px 15px rgba(52,152,219,0.4);
+      transition: all 0.3s;
+    }
+
+    .download-btn:hover {
+      background: #2980b9;
+      transform: translateY(-2px);
+    }
+
+    /* 2단 그리드 */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+      .resume-header {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <!-- 헤더 -->
+    <header class="resume-header">
+      <img src="profile.jpg" alt="프로필 사진" class="profile-photo">
+      <div class="header-info">
+        <h1>유 기 웅</h1>
+        <p class="title">카페/매장 운영 전문가 | 업무 자동화 기획자<br>현장 문제를 데이터와 자동화로 해결하는 실무형 인재</p>
+        <div class="contact-info">
+          <span>생년월일: 1995. 09. 02</span>
+          <span>연락처: 010-4483-5400</span>
+          <span>이메일: ryugw10@naver.com</span>
+          <span>거주지: 부산 (원격 작업 가능)</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 본문 -->
+    <div class="resume-body">
+
+      <!-- 자기소개 -->
+      <section class="section">
+        <h2 class="section-title">자기소개</h2>
+        <div class="intro-text">
+          <p><strong>카페·매장 운영 경험과 자동화를 결합해서, 현장에서 반복되는 문제를 실제로 줄이는 실무형 운영/기획자</strong>입니다.</p>
+          <p>8년간의 카페/매장 운영 경험(개인 카페, 프랜차이즈, 공공기관 카페사업단)을 바탕으로, 매장 안에서 반복해서 부딪히는 문제들(매출 저하, 클레임, 동선, 인력, 문서 정리, 보고 체계)을 데이터·체크리스트·자동화 도구를 활용해 <strong>'한 번 잘 설계해두면 계속 편해지는 구조'</strong>로 바꾸는 데 집중해왔습니다.</p>
+          <p>AI, n8n, Python 같은 기술들은 현장의 문제 해결을 위한 도구로 활용하며, "운영 + 자동화 + 교육을 동시에 이해하는 사람"이라는 방향을 잡고 있습니다.</p>
+        </div>
+      </section>
+
+      <!-- 경력사항 -->
+      <section class="section">
+        <h2 class="section-title">경력사항</h2>
+
+        <div class="career-item">
+          <div class="career-header">
+            <span class="career-title">부산동래지역자활센터 카페사업단 팀장</span>
+            <span class="career-period">2023.02 ~ 2025.01 (1년 11개월)</span>
+          </div>
+          <ul class="career-desc">
+            <li>카페사업단 매장 총괄 (운영, 인력, 매출, 품질 관리 전반 책임)</li>
+            <li>신규 매장 입점 및 운영 설계</li>
+            <li>직원 교육 및 스케줄 관리 (개인별 속도와 이해도를 고려한 맞춤 교육)</li>
+            <li>에스프레소 추출 기준 세팅 및 레시피 문서화</li>
+            <li>고객 응대 및 민원 처리, 매출/결산 보고</li>
+          </ul>
+        </div>
+
+        <div class="career-item">
+          <div class="career-header">
+            <span class="career-title">메가커피 매니저</span>
+            <span class="career-period">2022.08 ~ 2023.02 (7개월)</span>
+          </div>
+          <ul class="career-desc">
+            <li>음료 제조 및 고객 응대</li>
+            <li>프랜차이즈 매뉴얼 기반 운영 시스템 체득</li>
+            <li>발주·재고 관리, 신입 교육</li>
+          </ul>
+        </div>
+
+        <div class="career-item">
+          <div class="career-header">
+            <span class="career-title">씨리얼 개인 카페 운영 총괄</span>
+            <span class="career-period">2018.11 ~ 2022.05 (3년 7개월)</span>
+          </div>
+          <ul class="career-desc">
+            <li>카페 창업 준비부터 운영 종료까지 전 과정 총괄</li>
+            <li>콘셉트·브랜드 방향 설정, 메뉴 구성 및 시그니처 기획</li>
+            <li>바 동선 및 손님 동선 설계, 운영 시스템 구축</li>
+            <li>SNS 마케팅 및 콘텐츠 직접 제작 (누적 1,300건 이상)</li>
+            <li>재고·발주·원가 관리, 고객 응대 및 단골 관리</li>
+          </ul>
+        </div>
+
+        <div class="career-item">
+          <div class="career-header">
+            <span class="career-title">대은인테리어 과장</span>
+            <span class="career-period">2014.02 ~ 2017.01 (3년)</span>
+          </div>
+          <ul class="career-desc">
+            <li>현장 시공 관리 (도면 vs 실제 시공 상태 비교, 공정 순서 관리)</li>
+            <li>협력업체 조율 (전기, 배관, 목공, 도장 등)</li>
+            <li>자재·마감재 선택 및 품질·안전 점검</li>
+            <li>인테리어 견적 구조 이해 및 공간 동선 설계 감각 함양</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 프로젝트 경험 -->
+      <section class="section">
+        <h2 class="section-title">주요 프로젝트</h2>
+
+        <div class="project-item">
+          <h4>해운회사 카페 신규 매장 구축 프로젝트 - PM (2025.09)</h4>
+          <p>시장조사(20곳 벤치마킹), 상권 분석, 콘셉트·포지셔닝 기획, 인테리어 업체 미팅 및 견적 협의(1.5억→1.3억 조정), 브랜딩 업체 미팅, 로고·컨셉 초안 제작, 메뉴 방향 및 시그니처 구조 기획, 네이버 플레이스 마케팅 방향 제안</p>
+        </div>
+
+        <div class="project-item">
+          <h4>n8n 기반 가맹점 일일 리포트 자동화 시스템 (2025)</h4>
+          <p>Google Sheets 매출 데이터 → Gemini AI 분석 → 텔레그램 자동 발송. 매장별 매출/생산성/폐기율 분석, 위험 항목 자동 알림, 기상청 API 연동 날씨 정보 포함</p>
+        </div>
+
+        <div class="project-item">
+          <h4>문서 정리 프로그램 개발 및 배포 (2025.05~)</h4>
+          <p>Windows용 문서 자동 정리 프로그램. 파일 확장자/이름/생성일 기준 자동 이동, 파일명 자동 변환, 백업·리셋 기능. 지인(소상공인, 사무직)에게 실제 배포 및 사용</p>
+        </div>
+
+        <div class="project-item">
+          <h4>AI 실습·LLM 교육 소모임 운영 (2024.09~)</h4>
+          <p>매주 수요일 정기 모임: AI 도구 비교, 활용법 공유. GPT/Claude/Gemini 차이점, n8n 자동화 실습, 구조적 프롬프트 설계 교육 진행</p>
+        </div>
+      </section>
+
+      <!-- 문제 해결 사례 -->
+      <section class="section">
+        <h2 class="section-title">문제 해결 사례</h2>
+
+        <div class="project-item">
+          <h4>커피 맛 관련 반복 민원 해결</h4>
+          <p>원두 상태, 머신 세팅, 직원별 추출 습관 분석 → 추출 기준 재정의 및 문서화 → 직원 재교육 → 클레임 빈도 감소, "맛이 좋아졌다" 반응 확보</p>
+        </div>
+
+        <div class="project-item">
+          <h4>배달앱 노출 변화로 매출 급감 → 회복</h4>
+          <p>노출 알고리즘 역추론, 상위 노출 매장 분석 → 카테고리/영업시간/메뉴 구성 조정 → 전월 대비 매출 150% 수준 회복</p>
+        </div>
+
+        <div class="project-item">
+          <h4>운영 매뉴얼 구축으로 신규 직원 적응 기간 단축</h4>
+          <p>오픈/마감 체크리스트, 하루 루틴, 메뉴별 주의사항 문서화 → 신규 직원 업무 적응 기간 2주 → 5일로 단축</p>
+        </div>
+      </section>
+
+      <!-- 핵심역량 & 스킬 -->
+      <section class="section">
+        <h2 class="section-title">핵심역량</h2>
+        <div class="skills-grid">
+          <span class="skill-tag highlight">매장 운영 총괄</span>
+          <span class="skill-tag highlight">신규 매장 구축</span>
+          <span class="skill-tag highlight">업무 자동화</span>
+          <span class="skill-tag">매출 분석 및 보고</span>
+          <span class="skill-tag">직원 교육</span>
+          <span class="skill-tag">에스프레소 세팅</span>
+          <span class="skill-tag">메뉴 개발</span>
+          <span class="skill-tag">상권 분석</span>
+          <span class="skill-tag">SNS 마케팅</span>
+          <span class="skill-tag">클레임 처리</span>
+          <span class="skill-tag">매뉴얼 제작</span>
+          <span class="skill-tag">인테리어 견적 협상</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">기술 스킬</h2>
+        <div class="two-column">
+          <div>
+            <p style="font-weight: bold; margin-bottom: 10px; color: #2c3e50;">자동화/AI</p>
+            <div class="skills-grid">
+              <span class="skill-tag">n8n</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">GPT/Claude/Gemini</span>
+              <span class="skill-tag">Notion API</span>
+            </div>
+          </div>
+          <div>
+            <p style="font-weight: bold; margin-bottom: 10px; color: #2c3e50;">운영/디자인</p>
+            <div class="skills-grid">
+              <span class="skill-tag">Excel/Sheets</span>
+              <span class="skill-tag">Notion</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Canva</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 학력 -->
+      <section class="section">
+        <h2 class="section-title">학력</h2>
+        <div style="display: flex; justify-content: space-between; padding: 10px 15px; background: #f9f9f9; border-radius: 5px;">
+          <span>전북대학교 생물환경화학과 (중퇴)</span>
+          <span style="color: #7f8c8d;">2003학번</span>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="resume-footer">
+      <p>성장의 순간을 소중히 여기고, 언제나 연락하는 사람이 되고 싶습니다.</p>
+      <p style="margin-top: 10px;">본 이력서의 내용은 사실과 다름없음을 확인합니다.</p>
+    </footer>
+  </div>
+
+  <button class="download-btn" onclick="window.print()">PDF 다운로드</button>
+</body>
+</html>
