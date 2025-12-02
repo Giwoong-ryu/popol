@@ -21,7 +21,7 @@ const values: ValueItem[] = [
     image: getAssetPath("app_make/edu_cover.jpg"),
     details: [
       "커피 이론 교육자료 47페이지 직접 제작",
-      "신입 교육 기간 2주 → 5일로 단축 실적",
+      "신입 교육 기간 1달 → 2주로 단축 실적",
       "에스프레소 추출, 스티밍 등 실무 매뉴얼 완비"
     ]
   },
