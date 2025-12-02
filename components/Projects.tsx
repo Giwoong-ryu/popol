@@ -70,7 +70,7 @@ const Projects: React.FC = () => {
       <div className="container mx-auto px-4 max-w-[1600px]">
         <div className="text-center mb-16">
           <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">Portfolio & Achievements</h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-gray-900">역량 및 결과물</h3>
+          <h3 className="text-3xl md:text-5xl font-bold text-gray-900">핵심역량</h3>
           <p className="text-lg text-gray-600 mt-4">
             8년 현장 경험을 바탕으로 직접 제작하고 검증한 교육 자료 및 콘텐츠
           </p>

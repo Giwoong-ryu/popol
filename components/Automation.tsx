@@ -24,29 +24,18 @@ const Automation: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Benefits - 간단하게 */}
+        {/* 구축 시스템 요약 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
+          className="flex flex-wrap justify-center gap-3 mb-12"
         >
-          <div className="bg-emerald-50 rounded-xl p-4 text-center">
-            <div className="text-2xl font-bold text-emerald-600 mb-1">자동</div>
-            <div className="text-sm text-gray-600">일일 리포트 발송</div>
-          </div>
-          <div className="bg-emerald-50 rounded-xl p-4 text-center">
-            <div className="text-2xl font-bold text-emerald-600 mb-1">0분</div>
-            <div className="text-sm text-gray-600">보고서 작성 시간</div>
-          </div>
-          <div className="bg-emerald-50 rounded-xl p-4 text-center">
-            <div className="text-2xl font-bold text-emerald-600 mb-1">실시간</div>
-            <div className="text-sm text-gray-600">이상 징후 감지</div>
-          </div>
-          <div className="bg-emerald-50 rounded-xl p-4 text-center">
-            <div className="text-2xl font-bold text-emerald-600 mb-1">AI</div>
-            <div className="text-sm text-gray-600">개선 제안 자동화</div>
-          </div>
+          <span className="px-4 py-2 bg-gray-100 rounded-full text-sm text-gray-700">n8n 워크플로우</span>
+          <span className="px-4 py-2 bg-gray-100 rounded-full text-sm text-gray-700">Google Sheets 연동</span>
+          <span className="px-4 py-2 bg-gray-100 rounded-full text-sm text-gray-700">Gemini AI 분석</span>
+          <span className="px-4 py-2 bg-gray-100 rounded-full text-sm text-gray-700">텔레그램 발송</span>
+          <span className="px-4 py-2 bg-gray-100 rounded-full text-sm text-gray-700">기상청 API</span>
         </motion.div>
 
         {/* Tab Navigation */}
