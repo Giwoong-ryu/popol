@@ -477,6 +477,31 @@
     </footer>
   </div>
 
-  <button class="download-btn" onclick="window.print()">PDF 다운로드</button>
+  <button class="download-btn" onclick="downloadPDF()">PDF 다운로드</button>
+
+  <!-- html2pdf.js 라이브러리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    function downloadPDF() {
+      const element = document.querySelector('.resume-container');
+      const button = document.querySelector('.download-btn');
+
+      // 버튼 숨기기
+      button.style.display = 'none';
+
+      const opt = {
+        margin: 0,
+        filename: '이력서_유기웅.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+
+      html2pdf().set(opt).from(element).save().then(() => {
+        // 버튼 다시 표시
+        button.style.display = 'block';
+      });
+    }
+  </script>
 </body>
 </html>
