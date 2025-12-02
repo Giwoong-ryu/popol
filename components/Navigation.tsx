@@ -14,7 +14,7 @@ const navItems: NavItem[] = [
   { id: 'projects', label: '핵심역량', icon: <Briefcase className="w-4 h-4" /> },
   { id: 'experience', label: '경력', icon: <Award className="w-4 h-4" /> },
   { id: 'automation', label: '업무자동화', icon: <Zap className="w-4 h-4" /> },
-  { id: 'documents', label: '교육자료', icon: <FileText className="w-4 h-4" /> },
+  { id: 'documents', label: '자료', icon: <FileText className="w-4 h-4" /> },
 ];
 
 const Navigation: React.FC = () => {

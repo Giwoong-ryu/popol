@@ -5,7 +5,7 @@ import { getAssetPath } from '../utils/getAssetPath';
 
 const highlights = [
   { icon: <FileText className="w-6 h-6" />, title: "교육 자료 제작", desc: "커피 이론부터 실무까지, 11페이지 교육자료 직접 제작" },
-  { icon: <Coffee className="w-6 h-6" />, title: "신입 교육 체계화", desc: "체계적 매뉴얼로 교육 기간 2주→5일 단축" },
+  { icon: <Coffee className="w-6 h-6" />, title: "신입 교육 체계화", desc: "체계적 매뉴얼로 교육 기간 1달→2주 단축" },
   { icon: <Map className="w-6 h-6" />, title: "신규 오픈 지원", desc: "상권 분석, 인테리어 협의, 오픈 준비 전 과정 경험" },
   { icon: <User className="w-6 h-6" />, title: "SNS 콘텐츠 제작", desc: "1,300건 직접 제작, 가맹점용 템플릿 제공 가능" },
 ];
