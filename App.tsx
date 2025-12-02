@@ -1,9 +1,9 @@
 import React from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
-import Gallery from './components/Gallery';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
+import Documents from './components/Documents';
 import Automation from './components/Automation';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
@@ -20,7 +20,7 @@ const App: React.FC = () => {
         <Projects />
         <Experience />
         <Automation />
-        <Gallery />
+        <Documents />
       </main>
       <Footer />
     </div>
