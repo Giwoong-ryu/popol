@@ -5,6 +5,7 @@ import Gallery from './components/Gallery';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Documents from './components/Documents';
+import Automation from './components/Automation';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 import PageSwitch from './components/PageSwitch';
@@ -17,6 +18,7 @@ const App: React.FC = () => {
       <main className="flex flex-col w-full">
         <Hero />
         <About />
+        <Automation />
         <Projects />
         <Experience />
         <Documents />

@@ -34,18 +34,18 @@ const projects: Project[] = [
     ]
   },
   {
-    id: 'checklist',
-    title: '운영 체크리스트 세트',
-    category: 'Operations Manual',
-    image: getAssetPath('app_make/커피 이론 교육자료-제출용/■ 테이스팅 노트 및 체크리스트_제출용_1.jpg'),
+    id: 'automation',
+    title: '가맹점 일일 리포트 자동화',
+    category: 'AI Automation',
+    image: getAssetPath('app_make/1-2.png'),
     icon: <Coffee className="w-5 h-5"/>,
     description: [
-      '매장 오픈/마감 루틴, 품질 관리, 위생 점검을 위한 체크리스트 직접 설계 및 제작',
-      '오픈 체크리스트 15항목: 머신 예열, 원두 상태 확인, 청소 상태, 재고 확인 등',
-      '마감 체크리스트 12항목: 장비 청소, 재고 정리, 매출 정산, 보안 점검 등',
-      '품질 관리 체크리스트 10항목: 추출 시간, 온도, 맛 테스트, 위생 상태 등',
-      '도입 후 업무 누락률 제로 달성, 신입 직원 적응 기간 1주 → 3일로 단축',
-      '테이스팅 노트를 활용한 일일 품질 관리 시스템 구축으로 맛 일관성 유지'
+      'n8n + Gemini AI + Google Sheets + Telegram 연동 자동화 시스템 직접 설계 및 구축',
+      '매장 데이터(매출, 폐기율, 생산성) 자동 수집 → AI 분석 → 리포트 자동 생성',
+      '이상 징후(폐기율 5% 초과, 매출 급락 등) 실시간 감지 및 즉시 알림 발송',
+      '날씨 API 연동으로 기온·강수량 기반 재고 관리 제안 기능 포함',
+      '본사/슈퍼바이저/점주 각각에 맞춤형 리포트 자동 전송 시스템 구현',
+      '매일 수동 작성하던 일일 보고서 작업 시간 완전 제거 (5분 → 0분)'
     ]
   },
   {
@@ -70,7 +70,7 @@ const Projects: React.FC = () => {
       <div className="container mx-auto px-4 max-w-[1600px]">
         <div className="text-center mb-16">
           <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">Portfolio & Achievements</h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-gray-900">실제 제작한 결과물</h3>
+          <h3 className="text-3xl md:text-5xl font-bold text-gray-900">역량 및 결과물</h3>
           <p className="text-lg text-gray-600 mt-4">
             8년 현장 경험을 바탕으로 직접 제작하고 검증한 교육 자료 및 콘텐츠
           </p>
