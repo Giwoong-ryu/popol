@@ -15,8 +15,8 @@ const productImages = [
   "app_make/product_9.jpg",
   "app_make/product_10.jpg",
   "app_make/product_11.jpg",
-  "app_make/product_12.jpg", // 리얼 딸기 라떼
-  "app_make/product_13.jpg", // 샌드위치
+  "app_make/product_12.png", // 리얼 딸기 라떼
+  "app_make/product_13.png", // 샌드위치
   "app_make/product_14.jpg", // 에그타르트
 ].map(getAssetPath);
 
