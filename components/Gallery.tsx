@@ -4,6 +4,8 @@ import { Coffee, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getAssetPath } from '../utils/getAssetPath';
 
 const productImages = [
+  "app_make/edu_cover.jpg",
+  "app_make/product_12_1.png",
   "app_make/product_1.jpg",
   "app_make/product_2.jpg",
   "app_make/product_3.jpg",
@@ -55,8 +57,8 @@ const Gallery: React.FC = () => {
         {/* Product Carousel Section */}
         <div className="mb-12">
           <div className="text-center mb-8">
-            <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">제작 및 결과물</h2>
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">제작 자료</h3>
+            <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Content Portfolio</h2>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">SNS 콘텐츠 & 교육자료</h3>
           </div>
 
           {/* Carousel Layout - 5 visible items */}

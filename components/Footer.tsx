@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Mail, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -20,12 +20,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <button className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 text-white rounded-full font-semibold hover:bg-emerald-700 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-500">
-          <Download className="w-5 h-5" />
-          이력서(PDF) 다운로드
-        </button>
-
-        <p className="mt-16 text-gray-400 text-sm">
+        <p className="mt-10 text-gray-400 text-sm">
           © 2025 Ryu Gi-Woong. All rights reserved.<br/>
           Designed with React & Tailwind CSS.
         </p>
