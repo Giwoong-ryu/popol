@@ -22,8 +22,8 @@ const Hero: React.FC = () => {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-            8년 현장 경험 기반<br />
-            가맹점 교육 전문가
+            F&B 8년<br />
+            현장에서 만든 교육 시스템
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             교육 자료 제작 · 신입 교육 체계화 · 오픈 지원
