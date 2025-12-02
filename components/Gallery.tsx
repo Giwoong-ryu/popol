@@ -15,6 +15,10 @@ const productImages = [
   "app_make/product_9.jpg",
   "app_make/product_10.jpg",
   "app_make/product_11.jpg",
+  "app_make/product_12.jpg",
+  "app_make/product_13.jpg",
+  "app_make/product_14.jpg",
+  "app_make/product_15.jpg",
 ].map(getAssetPath);
 
 const Gallery: React.FC = () => {
