@@ -81,7 +81,7 @@ const FranchiseValue: React.FC = () => {
             가맹점 교육 담당으로서의 4가지 강점
           </h3>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            11년 현장 경험 (F&B 8년 + 공간설계 3년)을 바탕으로<br className="hidden md:block" />
+            F&B 8년 현장 경험을 바탕으로<br className="hidden md:block" />
             가맹점주와 직원이 실제로 사용할 수 있는 교육 콘텐츠를 제작합니다
           </p>
         </motion.div>

@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
             유기웅 <span className="text-gray-600 font-normal">Ryu Gi-Woong</span>
           </h2>
           <p className="text-gray-600">
-            F&B 8년 + 공간설계 3년 | 바리스타 2급 · 운전면허 1종
+            F&B 8년 | 바리스타 2급 · 운전면허 1종
           </p>
         </motion.div>
       </div>

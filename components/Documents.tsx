@@ -36,14 +36,18 @@ const documents: Document[] = [
     gallery: educationImages,
   },
   {
-    image: getAssetPath('app_make/커피 이론 교육자료-제출용/■ 테이스팅 노트 및 체크리스트_제출용_1.jpg'),
-    title: '체크리스트',
-    category: 'QA Manual',
+    image: getAssetPath('app_make/product_12_1.png'),
+    title: 'SNS 관리',
+    category: 'Content Marketing',
     icon: <FileText className="w-5 h-5" />,
-    description: '매장 운영 품질 관리를 위한 체크리스트. 개점 전 준비사항, 위생 관리, 제품 품질 확인 등을 표준화했습니다. 오픈 15항목, 마감 12항목, 품질 관리 10항목으로 업무 누락을 방지합니다.',
+    description: '인스타그램 콘텐츠 기획·촬영·편집·업로드 전 과정을 직접 수행했습니다. 3.5년간 1,300건 이상의 게시물을 제작하며 팔로워 2,000명을 확보했습니다.',
+    gallery: [
+      getAssetPath('app_make/product_12_1.png'),
+      getAssetPath('app_make/product_10.jpg'),
+    ],
   },
   {
-    image: getAssetPath('app_make/m_1.png'),
+    image: getAssetPath('app_make/k1.png'),
     title: '플레이스 세팅',
     category: 'Marketing',
     icon: <TrendingUp className="w-5 h-5" />,
@@ -57,11 +61,15 @@ const documents: Document[] = [
     description: '데이터 기반 상권 분석 및 타겟 고객층 파악. 유동인구, 소비 패턴, 경쟁 업체 등을 종합 분석하여 매장 운영 전략을 수립했습니다.',
   },
   {
-    image: getAssetPath('app_make/m_4.png'),
+    image: getAssetPath('app_make/k2.png'),
     title: '경쟁사 분석',
     category: 'Competitive Analysis',
     icon: <Target className="w-5 h-5" />,
     description: '20곳 이상의 경쟁 카페 벤치마킹을 통한 차별화 전략 도출. 가격, 메뉴 구성, 인테리어, SNS 마케팅 등 다각도로 분석했습니다.',
+    gallery: [
+      getAssetPath('app_make/k2.png'),
+      getAssetPath('app_make/k3.png'),
+    ],
   },
   {
     image: getAssetPath('app_make/인테리어.png'),

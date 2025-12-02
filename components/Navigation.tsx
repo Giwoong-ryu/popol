@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Home, User, Image, Lightbulb, Briefcase, Award, FileText } from 'lucide-react';
+import { Home, User, Image, Zap, Briefcase, Award, FileText } from 'lucide-react';
 
 interface NavItem {
   id: string;
@@ -11,7 +11,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   { id: 'hero', label: '홈', icon: <Home className="w-4 h-4" /> },
   { id: 'about', label: '소개', icon: <User className="w-4 h-4" /> },
-  { id: 'philosophy', label: '철학', icon: <Lightbulb className="w-4 h-4" /> },
+  { id: 'automation', label: '업무자동화', icon: <Zap className="w-4 h-4" /> },
   { id: 'projects', label: '프로젝트', icon: <Briefcase className="w-4 h-4" /> },
   { id: 'experience', label: '경력', icon: <Award className="w-4 h-4" /> },
   { id: 'documents', label: '문서', icon: <FileText className="w-4 h-4" /> },

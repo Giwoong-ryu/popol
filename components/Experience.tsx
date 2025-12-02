@@ -75,18 +75,6 @@ const experiences: ExperienceItem[] = [
       '위생, 포스, 고객 대응 등 프랜차이즈 현장 운영 노하우 습득',
     ],
   },
-  {
-    company: '상업 공간 설계 & 시공 관리 경험',
-    position: '과장 | 대○인테리어',
-    period: '2014.02 ~ 2017.01',
-    responsibilities: [
-      '상업 공간 인테리어 설계 및 시공 현장 관리',
-      '자재 선정, 협력업체 관리, 공정 스케줄 조율',
-    ],
-    achievements: [
-      '신규 오픈 지원: 인테리어 견적 협의, 시공 감리, 동선 설계 경험',
-    ],
-  },
 ];
 
 const Experience: React.FC = () => {
@@ -99,7 +87,7 @@ const Experience: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Experience & Growth</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">11년 현장 경험으로 쌓은 교육 노하우</h3>
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">8년 현장 경험으로 쌓은 교육 노하우</h3>
         </motion.div>
 
         <div className="space-y-8">
@@ -182,7 +170,7 @@ const Experience: React.FC = () => {
           className="mt-12 pt-8 border-t-2 border-gray-200"
         >
           <p className="text-center text-gray-700 text-lg">
-            <strong className="text-emerald-600">F&B 8년 + 공간설계 3년</strong> |
+            <strong className="text-emerald-600">F&B 8년</strong> |
             신규 매장 3곳 구축 |
             개인·프랜차이즈·공공기관 전 경험
           </p>
