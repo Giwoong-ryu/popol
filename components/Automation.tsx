@@ -4,7 +4,7 @@ import { Zap } from 'lucide-react';
 import { getAssetPath } from '../utils/getAssetPath';
 
 const Automation: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'workflow' | 'result' | 'data'>('workflow');
+  const [activeTab, setActiveTab] = useState<'workflow' | 'result' | 'data'>('result');
 
   return (
     <section id="automation" className="py-20 bg-white">
