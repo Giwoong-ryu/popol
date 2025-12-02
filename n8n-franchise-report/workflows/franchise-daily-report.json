@@ -1,5 +1,5 @@
 {
-  "name": "가맹점 일일 리포트 자동화",
+  "name": "가맹점 일일 리포트 자동화 (Gemini 2.5)",
   "nodes": [
     {
       "parameters": {
@@ -160,7 +160,12 @@
     },
     {
       "parameters": {
-        "model": "gpt-4o-mini",
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-2.5-flash",
+          "mode": "list",
+          "cachedResultName": "Gemini 2.5 Flash"
+        },
         "messages": {
           "values": [
             {
@@ -170,25 +175,26 @@
         },
         "options": {
           "temperature": 0.7,
-          "maxTokens": 1500
+          "maxOutputTokens": 1500
         }
       },
-      "id": "generate-report",
-      "name": "GPT 리포트 생성",
-      "type": "@n8n/n8n-nodes-langchain.openAi",
-      "typeVersion": 1.4,
+      "id": "generate-report-gemini",
+      "name": "Gemini 리포트 생성",
+      "type": "n8n-nodes-base.googleGemini",
+      "typeVersion": 1,
       "position": [880, 0],
       "credentials": {
-        "openAiApi": {
-          "id": "YOUR_OPENAI_CREDENTIAL_ID",
-          "name": "OpenAI"
+        "googleAi": {
+          "id": "YOUR_GOOGLE_AI_CREDENTIAL_ID",
+          "name": "Google AI (Gemini)"
         }
-      }
+      },
+      "notes": "Gemini 2.5 Flash 사용\n비용: $0.10/1M tokens (GPT 대비 33% 저렴)"
     },
     {
       "parameters": {
         "chatId": "YOUR_TELEGRAM_CHAT_ID",
-        "text": "={{ $json.message.content }}",
+        "text": "={{ $json.output }}",
         "additionalFields": {
           "parse_mode": "HTML"
         }
@@ -214,7 +220,7 @@
           "parameters": [
             {
               "name": "message",
-              "value": "={{ $json.message.content }}"
+              "value": "={{ $json.output }}"
             }
           ]
         },
@@ -266,10 +272,10 @@
     },
     "데이터 분석": {
       "main": [
-        [{ "node": "GPT 리포트 생성", "type": "main", "index": 0 }]
+        [{ "node": "Gemini 리포트 생성", "type": "main", "index": 0 }]
       ]
     },
-    "GPT 리포트 생성": {
+    "Gemini 리포트 생성": {
       "main": [
         [
           { "node": "텔레그램 발송", "type": "main", "index": 0 },
@@ -283,7 +289,7 @@
     "timezone": "Asia/Seoul"
   },
   "staticData": null,
-  "tags": ["프랜차이즈", "일일리포트", "자동화"],
+  "tags": ["프랜차이즈", "일일리포트", "자동화", "Gemini"],
   "triggerCount": 1,
   "pinData": {}
 }
