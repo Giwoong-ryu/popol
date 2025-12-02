@@ -55,8 +55,8 @@ const Gallery: React.FC = () => {
         {/* Product Carousel Section */}
         <div className="mb-12">
           <div className="text-center mb-8">
-            <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">SNS Contents</h2>
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">SNS 게시물</h3>
+            <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">제작 및 결과물</h2>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">제작 자료</h3>
           </div>
 
           {/* Carousel Layout - 5 visible items */}
