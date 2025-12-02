@@ -68,7 +68,7 @@ const About: React.FC = () => {
 
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed mb-8">
               <p>
-                <strong className="text-gray-900">11년 현장 경험 (F&B 8년 + 공간설계 3년)</strong>을 바탕으로 실전형 교육 자료를 제작합니다.
+                <strong className="text-gray-900">F&B 8년 현장 경험</strong>을 바탕으로 실전형 교육 자료를 제작합니다.
               </p>
               <p>
                 개인카페부터 대형 프랜차이즈까지, <strong className="text-gray-900">직원·매니저·팀장</strong>을 모두 경험하며
