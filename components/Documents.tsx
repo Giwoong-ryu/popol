@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FileText, TrendingUp, BookOpen, BarChart3, Target, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { FileText, TrendingUp, BookOpen, BarChart3, Target, X, ChevronLeft, ChevronRight, Settings } from 'lucide-react';
 import { getAssetPath } from '../utils/getAssetPath';
 
 interface Document {
@@ -26,7 +26,22 @@ const educationImages = [
   getAssetPath('app_make/커피 이론 교육자료-제출용/커피 이론 교육자료-제출용_11.jpg'),
 ];
 
+const manualImages = [
+  getAssetPath('app_make/매뉴얼/1.png'),
+  getAssetPath('app_make/매뉴얼/2.png'),
+  getAssetPath('app_make/매뉴얼/20251203_015940.png'),
+  getAssetPath('app_make/매뉴얼/20251203_020027.png'),
+];
+
 const documents: Document[] = [
+  {
+    image: getAssetPath('app_make/매뉴얼/1.png'),
+    title: '업무 시스템 매뉴얼',
+    category: 'Work Manual',
+    icon: <Settings className="w-5 h-5" />,
+    description: '자활센터에서 직접 제작한 업무 시스템 매뉴얼입니다. 화면 캡처 + 빨간 박스 + 단계별 설명으로, 누구든지 보면서 그대로 따라할 수 있도록 만들었습니다.',
+    gallery: manualImages,
+  },
   {
     image: getAssetPath('app_make/edu_cover.jpg'),
     title: '커피 이론 교육자료',

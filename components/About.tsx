@@ -80,6 +80,25 @@ const About: React.FC = () => {
               </p>
             </div>
 
+            {/* 일하는 방식 */}
+            <div className="p-6 border-l-4 border-blue-500 bg-blue-50/50 rounded-r-2xl mb-8">
+              <h4 className="text-lg font-bold mb-4 text-gray-900">일하는 방식</h4>
+              <div className="space-y-3 text-gray-700 text-sm leading-relaxed">
+                <p>
+                  <strong className="text-gray-900">매뉴얼은 현장에서 보면서 따라할 수 있어야 합니다.</strong><br />
+                  집에서 공부해야 할 내용이 아니라, 들고다니면서 바로 볼 수 있는 것이 진짜 매뉴얼이라고 생각합니다.
+                </p>
+                <p>
+                  <strong className="text-gray-900">가까이 있는 사람의 불편함을 해결해주면 그게 나한테도 이득입니다.</strong><br />
+                  분위기가 좋아지고, 결과물이 생기고, 새로운 시도를 해볼 수 있습니다.
+                </p>
+                <p>
+                  <strong className="text-gray-900">문제를 알면서 안 하면 오히려 내가 불편합니다.</strong><br />
+                  해결할 수 있는 문제가 보이면 그냥 넘어가기가 어렵습니다.
+                </p>
+              </div>
+            </div>
+
             {/* Contact Info */}
             <div className="p-6 border-l-4 border-emerald-500 bg-emerald-50/50 rounded-r-2xl">
               <h4 className="text-lg font-bold mb-4 text-gray-900">Contact</h4>
