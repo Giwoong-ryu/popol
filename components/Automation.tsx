@@ -40,10 +40,10 @@ const Automation: React.FC = () => {
             화면 캡처 + 빨간 박스 + 단계별 설명으로, 누구든지 보면서 따라할 수 있는 매뉴얼을 만들었습니다.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 ml-11">
-            <img src={getAssetPath("app_make/매뉴얼/1.png")} alt="매뉴얼 1" className="rounded-lg shadow-sm" />
-            <img src={getAssetPath("app_make/매뉴얼/2.png")} alt="매뉴얼 2" className="rounded-lg shadow-sm" />
-            <img src={getAssetPath("app_make/매뉴얼/20251203_015940.png")} alt="매뉴얼 3" className="rounded-lg shadow-sm" />
-            <img src={getAssetPath("app_make/매뉴얼/20251203_020027.png")} alt="매뉴얼 4" className="rounded-lg shadow-sm" />
+            <img src={getAssetPath("app_make/manual/1.png")} alt="매뉴얼 1" className="rounded-lg shadow-sm" />
+            <img src={getAssetPath("app_make/manual/2.png")} alt="매뉴얼 2" className="rounded-lg shadow-sm" />
+            <img src={getAssetPath("app_make/manual/20251203_015940.png")} alt="매뉴얼 3" className="rounded-lg shadow-sm" />
+            <img src={getAssetPath("app_make/manual/20251203_020027.png")} alt="매뉴얼 4" className="rounded-lg shadow-sm" />
           </div>
         </motion.div>
 
@@ -71,8 +71,8 @@ const Automation: React.FC = () => {
             바탕화면 자동 정리 + 날짜별 분류 + 되돌리기 + 파일 미리보기(이미지/터미널 결과) 기능까지 구현했습니다.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ml-11">
-            <img src={getAssetPath("app_make/매뉴얼/문서정리프로그램.png")} alt="문서정리 프로그램" className="rounded-lg shadow-sm" />
-            <img src={getAssetPath("app_make/매뉴얼/뷰어.png")} alt="뷰어 프로그램" className="rounded-lg shadow-sm" />
+            <img src={getAssetPath("app_make/manual/file-manager.png")} alt="문서정리 프로그램" className="rounded-lg shadow-sm" />
+            <img src={getAssetPath("app_make/manual/viewer.png")} alt="뷰어 프로그램" className="rounded-lg shadow-sm" />
           </div>
         </motion.div>
 
