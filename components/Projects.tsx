@@ -20,15 +20,15 @@ const projects: Project[] = [
   },
   {
     id: 'contents',
-    title: 'SNS 콘텐츠 포트폴리오',
-    category: 'Content Creation',
-    image: getAssetPath('app_make/product_10.jpg'),
+    title: 'SNS와 고객소통',
+    category: 'Content & Communication',
+    image: getAssetPath('app_make/product_12_1.png'),
     icon: <PenTool className="w-5 h-5"/>,
     description: [
+      '배달앱 리뷰 관리로 평점 5.0, 1년 6개월 유지',
       '개인 카페 운영 3.5년간 인스타그램 게시물 1,300건 이상 직접 제작',
       '기획·촬영·편집·업로드 전 과정 직접 수행',
-      '팔로워 2,000명 이상 확보',
-      '스마트폰 + 자연광 활용한 저비용 촬영 세팅'
+      '팔로워 2,000명 이상 확보'
     ]
   },
   {
@@ -38,7 +38,6 @@ const projects: Project[] = [
     image: getAssetPath('app_make/1-2.png'),
     icon: <Coffee className="w-5 h-5"/>,
     description: [
-      'n8n + Gemini AI + Google Sheets + Telegram 연동 시스템 직접 구축',
       '매장 데이터(매출, 폐기율) 자동 수집 → AI 분석 → 리포트 자동 발송',
       '이상 징후(폐기율 5% 초과 등) 감지 시 알림 발송 기능',
       '날씨 API 연동으로 기온·강수량 기반 재고 관리 제안 기능 포함'

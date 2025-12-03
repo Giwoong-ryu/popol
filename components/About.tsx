@@ -51,27 +51,24 @@ const About: React.FC = () => {
             <div className="mb-10">
               <h4 className="text-xl font-bold text-gray-900 mb-5 border-l-4 border-emerald-500 pl-4">소개</h4>
               <div className="text-gray-700 leading-relaxed space-y-4">
-                <p className="text-lg">
-                  <strong className="text-gray-900">교육받는 입장과 교육하는 입장을 모두 경험했습니다.</strong>
+                <p>
+                  F&B 8년, 직원부터 팀장까지 현장에서 일했습니다.
                 </p>
                 <p>
-                  개인카페부터 대형 프랜차이즈까지, 직원·매니저·팀장으로 일하면서 현장에서 진짜 필요한 게 뭔지 알게 됐습니다. 그래서 집에서 공부하는 교육자료가 아니라, 현장에서 보면서 바로 따라할 수 있는 자료를 만듭니다.
-                </p>
-                <p>
-                  가맹점 관리를 하면서 본사가 미처 못 챙기는 부분을 직접 해결한 경험도 있습니다. 이벤트 디자인이 늦어지면 직접 만들어서 전달하고, 배달앱 리뷰 관리법을 공유하기도 했습니다.
+                  교육받는 입장과 교육하는 입장을 둘 다 거쳤고, 현장의 고충과 본사의 입장 양쪽을 아는 만큼 상생의 방향으로 나아가려고 노력합니다.
                 </p>
               </div>
             </div>
 
-            {/* 일하는 방식 */}
+            {/* 함께 일하는 방식 */}
             <div className="p-6 bg-gray-50 rounded-2xl border-l-4 border-blue-500">
-              <h4 className="text-lg font-bold mb-4 text-gray-900">일하는 방식</h4>
+              <h4 className="text-lg font-bold mb-4 text-gray-900">함께 일하는 방식</h4>
               <div className="text-gray-700 leading-relaxed space-y-3">
                 <p>
-                  <strong className="text-gray-900">가까이 있는 사람의 불편함을 해결하면, 그게 결국 나한테도 이득입니다.</strong>
+                  <strong className="text-gray-900">가까이 있는 사람의 불편함을 해결하면, 그게 결국 나에게도 돌아옵니다.</strong>
                 </p>
                 <p>
-                  분위기가 좋아지고, 결과물이 생기고, 새로운 시도를 해볼 수 있습니다. 문제가 보이는데 안 하면 오히려 제가 불편합니다. 해운회사에서 문서정리 프로그램을 만든 것도, 자활센터에서 업무 매뉴얼을 만든 것도 그래서입니다.
+                  눈앞에 보이는 문제를 그냥 넘어가지 않고 해결해주면, 상대방이 편해지는 것 이상으로 저한테도 돌아오는 게 있었습니다. 능력적으로, 관계적으로, 심적으로도요. 그런 경험이 쌓이다 보니 시키지 않아도 제가 할 수 있겠다 싶으면 움직이게 됐습니다. 그래서 매뉴얼을 만들게 됐고, 문서정리 프로그램도 만들게 됐습니다.
                 </p>
               </div>
             </div>
