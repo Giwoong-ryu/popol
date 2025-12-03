@@ -27,20 +27,20 @@ const educationImages = [
 ];
 
 const manualImages = [
-  getAssetPath('app_make/매뉴얼/1.png'),
-  getAssetPath('app_make/매뉴얼/2.png'),
-  getAssetPath('app_make/매뉴얼/20251203_015940.png'),
-  getAssetPath('app_make/매뉴얼/20251203_020027.png'),
+  getAssetPath('app_make/manual/1.png'),
+  getAssetPath('app_make/manual/2.png'),
+  getAssetPath('app_make/manual/20251203_015940.png'),
+  getAssetPath('app_make/manual/20251203_020027.png'),
 ];
 
 const programImages = [
-  getAssetPath('app_make/매뉴얼/문서정리프로그램.png'),
-  getAssetPath('app_make/매뉴얼/뷰어.png'),
+  getAssetPath('app_make/manual/file-manager.png'),
+  getAssetPath('app_make/manual/viewer.png'),
 ];
 
 const documents: Document[] = [
   {
-    image: getAssetPath('app_make/매뉴얼/1.png'),
+    image: getAssetPath('app_make/manual/1.png'),
     title: '업무 시스템 매뉴얼',
     category: 'Work Manual',
     icon: <Settings className="w-5 h-5" />,
@@ -48,7 +48,7 @@ const documents: Document[] = [
     gallery: manualImages,
   },
   {
-    image: getAssetPath('app_make/매뉴얼/문서정리프로그램.png'),
+    image: getAssetPath('app_make/manual/file-manager.png'),
     title: '문서정리 프로그램',
     category: 'Utility Tool',
     icon: <Monitor className="w-5 h-5" />,
