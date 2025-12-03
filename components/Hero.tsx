@@ -7,7 +7,7 @@ const heroImages = [
   { src: getAssetPath("app_make/ai교육.png"), link: "#about", label: "소개" },
   { src: getAssetPath("app_make/h_3.jpeg"), link: "#projects", label: "핵심 역량" },
   { src: getAssetPath("app_make/ai교육_1.jpg"), link: "#experience", label: "경력" },
-  { src: getAssetPath("app_make/h_5.jpeg"), link: "#automation", label: "업무 효율화" },
+  { src: getAssetPath("app_make/1-2.png"), link: "#automation", label: "업무 효율화" },
 ];
 
 const Hero: React.FC = () => {
