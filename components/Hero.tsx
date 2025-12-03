@@ -7,7 +7,7 @@ const heroImages = [
   { src: getAssetPath("app_make/ai교육.png"), link: "#about", label: "소개" },
   { src: getAssetPath("app_make/h_3.jpeg"), link: "#projects", label: "핵심 역량" },
   { src: getAssetPath("app_make/ai교육_1.jpg"), link: "#experience", label: "경력" },
-  { src: getAssetPath("app_make/h_5.jpeg"), link: "#automation", label: "업무 자동화" },
+  { src: getAssetPath("app_make/h_5.jpeg"), link: "#automation", label: "업무 효율화" },
 ];
 
 const Hero: React.FC = () => {
@@ -23,10 +23,10 @@ const Hero: React.FC = () => {
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
             F&B 8년<br />
-            현장에서 만든 교육 자료
+            현장 경험
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            교육 자료 제작 · 가맹점 관리 경험 · 업무 효율화
+            매장 운영 · 교육 · 업무 효율화
           </p>
         </motion.div>
 
@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
           className="text-center mt-16"
         >
           <div className="inline-block bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-3">
-            🎯 가맹점 교육 담당 / 오픈 지원팀 구직 중
+            🎯 F&B 본사 / 운영지원 구직 중
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
             유기웅 <span className="text-gray-600 font-normal">Ryu Gi-Woong</span>
