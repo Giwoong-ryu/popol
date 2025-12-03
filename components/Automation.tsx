@@ -17,8 +17,7 @@ const Automation: React.FC = () => {
           <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Work Efficiency</h2>
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">업무 효율화</h3>
           <p className="text-gray-600 max-w-2xl">
-            현장의 불편함을 발견하면 직접 해결합니다.<br />
-            매뉴얼 제작에서 시작해, 프로그램 개발, 자동화 시스템 구축까지 직접 만든 결과물입니다.
+            현장의 불편함을 발견하면 직접 해결합니다.
           </p>
         </motion.div>
 
@@ -33,12 +32,9 @@ const Automation: React.FC = () => {
             <div className="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
             <h4 className="text-xl font-bold text-gray-900 flex items-center gap-2">
               <FileText className="w-5 h-5 text-emerald-600" />
-              매뉴얼 제작
+              신규직원을 위한 회사시스템 매뉴얼 제작
             </h4>
           </div>
-          <p className="text-gray-600 text-sm mb-4 ml-11">
-            화면 캡처 + 빨간 박스 + 단계별 설명으로, 누구든지 보면서 따라할 수 있는 매뉴얼을 만들었습니다.
-          </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 ml-11">
             <img src={getAssetPath("app_make/manual/1.png")} alt="매뉴얼 1" className="rounded-lg shadow-sm" />
             <img src={getAssetPath("app_make/manual/2.png")} alt="매뉴얼 2" className="rounded-lg shadow-sm" />
@@ -63,13 +59,9 @@ const Automation: React.FC = () => {
             <div className="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
             <h4 className="text-xl font-bold text-gray-900 flex items-center gap-2">
               <Monitor className="w-5 h-5 text-emerald-600" />
-              프로그램 개발
+              회사 직원들의 문서정리를 위한 프로그램 제작
             </h4>
           </div>
-          <p className="text-gray-600 text-sm mb-4 ml-11">
-            해운회사 직원들이 문서정리를 어려워해서 직접 프로그램을 만들어 전달했습니다.<br />
-            바탕화면 자동 정리 + 날짜별 분류 + 되돌리기 + 파일 미리보기(이미지/터미널 결과) 기능까지 구현했습니다.
-          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ml-11">
             <img src={getAssetPath("app_make/manual/file-manager.png")} alt="문서정리 프로그램" className="rounded-lg shadow-sm" />
             <img src={getAssetPath("app_make/manual/viewer.png")} alt="뷰어 프로그램" className="rounded-lg shadow-sm" />
@@ -92,12 +84,9 @@ const Automation: React.FC = () => {
             <div className="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
             <h4 className="text-xl font-bold text-gray-900 flex items-center gap-2">
               <Zap className="w-5 h-5 text-emerald-600" />
-              자동화 시스템 구축
+              매장데이터 분석 및 리포트 발송까지 자동화
             </h4>
           </div>
-          <p className="text-gray-600 text-sm mb-4 ml-11">
-            매장 데이터를 자동으로 분석해서 텔레그램으로 리포트를 발송하는 시스템을 구축했습니다.
-          </p>
 
           {/* 데이터 → 결과 플로우 */}
           <div className="flex flex-col lg:flex-row items-center gap-4 ml-11">
@@ -128,15 +117,6 @@ const Automation: React.FC = () => {
                 <img src={getAssetPath("app_make/1-4.png")} alt="리포트 3" className="rounded-lg shadow-sm" />
               </div>
             </div>
-          </div>
-
-          {/* 기술 스택 */}
-          <div className="flex flex-wrap justify-center gap-2 mt-4 ml-11">
-            <span className="px-3 py-1.5 bg-white rounded-full text-xs text-gray-600 shadow-sm">n8n</span>
-            <span className="px-3 py-1.5 bg-white rounded-full text-xs text-gray-600 shadow-sm">Google Sheets</span>
-            <span className="px-3 py-1.5 bg-white rounded-full text-xs text-gray-600 shadow-sm">Gemini AI</span>
-            <span className="px-3 py-1.5 bg-white rounded-full text-xs text-gray-600 shadow-sm">Telegram</span>
-            <span className="px-3 py-1.5 bg-white rounded-full text-xs text-gray-600 shadow-sm">기상청 API</span>
           </div>
         </motion.div>
 

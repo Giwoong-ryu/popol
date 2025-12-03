@@ -197,19 +197,6 @@ const Documents: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Summary */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.6 }}
-          className="mt-16 pt-8 border-t-2 border-gray-200"
-        >
-          <p className="text-center text-gray-700 text-lg">
-            <strong className="text-emerald-600">커피 이론 교육자료 11페이지</strong> (2년간 자활센터 실사용) |
-            <strong className="text-emerald-600"> 상권 분석 문서 4개</strong>
-          </p>
-        </motion.div>
       </div>
 
       {/* Modal with Gallery Support */}
