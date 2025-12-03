@@ -4,10 +4,10 @@ import { User, Coffee, Map, BarChart, Users, FileText } from 'lucide-react';
 import { getAssetPath } from '../utils/getAssetPath';
 
 const highlights = [
-  { icon: <FileText className="w-6 h-6" />, title: "교육 자료 제작", desc: "커피 이론부터 실무까지, 11페이지 교육자료 직접 제작" },
-  { icon: <Coffee className="w-6 h-6" />, title: "신입 교육 체계화", desc: "체계적 매뉴얼로 교육 기간 1달→2주 단축" },
-  { icon: <Map className="w-6 h-6" />, title: "신규 오픈 지원", desc: "상권 분석, 인테리어 협의, 오픈 준비 전 과정 경험" },
-  { icon: <User className="w-6 h-6" />, title: "SNS 콘텐츠 제작", desc: "1,300건 직접 제작, 가맹점용 템플릿 제공 가능" },
+  { icon: <Users className="w-6 h-6" />, title: "가맹점 관리 경험", desc: "블루샥 가맹점 담당, 본사 미대응 업무 직접 지원" },
+  { icon: <FileText className="w-6 h-6" />, title: "교육 자료 제작", desc: "11페이지 커피 이론 교육자료 직접 제작, 2년간 실사용" },
+  { icon: <Map className="w-6 h-6" />, title: "신규 매장 오픈", desc: "자활센터 3곳 + 해운회사 1곳, 총 4곳 오픈 경험" },
+  { icon: <BarChart className="w-6 h-6" />, title: "업무 자동화", desc: "n8n 리포트 자동화, 문서정리 프로그램 직접 개발" },
 ];
 
 const About: React.FC = () => {
@@ -60,9 +60,9 @@ const About: React.FC = () => {
                 가맹점 교육 담당자로서의 강점
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                "8년 현장 경험을 <strong>교육 자료로 만들어</strong><br />
-                가맹점주와 직원이 <strong>독립적으로 운영</strong>할 수 있도록<br />
-                체계적인 교육 시스템을 구축합니다."
+                "<strong>교육받는 입장과 교육하는 입장</strong>을 모두 경험했습니다.<br />
+                그래서 현장에서 <strong>실제로 쓸 수 있는 교육 자료</strong>를 만들 수 있습니다.<br />
+                가맹점 관리를 하며 <strong>본사가 못해주는 부분을 직접 지원</strong>한 경험도 있습니다."
               </p>
             </div>
 
