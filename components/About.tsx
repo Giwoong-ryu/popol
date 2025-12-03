@@ -52,7 +52,7 @@ const About: React.FC = () => {
               <h4 className="text-xl font-bold text-gray-900 mb-5 border-l-4 border-emerald-500 pl-4">소개</h4>
               <div className="text-gray-700 leading-relaxed space-y-4">
                 <p>
-                  F&B 8년, 직원부터 팀장까지 현장에서 일했습니다.
+                  직원으로 시작해서 매니저, 팀장을 거쳤고, 개인카페도 직접 운영해봤습니다.
                 </p>
                 <p>
                   교육받는 입장과 교육하는 입장을 둘 다 거쳤고, 현장의 고충과 본사의 입장 양쪽을 아는 만큼 상생의 방향으로 나아가려고 노력합니다.
@@ -63,12 +63,18 @@ const About: React.FC = () => {
             {/* 함께 일하는 방식 */}
             <div className="p-6 bg-gray-50 rounded-2xl border-l-4 border-blue-500">
               <h4 className="text-lg font-bold mb-4 text-gray-900">함께 일하는 방식</h4>
-              <div className="text-gray-700 leading-relaxed space-y-3">
+              <div className="text-gray-700 leading-relaxed space-y-4">
                 <p>
                   <strong className="text-gray-900">가까이 있는 사람의 불편함을 해결하면, 그게 결국 나에게도 돌아옵니다.</strong>
                 </p>
                 <p>
-                  눈앞에 보이는 문제를 그냥 넘어가지 않고 해결해주면, 상대방이 편해지는 것 이상으로 저한테도 돌아오는 게 있었습니다. 능력적으로, 관계적으로, 심적으로도요. 그런 경험이 쌓이다 보니 시키지 않아도 제가 할 수 있겠다 싶으면 움직이게 됐습니다. 그래서 매뉴얼을 만들게 됐고, 문서정리 프로그램도 만들게 됐습니다.
+                  눈앞에 보이는 문제를 그냥 넘어가지 않고 해결해주면,<br />
+                  상대방이 편해지는 것 이상으로 저한테도 돌아오는 게 있었습니다.<br />
+                  능력적으로, 관계적으로, 심적으로도요.
+                </p>
+                <p>
+                  그런 경험이 쌓이다 보니 시키지 않아도 제가 할 수 있겠다 싶으면 움직이게 됐습니다.<br />
+                  그래서 매뉴얼을 만들게 됐고, 문서정리 프로그램도 만들게 됐습니다.
                 </p>
               </div>
             </div>
