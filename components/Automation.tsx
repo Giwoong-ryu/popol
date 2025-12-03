@@ -19,8 +19,8 @@ const Automation: React.FC = () => {
           <h2 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Automation</h2>
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">업무 자동화 역량</h3>
           <p className="text-gray-600 max-w-2xl">
-            반복 업무를 자동화하여 본사·슈퍼바이저·점주 모두의 시간을 절약합니다.<br />
-            실제 구축한 가맹점 일일 리포트 자동화 시스템입니다.
+            반복되는 수동 작업을 자동화하는 시스템을 직접 만들었습니다.<br />
+            n8n, Google Sheets, AI를 활용해 일일 리포트 자동 생성 시스템을 구축했습니다.
           </p>
         </motion.div>
 
@@ -146,8 +146,8 @@ const Automation: React.FC = () => {
           <div className="flex items-start gap-3">
             <Zap className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
             <p className="text-gray-700">
-              <strong className="text-gray-900">활용 가능:</strong> 매장 데이터 수집 → AI 분석 → 리포트 자동 발송 시스템을 가맹점 본사에 도입하여
-              슈퍼바이저 업무 부담 경감 및 이상 징후 조기 발견에 기여할 수 있습니다.
+              <strong className="text-gray-900">구축 경험:</strong> 이 시스템을 가맹점 본사에 도입하면
+              일일 리포트 수동 작성 시간을 줄이고, 이상 징후를 빠르게 확인할 수 있습니다.
             </p>
           </div>
         </motion.div>
