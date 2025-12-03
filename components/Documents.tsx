@@ -35,6 +35,7 @@ const manualImages = [
 
 const programImages = [
   getAssetPath('app_make/매뉴얼/문서정리프로그램.png'),
+  getAssetPath('app_make/매뉴얼/뷰어.png'),
 ];
 
 const documents: Document[] = [
@@ -51,7 +52,7 @@ const documents: Document[] = [
     title: '문서정리 프로그램',
     category: 'Utility Tool',
     icon: <Monitor className="w-5 h-5" />,
-    description: '해운회사 직원들의 불편함을 해결하기 위해 직접 개발한 파일 정리 프로그램입니다. 바탕화면 자동 정리, 날짜별 분류, 되돌리기 기능을 포함하며, 미리보기 기능으로 파일 확인이 가능합니다.',
+    description: '해운회사 직원들의 불편함을 해결하기 위해 직접 개발한 파일 정리 프로그램입니다. 바탕화면 자동 정리, 날짜별 분류, 되돌리기 기능을 포함합니다. 파일 클릭 시 이미지뿐 아니라 터미널 실행 결과까지 미리보기 가능합니다.',
     gallery: programImages,
   },
   {
