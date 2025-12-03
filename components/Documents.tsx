@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FileText, TrendingUp, BookOpen, BarChart3, Target, X, ChevronLeft, ChevronRight, Settings } from 'lucide-react';
+import { FileText, TrendingUp, BookOpen, BarChart3, Target, X, ChevronLeft, ChevronRight, Settings, Monitor } from 'lucide-react';
 import { getAssetPath } from '../utils/getAssetPath';
 
 interface Document {
@@ -33,6 +33,10 @@ const manualImages = [
   getAssetPath('app_make/매뉴얼/20251203_020027.png'),
 ];
 
+const programImages = [
+  getAssetPath('app_make/매뉴얼/문서정리프로그램.png'),
+];
+
 const documents: Document[] = [
   {
     image: getAssetPath('app_make/매뉴얼/1.png'),
@@ -41,6 +45,14 @@ const documents: Document[] = [
     icon: <Settings className="w-5 h-5" />,
     description: '자활센터에서 직접 제작한 업무 시스템 매뉴얼입니다. 화면 캡처 + 빨간 박스 + 단계별 설명으로, 누구든지 보면서 그대로 따라할 수 있도록 만들었습니다.',
     gallery: manualImages,
+  },
+  {
+    image: getAssetPath('app_make/매뉴얼/문서정리프로그램.png'),
+    title: '문서정리 프로그램',
+    category: 'Utility Tool',
+    icon: <Monitor className="w-5 h-5" />,
+    description: '해운회사 직원들의 불편함을 해결하기 위해 직접 개발한 파일 정리 프로그램입니다. 바탕화면 자동 정리, 날짜별 분류, 되돌리기 기능을 포함하며, 미리보기 기능으로 파일 확인이 가능합니다.',
+    gallery: programImages,
   },
   {
     image: getAssetPath('app_make/edu_cover.jpg'),
