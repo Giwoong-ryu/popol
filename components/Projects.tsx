@@ -34,7 +34,7 @@ const projects: Project[] = [
   {
     id: 'automation',
     title: '가맹점 일일 리포트 자동화',
-    category: 'AI Automation',
+    category: 'Work Efficiency',
     image: getAssetPath('app_make/1-2.png'),
     icon: <Coffee className="w-5 h-5"/>,
     description: [

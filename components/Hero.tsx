@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
             현장에서 만든 교육 자료
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            교육 자료 제작 · 가맹점 관리 경험 · 업무 자동화
+            교육 자료 제작 · 가맹점 관리 경험 · 업무 효율화
           </p>
         </motion.div>
 

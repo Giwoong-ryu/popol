@@ -7,7 +7,7 @@ const highlights = [
   { icon: <Users className="w-6 h-6" />, title: "가맹점 관리 경험", desc: "블루샥 가맹점 담당, 본사 미대응 업무 직접 지원" },
   { icon: <FileText className="w-6 h-6" />, title: "교육 자료 제작", desc: "11페이지 커피 이론 교육자료 직접 제작, 2년간 실사용" },
   { icon: <Map className="w-6 h-6" />, title: "신규 매장 오픈", desc: "자활센터 3곳 + 해운회사 1곳, 총 4곳 오픈 경험" },
-  { icon: <BarChart className="w-6 h-6" />, title: "업무 자동화", desc: "n8n 리포트 자동화, 문서정리 프로그램 직접 개발" },
+  { icon: <BarChart className="w-6 h-6" />, title: "업무 효율화", desc: "매뉴얼 제작, 프로그램 개발, 리포트 자동화 직접 구축" },
 ];
 
 const About: React.FC = () => {
